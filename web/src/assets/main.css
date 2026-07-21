@@ -1,103 +1,121 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lato:wght@300;400;700&display=swap");
+
+/* ─────────────────────────────────────────────────────────────
+   Havencrest — Tailwind v4 design system
+   Derived from Havencrest Brand Guidelines 2026.
+
+   @import order matters: all @import rules must sit before any
+   other rule. Tailwind first, then the fonts.
+   ───────────────────────────────────────────────────────────── */
 
 @theme {
-  /* ─────────────────────────────────────────────
-     Font family — Google Sans Flex primary
-     ───────────────────────────────────────────── */
-  --font-sans: "Google Sans Flex", system-ui, -apple-system, sans-serif;
+  /* ───────────────────────────────
+     TYPEFACES  (§04 Typography)
+     Julius Sans One — display only. One light weight, no true bold.
+       Always uppercase, always letterspaced. Never below 14px, never body.
+     Lato — everything that does the work. Light / Regular / Bold.
+     ─────────────────────────────── */
+  --font-display: "Julius Sans One", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Lato", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
-  /* ─────────────────────────────────────────────
-     Typography scale
-     In v4, paired metadata lives on --text-<name>--line-height,
-     --text-<name>--letter-spacing, --text-<name>--font-weight.
-     ───────────────────────────────────────────── */
+  /* ───────────────────────────────
+     PALETTE  (§03 Colour) — five colours, each with one job.
+     Do not add hues beyond these. Need a border or muted tint?
+     Derive it, e.g.  color-mix(in srgb, var(--color-deep-plum) 12%, transparent)
+     ─────────────────────────────── */
+  --color-deep-plum: #230423; /* Primary text        */
+  --color-root-olive: #4e5637; /* Accents / labels    */
+  --color-growth-green: #527646; /* Primary colour      */
+  --color-signal-plum: #762476; /* Secondary colour    */
+  --color-haven-cream: #f7f4ed; /* Background          */
 
-  /* Metadata (Label): 12px mobile / 14px desktop */
-  --text-metadata: 0.75rem;
-  --text-metadata--line-height: 1;
-  --text-metadata--letter-spacing: 0.05em;
-  --text-metadata-lg: 0.875rem;
-  --text-metadata-lg--line-height: 1;
-  --text-metadata-lg--letter-spacing: 0.05em;
+  /* Semantic aliases — reference roles, not hex, in components */
+  --color-text: var(--color-deep-plum);
+  --color-background: var(--color-haven-cream);
+  --color-primary: var(--color-growth-green);
+  --color-secondary: var(--color-signal-plum);
+  --color-accent: var(--color-root-olive);
 
-  /* Body (Primary): 16px mobile / 18px desktop */
+  /* ───────────────────────────────
+     TYPE SCALE  (§04 Type scale)
+     Sizes/leading are the brand's px pairs expressed in rem.
+     Tracking & weight ride along with each text-* utility.
+     Case is NOT a token — apply `uppercase` in markup where noted.
+     ─────────────────────────────── */
+
+  /* H1 · Page title — Julius Sans One · 40/48 · UPPERCASE · +3% */
+  --text-h1: 2.5rem;
+  --text-h1--line-height: 3rem;
+  --text-h1--letter-spacing: 0.03em;
+  --text-h1--font-weight: 400;
+
+  /* H2 · Section — Julius Sans One · 28/36 · UPPERCASE · +2% */
+  --text-h2: 1.75rem;
+  --text-h2--line-height: 2.25rem;
+  --text-h2--letter-spacing: 0.02em;
+  --text-h2--font-weight: 400;
+
+  /* H3 · Subhead — Lato Bold · 18/26 · sentence case */
+  --text-h3: 1.125rem;
+  --text-h3--line-height: 1.625rem;
+  --text-h3--font-weight: 700;
+
+  /* Body — Lato Regular · 16/26 · max ~70 chars per line */
   --text-body: 1rem;
-  --text-body--line-height: 1.625;
-  --text-body-lg: 1.125rem;
-  --text-body-lg--line-height: 1.625;
+  --text-body--line-height: 1.625rem;
+  --text-body--font-weight: 400;
 
-  /* H2 (Subhead): 24px mobile / 30px desktop */
-  --text-h2: 1.5rem;
-  --text-h2--line-height: 1.2;
-  --text-h2--font-weight: 700;
-  --text-h2-lg: 1.875rem;
-  --text-h2-lg--line-height: 1.2;
-  --text-h2-lg--font-weight: 700;
+  /* Caption / label — Lato Bold · 11/16 · UPPERCASE · +8% · Root Olive */
+  --text-label: 0.6875rem;
+  --text-label--line-height: 1rem;
+  --text-label--letter-spacing: 0.08em;
+  --text-label--font-weight: 700;
 
-  /* H1 (Section): 32px mobile / 48px desktop */
-  --text-h1: 2rem;
-  --text-h1--line-height: 1.2;
-  --text-h1--letter-spacing: -0.01em;
-  --text-h1--font-weight: 700;
-  --text-h1-lg: 3rem;
-  --text-h1-lg--line-height: 1.2;
-  --text-h1-lg--letter-spacing: -0.01em;
-  --text-h1-lg--font-weight: 700;
+  /* Display / hero numerals (01–06, wordmark scale) — Julius Sans One.
+     Not in the formal type table; sized to match the deck's section
+     numbers. Uppercase, letterspaced, single light weight. */
+  --text-display: 4rem;
+  --text-display--line-height: 1.1;
+  --text-display--letter-spacing: 0.03em;
+  --text-display--font-weight: 400;
 
-  /* Display (Hero): 40px mobile / 64px desktop */
-  --text-display: 2.5rem;
-  --text-display--line-height: 1.2;
-  --text-display--letter-spacing: -0.02em;
-  --text-display--font-weight: 700;
-  --text-display-lg: 4rem;
-  --text-display-lg--line-height: 1.2;
-  --text-display-lg--letter-spacing: -0.02em;
-  --text-display-lg--font-weight: 700;
+  /* ───────────────────────────────
+     TRACKING (§04) — Julius Sans One lives in a 2–4% band.
+     ─────────────────────────────── */
+  --tracking-display: 0.03em;
+  --tracking-h1: 0.03em;
+  --tracking-h2: 0.02em;
+  --tracking-label: 0.08em;
 
-  /* Footnote: 12px mobile / 14px desktop */
-  --text-footnote: 0.75rem;
-  --text-footnote--line-height: 1.5;
-  --text-footnote-lg: 0.875rem;
-  --text-footnote-lg--line-height: 1.5;
+  /* ───────────────────────────────
+     LEADING (§04 Setting type well)
+     1.6 for body — distressed readers lose their place in tight text.
+     ─────────────────────────────── */
+  --leading-body: 1.625;
 
-  /* Numeric aliases (override defaults to match protocol) */
-  --text-xs: 0.75rem; /* 12px */
-  --text-sm: 0.875rem; /* 14px */
-  --text-base: 1rem; /* 16px */
-  --text-lg: 1.125rem; /* 18px */
-  --text-2xl: 1.5rem; /* 24px (H2 Mobile) */
-  --text-3xl: 1.875rem; /* 30px (H2 Desktop) */
-  --text-4xl: 2.5rem; /* 40px (Display Mobile) */
-  --text-5xl: 3rem; /* 48px (H1 Desktop) */
-  --text-6xl: 4rem; /* 64px (Display Desktop) */
+  /* ───────────────────────────────
+     MAX MEASURE — cap line length near 65–70 characters.
+     Use as  max-w-measure  on body copy containers.
+     ─────────────────────────────── */
+  --container-measure: 34rem;
+}
 
-  /* ─────────────────────────────────────────────
-     Letter spacing
-     ───────────────────────────────────────────── */
-  --tracking-tightest: -0.02em;
-  --tracking-wider: 0.05em;
-
-  /* ─────────────────────────────────────────────
-     Line height
-     ───────────────────────────────────────────── */
-  --leading-tight: 1.2;
-  --leading-relaxed: 1.625;
-
-  /* ─────────────────────────────────────────────
-     Colors — restricted neutral palette + brand
-     ───────────────────────────────────────────── */
-  --color-neutral-50: #fafafa;
-  --color-neutral-100: #f5f5f5;
-  --color-neutral-200: #e5e5e5;
-  --color-neutral-300: #d4d4d4;
-  --color-neutral-400: #a3a3a3;
-  --color-neutral-500: #737373;
-  --color-neutral-600: #525252;
-  --color-neutral-700: #404040;
-  --color-neutral-800: #262626;
-  --color-neutral-900: #171717;
-  --color-neutral-950: #0a0a0a;
-
-  --color-testcolor: #ff0000;
-  --color-brand: #d85f2c;
+/* ─────────────────────────────────────────────────────────────
+   AUTHORING RULES that can't be tokens — encoded as light defaults.
+   (§04 Setting type well)
+   ───────────────────────────────────────────────────────────── */
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    text-align: left; /* Left-align everything, ragged right. */
+    text-wrap: pretty;
+  }
+  /* Julius Sans One is only ever uppercase + letterspaced. */
+  .font-display {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+  }
 }
