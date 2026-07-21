@@ -1,68 +1,68 @@
-**Havencrest – Therapists Page Guide** 
+**Havencrest – Therapists Page Guide**
 
-**Page Heading** 
+**Page Heading**
 
-**Therapists** 
+**Therapists**
 
-Find a therapist that's right for you. 
+Find a therapist that's right for you.
 
-Browse our clinicians and learn more about their experience, specialties, and approach. 
+Browse our clinicians and learn more about their experience, specialties, and approach.
 
-**Therapist Card Layout** 
+**Therapist Card Layout**
 
-**Photo** 
+**Photo**
 
-**Sarah Johnson, LMHC** 
+**Sarah Johnson, LMHC**
 
-Adults • Couples 
+Adults • Couples
 
-Anxiety • Trauma • Life Transitions 
+Anxiety • Trauma • Life Transitions
 
-In-person | Telehealth 
+In-person | Telehealth
 
-**View Profile** → 
+**View Profile** →
 
-**Keep the card simple** 
+**Keep the card simple**
 
-Only display: Photo Name & credentials Populations served Specialties Appointment type View Profile Do not include a biography, therapeutic modalities, insurance information, or availability on the card. Those belong on the therapist's profile page. 
+Only display: Photo Name & credentials Populations served Specialties Appointment type View Profile Do not include a biography, therapeutic modalities, insurance information, or availability on the card. Those belong on the therapist's profile page.
 
-**Therapist Profile Page** 
+**Therapist Profile Page**
 
-**Sarah Johnson, LMHC** 
+**Sarah Johnson, LMHC**
 
-“I believe therapy should be…” 
+“I believe therapy should be…”
 
-**Works With** 
+**Works With**
 
-• Adults 
+• Adults
 
-• Couples 
+• Couples
 
-**Specialties** 
+**Specialties**
 
-• Anxiety 
+• Anxiety
 
-• Trauma 
+• Trauma
 
-• Life Transitions 
+• Life Transitions
 
-• Burnout 
+• Burnout
 
 **Therapeutic Approaches**  
-• CBT 
+• CBT
 
-• ACT 
+• ACT
 
-• EMDR 
+• EMDR
 
-**Appointment Options** 
+**Appointment Options**
 
-• In-person 
+• In-person
 
-• Telehealth 
+• Telehealth
 
-**Call to Action** 
+**Call to Action**
 
-**Book Appointment** 
+**Book Appointment**
 
 This button takes visitors to the appointment booking page.

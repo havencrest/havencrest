@@ -1,34 +1,29 @@
-**Why Choose Havencrest?** 
+**Why Choose Havencrest?**
 
-We're committed to making quality mental healthcare accessible, personalised, and centred around your needs. We believe the best care is collaborative, which is why you'll be an active participant in your journey. Together, we'll develop meaningful goals, monitor your progress, and adapt your care as your needs evolve. 
+We're committed to making quality mental healthcare accessible, personalised, and centred around your needs. We believe the best care is collaborative, which is why you'll be an active participant in your journey. Together, we'll develop meaningful goals, monitor your progress, and adapt your care as your needs evolve.
 
-***Cards to be designed*** 
+_**Cards to be designed**_
 
- 
+_**Card 1**_
 
-***Card 1*** 
+Flexible appointments
 
-Flexible appointments 
+Appointments are available seven days a week, with morning, daytime, and evening availability to fit your schedule.
 
-Appointments are available seven days a week, with morning, daytime, and evening availability to fit your schedule. 
+_**Card 2**_
 
- 
+Diverse Clinical Team
 
-***Card 2*** 
+Our clinicians offer a range of specialities, backgrounds, and therapeutic approaches to help you find the right fit
 
-Diverse Clinical Team 
+_**Card 3**_
 
-Our clinicians offer a range of specialities, backgrounds, and therapeutic approaches to help you find the right fit 
+Secure Telehealth
 
-***Card 3*** 
+Connect with your clinician securely from a location that works best for you.
 
-Secure Telehealth 
+_**Card 4**_
 
-Connect with your clinician securely from a location that works best for you. 
+Insurance Across Washington
 
-***Card 4*** 
-
-Insurance Across Washington 
-
-We work with a range if insurance providers to help quality mental healthcare more accessible across Washington.  
-
+We work with a range if insurance providers to help quality mental healthcare more accessible across Washington.

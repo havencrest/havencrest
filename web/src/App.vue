@@ -1,7 +1,7 @@
 <template>
-  <div class="flex min-h-screen flex-col bg-white text-neutral-900">
+  <div class="flex min-h-screen flex-col bg-background text-text">
     <AppHeader />
-    <main class="flex-1 pt-[6.5rem] lg:pt-[7.5rem]">
+    <main class="flex-1 pt-[4.5rem] lg:pt-[5.5rem]">
       <RouterView />
     </main>
     <AppFooter />

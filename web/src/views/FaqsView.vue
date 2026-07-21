@@ -12,23 +12,23 @@
           <details
             v-for="(item, i) in faqs"
             :key="i"
-            class="group rounded-xl border border-neutral-200 px-5 py-4 open:bg-neutral-50"
+            class="group rounded-lg border border-text/10 px-5 py-4 open:bg-background"
           >
             <summary
-              class="lg:text-body-lg text-body flex cursor-pointer items-center justify-between font-medium text-neutral-900"
+              class="text-body flex cursor-pointer items-center justify-between text-text font-bold"
             >
               {{ item.q }}
-              <span class="text-brand transition group-open:rotate-45">+</span>
+              <span class="text-primary transition group-open:rotate-45">+</span>
             </summary>
-            <p class="lg:text-body-lg text-body mt-3 text-neutral-600">{{ item.a }}</p>
+            <p class="text-body mt-3 text-text/80">{{ item.a }}</p>
           </details>
         </div>
 
         <div class="mt-16 text-center">
-          <p class="lg:text-body-lg text-body text-neutral-600">Still have questions?</p>
+          <p class="text-body text-text/80">Still have questions?</p>
           <router-link
             to="/contact"
-            class="mt-4 inline-flex items-center justify-center rounded-lg bg-brand px-5 py-3 text-body font-medium text-white hover:bg-neutral-900"
+            class="mt-4 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
             >Contact us</router-link
           >
         </div>

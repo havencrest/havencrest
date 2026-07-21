@@ -1,23 +1,28 @@
 <template>
   <div v-if="therapist">
-    <section class="border-b border-neutral-200 bg-neutral-50">
+    <section class="bg-background">
       <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 lg:grid-cols-3 lg:py-24">
         <div
-          class="flex aspect-square items-center justify-center rounded-2xl bg-white text-neutral-400"
+          class="flex aspect-square items-center justify-center rounded-lg bg-white text-text/40"
         >
-          <span class="text-display-lg">{{ initials }}</span>
+          <span class="text-display font-display">{{ initials }}</span>
         </div>
         <div class="lg:col-span-2">
-          <p class="lg:text-metadata-lg text-metadata uppercase text-brand">Therapist</p>
-          <h1 class="lg:text-display-lg text-display mt-2 text-neutral-900">
+          <p class="text-label uppercase text-accent">Therapist</p>
+          <h1 class="text-display font-display mt-2 text-text">
             {{ therapist.name }}, {{ therapist.credentials }}
           </h1>
-          <p class="lg:text-body-lg text-body mt-6 max-w-2xl italic text-neutral-600">
-            "{{ therapist.quote }}"
-          </p>
+          <blockquote class="relative mt-6 max-w-2xl pl-6">
+            <span
+              class="text-display font-display absolute -top-4 left-0 leading-none text-secondary"
+              aria-hidden="true"
+              >“</span
+            >
+            <p class="text-body text-text/80 italic">{{ therapist.quote }}</p>
+          </blockquote>
           <router-link
             to="/request-appointment"
-            class="mt-8 inline-flex items-center justify-center rounded-lg bg-brand px-5 py-3 text-body font-medium text-white hover:bg-neutral-900"
+            class="mt-8 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
             >Book appointment</router-link
           >
         </div>
@@ -37,8 +42,8 @@
   </div>
 
   <div v-else class="mx-auto max-w-7xl px-4 py-24 text-center">
-    <h1 class="lg:text-h1-lg text-h1 text-neutral-900">Therapist not found</h1>
-    <router-link to="/therapists" class="text-brand hover:underline"
+    <h1 class="text-h1 font-display text-text">Therapist not found</h1>
+    <router-link to="/therapists" class="text-primary hover:underline"
       >Back to all therapists</router-link
     >
   </div>
@@ -65,19 +70,11 @@ const ProfileList = defineComponent({
   setup(props) {
     return () =>
       h("div", null, [
-        h(
-          "p",
-          {
-            class: "lg:text-metadata-lg text-metadata uppercase text-neutral-600",
-          },
-          props.title,
-        ),
+        h("p", { class: "text-label uppercase text-accent" }, props.title),
         h(
           "ul",
           { class: "mt-4 space-y-2" },
-          props.items.map((i) =>
-            h("li", { class: "lg:text-body-lg text-body text-neutral-900" }, i),
-          ),
+          props.items.map((i) => h("li", { class: "text-body text-text" }, i)),
         ),
       ]);
   },

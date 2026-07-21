@@ -1,9 +1,5 @@
 <template>
-  <router-link
-    v-if="to"
-    :to="to"
-    :class="classes"
-  >
+  <router-link v-if="to" :to="to" :class="classes">
     <slot />
   </router-link>
   <a v-else-if="href" :href="href" :class="classes">
@@ -27,13 +23,13 @@ const props = defineProps({
 defineEmits(["click"]);
 
 const base =
-  "inline-flex items-center justify-center rounded-lg px-5 py-3 text-body font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2";
+  "inline-flex items-center justify-center rounded-md px-6 py-3 text-body transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2";
 
 const styles = {
-  primary: "bg-brand text-white hover:bg-neutral-900",
-  secondary: "border border-neutral-300 bg-white text-neutral-900 hover:border-neutral-900",
-  dark: "bg-neutral-900 text-white hover:bg-neutral-700",
-  ghost: "text-neutral-900 hover:underline",
+  primary: "bg-primary text-haven-cream hover:brightness-90",
+  secondary: "bg-secondary text-haven-cream hover:brightness-90",
+  outline: "border border-text/30 bg-transparent text-text hover:border-primary hover:text-primary",
+  ghost: "text-primary hover:underline",
 };
 
 const classes = computed(() => `${base} ${styles[props.variant] || styles.primary}`);

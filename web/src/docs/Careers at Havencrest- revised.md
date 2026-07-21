@@ -54,10 +54,10 @@ Autonomy is supported by access to consultation, opportunities for reflection, a
 
 Depending on your role, opportunities may include:
 
-* Flexible scheduling  
-* Morning, evening, and weekend appointments  
-* Secure telehealth  
-* Hybrid working arrangements
+- Flexible scheduling
+- Morning, evening, and weekend appointments
+- Secure telehealth
+- Hybrid working arrangements
 
 ---
 
@@ -67,10 +67,10 @@ We believe clinicians do their best work when they feel supported both professio
 
 Benefits may include:
 
-* Flexible remote working options  
-* Clinical supervision  
-* Administrative support  
-* A respectful, inclusive, and values-driven workplace
+- Flexible remote working options
+- Clinical supervision
+- Administrative support
+- A respectful, inclusive, and values-driven workplace
 
 ---
 
@@ -78,13 +78,13 @@ Benefits may include:
 
 You may feel at home at Havencrest if you:
 
-* Value meaningful therapeutic relationships.  
-* Believe every client deserves individualised, evidence-based care.  
-* Approach your work with curiosity and humility.  
-* Welcome reflection as part of professional growth.  
-* Value autonomy while recognising the importance of consultation.  
-* Appreciate authentic human connection alongside clinical expertise.  
-* Want to build a career in a practice committed to clinical excellence.
+- Value meaningful therapeutic relationships.
+- Believe every client deserves individualised, evidence-based care.
+- Approach your work with curiosity and humility.
+- Welcome reflection as part of professional growth.
+- Value autonomy while recognising the importance of consultation.
+- Appreciate authentic human connection alongside clinical expertise.
+- Want to build a career in a practice committed to clinical excellence.
 
 ---
 
@@ -94,5 +94,4 @@ We're always interested in connecting with clinicians who share our commitment t
 
 If you're looking for a practice where your expertise is respected, your growth is encouraged, and your work hasmeaningful impact, we'd love to hear from you.
 
-**View Current Opportunities *(link)***
-
+**View Current Opportunities _(link)_**

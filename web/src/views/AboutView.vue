@@ -6,16 +6,16 @@
       subtitle="At Havencrest, we believe meaningful mental healthcare starts with understanding the person behind every story."
     />
 
-    <section class="border-b border-neutral-200 bg-white">
+    <section class="bg-white">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
           <div class="lg:col-span-1">
-            <p class="lg:text-metadata-lg text-metadata uppercase text-brand">Our approach</p>
-            <h2 class="lg:text-h1-lg text-h1 mt-3 text-neutral-900">
-              Care shaped by curiosity, judgement and connection.
+            <p class="text-label mb-3 uppercase text-accent">Our approach</p>
+            <h2 class="text-h1 font-display text-text">
+              Care shaped by curiosity, judgement, and connection.
             </h2>
           </div>
-          <div class="lg:text-body-lg text-body space-y-5 text-neutral-600 lg:col-span-2">
+          <div class="text-body max-w-measure space-y-5 text-text/80 lg:col-span-2">
             <p>
               As a multidisciplinary mental health practice, we bring together evidence-based care,
               thoughtful clinical judgement, and genuine human connection to support individuals,
@@ -23,18 +23,18 @@
             </p>
             <p>
               Our approach is grounded in the belief that every person deserves to feel understood,
-              respected, and supported by clinicians who take the time to listen, adapt, and
-              provide care that reflects their unique needs and goals.
+              respected, and supported by clinicians who take the time to listen, adapt, and provide
+              care that reflects their unique needs and goals.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="border-b border-neutral-200 bg-neutral-50">
+    <section class="bg-background">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <SectionHeading eyebrow="Our story" title="How Havencrest came to be." />
-        <div class="lg:text-body-lg text-body max-w-3xl space-y-5 text-neutral-600">
+        <div class="text-body max-w-measure space-y-5 text-text/80">
           <p>
             Havencrest is founded with a clear belief: exceptional mental healthcare begins with
             exceptional clinical practice.
@@ -54,7 +54,7 @@
       </div>
     </section>
 
-    <section class="border-b border-neutral-200 bg-white">
+    <section class="bg-white">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <SectionHeading
           eyebrow="Our foundational philosophy"
@@ -79,7 +79,7 @@
       </div>
     </section>
 
-    <section class="border-b border-neutral-200 bg-neutral-50">
+    <section class="bg-background">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <SectionHeading eyebrow="What we stand for" title="Values that guide every session." />
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -116,12 +116,12 @@
       <template #actions>
         <router-link
           to="/therapists"
-          class="inline-flex items-center justify-center rounded-lg bg-brand px-5 py-3 text-body font-medium text-white hover:bg-neutral-900"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
           >Meet our therapists</router-link
         >
         <router-link
           to="/request-appointment"
-          class="inline-flex items-center justify-center rounded-lg border border-neutral-300 bg-white px-5 py-3 text-body font-medium text-neutral-900 hover:border-neutral-900"
+          class="inline-flex items-center justify-center rounded-md border border-text/30 px-6 py-3 text-body text-text hover:border-primary hover:text-primary"
           >Request appointment</router-link
         >
       </template>

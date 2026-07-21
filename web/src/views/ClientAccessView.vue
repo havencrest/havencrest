@@ -19,7 +19,7 @@
                 href="#"
                 target="_blank"
                 rel="noopener"
-                class="inline-flex items-center justify-center rounded-lg bg-brand px-5 py-3 text-body font-medium text-white hover:bg-neutral-900"
+                class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
                 >Open client portal ↗</a
               >
             </template>
@@ -32,29 +32,29 @@
             <template #actions>
               <router-link
                 to="/request-appointment"
-                class="inline-flex items-center justify-center rounded-lg bg-brand px-5 py-3 text-body font-medium text-white hover:bg-neutral-900"
+                class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
                 >Start here →</router-link
               >
             </template>
           </InfoCard>
         </div>
 
-        <div class="mt-16 rounded-2xl border border-neutral-200 bg-neutral-50 p-6 lg:p-10">
-          <h3 class="lg:text-h2-lg text-h2 text-neutral-900">Having trouble signing in?</h3>
-          <p class="lg:text-body-lg text-body mt-3 text-neutral-600">
+        <div class="mt-16 rounded-lg border border-text/10 bg-background p-6 lg:p-10">
+          <h3 class="text-h2 font-display text-text">Having trouble signing in?</h3>
+          <p class="text-body mt-3 text-text/80">
             If you can't access your account, please contact our team for assistance.
           </p>
-          <ul class="lg:text-body-lg text-body mt-4 space-y-2 text-neutral-900">
+          <ul class="text-body mt-4 space-y-2 text-text">
+            <li><a href="tel:+13604747990" class="hover:text-primary">Phone: 360-474-7990</a></li>
             <li>
-              <a href="tel:+13604747990" class="hover:text-brand">Phone: 360-474-7990</a>
-            </li>
-            <li>
-              <a href="mailto:info@havencrestcounseling.com" class="hover:text-brand"
+              <a href="mailto:info@havencrestcounseling.com" class="hover:text-primary"
                 >Email: info@havencrestcounseling.com</a
               >
             </li>
             <li>
-              <router-link to="/contact" class="text-brand hover:underline">Contact us →</router-link>
+              <router-link to="/contact" class="text-primary hover:underline"
+                >Contact us →</router-link
+              >
             </li>
           </ul>
         </div>

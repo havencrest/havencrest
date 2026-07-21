@@ -1,6 +1,6 @@
-**Havencrest – Patient Portal** 
+**Havencrest – Patient Portal**
 
-***(What is says on the page)***
+_**(What is says on the page)**_
 
 **Client Access**
 
@@ -8,28 +8,28 @@
 
 Choose the option that matches where you are in your journey with Havencrest.
 
-***(2 cards)***
+_**(2 cards)**_
 
-***Card 1:***
+_**Card 1:**_
 
-**I am an Existing client** 
+**I am an Existing client**
 
-Log in to your secure portal to manage appointments, complete forms, send secure message, and view your care information 
+Log in to your secure portal to manage appointments, complete forms, send secure message, and view your care information
 
-Open client portal- ***tab***
+Open client portal- _**tab**_
 
 **I am New to Havencrest**
 
 We’re here to help you take the first step. Complete a secure appointment request, and we will guide you to the clinician and care that’s right for you.
 
-Start here- ***tab should link you to the request appointment page***
+Start here- _**tab should link you to the request appointment page**_
 
-**Having trouble signing in?** 
+**Having trouble signing in?**
 
-If you can’t access your account, please contact our team for assistance. 
+If you can’t access your account, please contact our team for assistance.
 
-Phone 
+Phone
 
-Email 
+Email
 
-Contact Us   
+Contact Us

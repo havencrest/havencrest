@@ -8,13 +8,13 @@
       <template #actions>
         <router-link
           to="/careers/opportunities"
-          class="inline-flex items-center justify-center rounded-lg bg-brand px-5 py-3 text-body font-medium text-white hover:bg-neutral-900"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
           >View current opportunities</router-link
         >
       </template>
     </PageHero>
 
-    <section class="border-b border-neutral-200 bg-white">
+    <section class="bg-white">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <SectionHeading
           eyebrow="Why we show up"
@@ -24,7 +24,7 @@
       </div>
     </section>
 
-    <section class="border-b border-neutral-200 bg-neutral-50">
+    <section class="bg-background">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <SectionHeading eyebrow="Culture principles" title="How we work together." />
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -57,12 +57,12 @@
       </div>
     </section>
 
-    <section class="border-b border-neutral-200 bg-white">
+    <section class="bg-white">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
           <div>
             <SectionHeading title="Flexible ways of working" />
-            <ul class="lg:text-body-lg text-body space-y-3 text-neutral-700">
+            <ul class="text-body space-y-3 text-text/80">
               <li>• Flexible scheduling</li>
               <li>• Morning, evening, and weekend appointments</li>
               <li>• Secure telehealth</li>
@@ -71,7 +71,7 @@
           </div>
           <div>
             <SectionHeading title="Benefits" />
-            <ul class="lg:text-body-lg text-body space-y-3 text-neutral-700">
+            <ul class="text-body space-y-3 text-text/80">
               <li>• Flexible remote working options</li>
               <li>• Clinical supervision</li>
               <li>• Administrative support</li>
@@ -82,15 +82,13 @@
       </div>
     </section>
 
-    <section class="border-b border-neutral-200 bg-neutral-50">
+    <section class="bg-background">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <SectionHeading
           eyebrow="Is Havencrest right for you?"
           title="You may feel at home at Havencrest if you…"
         />
-        <ul
-          class="lg:text-body-lg text-body grid grid-cols-1 gap-4 text-neutral-700 md:grid-cols-2"
-        >
+        <ul class="text-body grid grid-cols-1 gap-4 text-text/80 md:grid-cols-2">
           <li>• Value meaningful therapeutic relationships.</li>
           <li>• Believe every client deserves individualised, evidence-based care.</li>
           <li>• Approach your work with curiosity and humility.</li>
@@ -109,7 +107,7 @@
       <template #actions>
         <router-link
           to="/careers/opportunities"
-          class="inline-flex items-center justify-center rounded-lg bg-brand px-5 py-3 text-body font-medium text-white hover:bg-neutral-900"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
           >View current opportunities</router-link
         >
       </template>

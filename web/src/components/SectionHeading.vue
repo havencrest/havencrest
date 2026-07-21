@@ -1,10 +1,10 @@
 <template>
   <div class="mb-10 max-w-3xl lg:mb-14">
-    <p v-if="eyebrow" class="lg:text-metadata-lg text-metadata mb-3 uppercase text-brand">
+    <p v-if="eyebrow" class="text-label mb-3 uppercase text-accent">
       {{ eyebrow }}
     </p>
-    <h2 class="lg:text-h1-lg text-h1 text-neutral-900">{{ title }}</h2>
-    <p v-if="subtitle" class="lg:text-body-lg text-body mt-4 text-neutral-600">
+    <h2 class="text-h1 font-display text-text">{{ title }}</h2>
+    <p v-if="subtitle" class="text-body mt-4 text-text/80">
       {{ subtitle }}
     </p>
   </div>

@@ -14,7 +14,7 @@
             <template #actions>
               <router-link
                 :to="`/services/${s.slug}`"
-                class="text-body font-medium text-brand hover:underline"
+                class="text-label uppercase text-primary hover:underline"
                 >Learn more →</router-link
               >
             </template>
@@ -30,12 +30,12 @@
       <template #actions>
         <router-link
           to="/request-appointment"
-          class="inline-flex items-center justify-center rounded-lg bg-brand px-5 py-3 text-body font-medium text-white hover:bg-neutral-900"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
           >Request appointment</router-link
         >
         <router-link
           to="/contact"
-          class="inline-flex items-center justify-center rounded-lg border border-neutral-300 bg-white px-5 py-3 text-body font-medium text-neutral-900 hover:border-neutral-900"
+          class="inline-flex items-center justify-center rounded-md border border-text/30 px-6 py-3 text-body text-text hover:border-primary hover:text-primary"
           >Contact us</router-link
         >
       </template>

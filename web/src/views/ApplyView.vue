@@ -9,7 +9,7 @@
     <section class="bg-white">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <form
-          class="mx-auto max-w-2xl space-y-6 rounded-2xl border border-neutral-200 bg-white p-6 lg:p-10"
+          class="mx-auto max-w-2xl space-y-6 rounded-lg border border-text/10 bg-background p-6 lg:p-10"
           @submit.prevent
         >
           <FormField label="Full name" name="name" />
@@ -19,7 +19,7 @@
           <FormField label="Tell us about your experience" name="message" type="textarea" />
           <button
             type="submit"
-            class="inline-flex w-full items-center justify-center rounded-lg bg-brand px-5 py-3 text-body font-medium text-white hover:bg-neutral-900"
+            class="inline-flex w-full items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
           >
             Submit application
           </button>
@@ -37,14 +37,10 @@ const FormField = defineComponent({
   props: { label: String, name: String, type: { type: String, default: "text" } },
   setup(props) {
     const inputClass =
-      "w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-body text-neutral-900 focus:border-brand focus:outline-none";
+      "w-full rounded-md border border-text/20 bg-white px-4 py-3 text-body text-text focus:border-primary focus:outline-none";
     return () =>
       h("label", { class: "block" }, [
-        h(
-          "span",
-          { class: "lg:text-metadata-lg text-metadata uppercase text-neutral-600" },
-          props.label,
-        ),
+        h("span", { class: "text-label uppercase text-accent" }, props.label),
         props.type === "textarea"
           ? h("textarea", {
               name: props.name,

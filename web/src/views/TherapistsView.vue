@@ -12,29 +12,25 @@
           <article
             v-for="t in therapists"
             :key="t.slug"
-            class="flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white"
+            class="flex flex-col overflow-hidden rounded-lg border border-text/10 bg-background"
           >
-            <div
-              class="flex aspect-[4/3] items-center justify-center bg-neutral-100 text-neutral-400"
-            >
-              <span class="lg:text-h1-lg text-h1">{{ initials(t) }}</span>
+            <div class="flex aspect-[4/3] items-center justify-center bg-text/5 text-text/40">
+              <span class="text-h1 font-display">{{ initials(t) }}</span>
             </div>
             <div class="flex flex-1 flex-col p-6">
-              <h3 class="lg:text-h2-lg text-h2 text-neutral-900">
-                {{ t.name }}, {{ t.credentials }}
-              </h3>
-              <p class="lg:text-footnote-lg text-footnote mt-1 text-neutral-600">
+              <h3 class="text-h2 font-display text-text">{{ t.name }}, {{ t.credentials }}</h3>
+              <p class="text-label mt-2 uppercase text-accent">
                 {{ t.populations.join(" • ") }}
               </p>
-              <p class="text-body mt-3 text-neutral-700">
+              <p class="text-body mt-3 text-text/80">
                 {{ t.specialties.join(" • ") }}
               </p>
-              <p class="lg:text-footnote-lg text-footnote mt-3 text-neutral-600">
+              <p class="text-body mt-3 text-text/60">
                 {{ t.appointmentTypes.join(" | ") }}
               </p>
               <router-link
                 :to="`/therapists/${t.slug}`"
-                class="mt-6 text-body font-medium text-brand hover:underline"
+                class="text-label mt-6 uppercase text-primary hover:underline"
                 >View profile →</router-link
               >
             </div>
