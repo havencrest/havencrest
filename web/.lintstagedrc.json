@@ -1,0 +1,3 @@
+{
+  "*.{js,ts,mjs,cts,mts,vue}": ["oxlint --fix", "oxfmt --no-error-on-unmatched-pattern"]
+}

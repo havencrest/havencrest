@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "plugins": ["import", "typescript", "unicorn"],
+  "env": {
+    "browser": true,
+    "es2024": true
+  },
+  "rules": {
+    // Side-effect imports (global CSS, polyfills) are legit in Vue/Vite.
+    "import/no-unassigned-import": "off"
+  }
+}
