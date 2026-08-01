@@ -3,7 +3,7 @@ export const services = [
     slug: "couples-therapy",
     title: "Couples Therapy",
     what: "A supportive space for partners to strengthen their relationship, improve communication, and work through challenges together.",
-    when: "Communication difficulties, conflict, trust concerns, parenting challenges, intimacy concerns, premarital counselling, and major life changes.",
+    when: "Communication difficulties, conflict, trust concerns, parenting challenges, intimacy concerns, premarital counseling, and major life changes.",
     expect:
       "Your therapist will help you understand relationship patterns, improve communication, and develop practical strategies.",
   },
@@ -11,23 +11,23 @@ export const services = [
     slug: "family-therapy",
     title: "Family Therapy",
     what: "Helps family members improve communication, strengthen relationships, and navigate challenges together.",
-    when: "Family conflict, parenting challenges, blended families, behavioural concerns, life transitions, grief, and communication difficulties.",
+    when: "Family conflict, parenting challenges, blended families, behavioral concerns, life transitions, grief, and communication difficulties.",
     expect: "Sessions focus on understanding family dynamics and working toward shared goals.",
   },
   {
     slug: "child-adolescent-therapy",
     title: "Child & Adolescent Therapy",
-    what: "Supports children and teenagers through emotional, behavioural, social, and developmental challenges.",
-    when: "Anxiety, school concerns, behavioural challenges, social difficulties, family changes, grief, and self-esteem.",
+    what: "Supports children and teenagers through emotional, behavioral, social, and developmental challenges.",
+    when: "Anxiety, school concerns, behavioral challenges, social difficulties, family changes, grief, and self-esteem.",
     expect:
       "Care is tailored to the child's developmental needs while partnering with parents when appropriate.",
   },
   {
     slug: "psychological-assessments",
     title: "Psychological Assessments",
-    what: "A structured evaluation to better understand cognitive, emotional, behavioural, or developmental functioning.",
+    what: "A structured evaluation to better understand cognitive, emotional, behavioral, or developmental functioning.",
     when: "ADHD, autism, learning difficulties, diagnostic clarification, accommodations, and treatment planning.",
-    expect: "May include interviews, questionnaires, standardised testing, and a written report.",
+    expect: "May include interviews, questionnaires, standardized testing, and a written report.",
   },
   {
     slug: "telehealth-services",

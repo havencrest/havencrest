@@ -23,7 +23,7 @@ const props = defineProps({
 defineEmits(["click"]);
 
 const base =
-  "inline-flex items-center justify-center rounded-md px-6 py-3 text-body transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2";
+  "inline-flex items-center justify-center rounded-md px-6 py-3 text-body transition duration-200 ease-out motion-safe:hover:-translate-y-px motion-safe:active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2";
 
 const styles = {
   primary: "bg-primary text-haven-cream hover:brightness-90",

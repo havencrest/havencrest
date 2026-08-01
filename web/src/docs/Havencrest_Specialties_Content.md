@@ -1,4 +1,4 @@
-**Havencrest Specialities Page**
+**Havencrest Specialties Page**
 
 The way we experience mental health is deeply personal and doesn’t always fit into a single category. Explore the concerns we commonly support, and if you’re unsure where your experience fits, we still encourage you to reach out.
 
@@ -150,7 +150,7 @@ You don't need to know exactly what you're experiencing before reaching out. If 
 Children and teens experience mental health challenges differently from adults.
 
 **You may recognize this if...**  
-You may recognize this if your child shows changes in mood, behaviour, friendships, school performance, or emotional regulation.
+You may recognize this if your child shows changes in mood, behavior, friendships, school performance, or emotional regulation.
 
 **How can we help?**  
 We provide age-appropriate support while working collaboratively with families.

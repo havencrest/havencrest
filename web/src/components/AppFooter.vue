@@ -72,10 +72,10 @@
               <span class="text-body text-haven-cream">360-447-5250</span>
             </div>
             <div class="flex items-start gap-2">
-              <span class="text-label uppercase text-haven-cream">Email</span>
+              <span class="text-label shrink-0 uppercase text-haven-cream">Email</span>
               <a
                 href="mailto:info@havencrestcounseling.com"
-                class="text-body text-haven-cream hover:underline"
+                class="text-body min-w-0 break-words text-haven-cream hover:underline"
                 >info@havencrestcounseling.com</a
               >
             </div>

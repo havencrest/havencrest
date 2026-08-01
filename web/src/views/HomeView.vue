@@ -46,7 +46,7 @@
         <SectionHeading
           eyebrow="Why Havencrest"
           title="Care built around your needs."
-          subtitle="We're committed to making quality mental healthcare accessible, personalised, and centred around your needs. We believe the best care is collaborative, which is why you'll be an active participant in your journey. Together, we'll develop meaningful goals, monitor your progress, and adapt your care as your needs evolve."
+          subtitle="We're committed to making quality mental healthcare accessible, personalized, and centered around your needs. We believe the best care is collaborative, which is why you'll be an active participant in your journey. Together, we'll develop meaningful goals, monitor your progress, and adapt your care as your needs evolve."
         />
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           <InfoCard title="Flexible appointments">
@@ -57,7 +57,7 @@
           </InfoCard>
           <InfoCard title="Diverse clinical team">
             <p>
-              Our clinicians offer a range of specialities, backgrounds, and therapeutic approaches
+              Our clinicians offer a range of specialties, backgrounds, and therapeutic approaches
               to help you find the right fit.
             </p>
           </InfoCard>
@@ -87,11 +87,7 @@
             <p><span class="text-text font-bold">What is it?</span> {{ s.what }}</p>
             <p><span class="text-text font-bold">When might it be helpful?</span> {{ s.when }}</p>
             <template #actions>
-              <router-link
-                :to="`/services/${s.slug}`"
-                class="text-label uppercase text-primary hover:underline"
-                >Learn more →</router-link
-              >
+              <ArrowLink :to="`/services/${s.slug}`">Learn more</ArrowLink>
             </template>
           </InfoCard>
         </div>
@@ -130,6 +126,7 @@ import { computed } from "vue";
 import SectionHeading from "@/components/SectionHeading.vue";
 import InfoCard from "@/components/InfoCard.vue";
 import CTABlock from "@/components/CTABlock.vue";
+import ArrowLink from "@/components/ArrowLink.vue";
 import { services } from "@/data/services";
 
 const previewServices = computed(() => services.slice(0, 3));

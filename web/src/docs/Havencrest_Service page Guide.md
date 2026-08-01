@@ -2,7 +2,7 @@
 
 **Thoughtful care, tailored to you.**
 
-No two people experience life's challenges in the same way. That's why we provide personalised mental healthcare designed around your unique needs, goals and circumstances
+No two people experience life's challenges in the same way. That's why we provide personalized mental healthcare designed around your unique needs, goals and circumstances
 
 Explore our services below to learn more.
 
@@ -22,7 +22,7 @@ A supportive space for partners to strengthen their relationship, improve commun
 
 **When might it be helpful?**
 
-Communication difficulties, conflict, trust concerns, parenting challenges, intimacy concerns, premarital counselling, and major life changes.
+Communication difficulties, conflict, trust concerns, parenting challenges, intimacy concerns, premarital counseling, and major life changes.
 
 **What can I expect?**
 
@@ -36,7 +36,7 @@ Helps family members improve communication, strengthen relationships, and naviga
 
 **When might it be helpful?**
 
-Family conflict, parenting challenges, blended families, behavioural concerns, life transitions, grief, and communication difficulties.
+Family conflict, parenting challenges, blended families, behavioral concerns, life transitions, grief, and communication difficulties.
 
 **What can I expect?**
 
@@ -44,11 +44,11 @@ Sessions focus on understanding family dynamics and working toward shared goals.
 
 **What is it?**
 
-Supports children and teenagers through emotional, behavioural, social, and developmental challenges.
+Supports children and teenagers through emotional, behavioral, social, and developmental challenges.
 
 **When might it be helpful?**
 
-Anxiety, school concerns, behavioural challenges, social difficulties, family changes, grief, and self-esteem.
+Anxiety, school concerns, behavioral challenges, social difficulties, family changes, grief, and self-esteem.
 
 **What can I expect?**
 
@@ -57,7 +57,7 @@ Care is tailored to the child's developmental needs while partnering with parent
 
 **What is it?**
 
-A structured evaluation to better understand cognitive, emotional, behavioural, or developmental functioning.
+A structured evaluation to better understand cognitive, emotional, behavioral, or developmental functioning.
 
 **When might it be helpful?**
 
@@ -65,7 +65,7 @@ ADHD, autism, learning difficulties, diagnostic clarification, accommodations, a
 
 **What can I expect?**
 
-May include interviews, questionnaires, standardised testing, and a written report. **Telehealth Services**
+May include interviews, questionnaires, standardized testing, and a written report. **Telehealth Services**
 
 **What is it?**
 

@@ -84,7 +84,7 @@ export const specialties = [
     title: "Child & Adolescent Mental Health",
     what: "Children and teens experience mental health challenges differently from adults.",
     recognize:
-      "You may recognize this if your child shows changes in mood, behaviour, friendships, school performance, or emotional regulation.",
+      "You may recognize this if your child shows changes in mood, behavior, friendships, school performance, or emotional regulation.",
     help: "We provide age-appropriate support while working collaboratively with families.",
   },
   {

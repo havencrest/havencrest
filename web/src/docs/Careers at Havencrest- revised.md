@@ -4,9 +4,9 @@
 
 Exceptional mental healthcare begins with exceptional clinicians.
 
-At Havencrest, we're building a practice where clinicians are trusted to exercise their expertise, supported in their professional growth, and encouraged to provide care that is thoughtful, evidence-based, and deeply person-centred.
+At Havencrest, we're building a practice where clinicians are trusted to exercise their expertise, supported in their professional growth, and encouraged to provide care that is thoughtful, evidence-based, and deeply person-centered.
 
-We believe great clinicians never stop learning. They remain curious, reflect on their practice, and continue refining their clinical judgement throughout their careers. Our role is to create an environment where that growth can flourish, for the benefit of both clinicians and the people they serve.
+We believe great clinicians never stop learning. They remain curious, reflect on their practice, and continue refining their clinical judgment throughout their careers. Our role is to create an environment where that growth can flourish, for the benefit of both clinicians and the people they serve.
 
 ---
 
@@ -14,7 +14,7 @@ We believe great clinicians never stop learning. They remain curious, reflect on
 
 Mental healthcare has the power to change lives, but meaningful care cannot be rushed or reduced to a one-size-fits-all approach.
 
-We exist to create a clinical environment where therapists have the freedom to practise with curiosity, integrity, and sound clinical judgement. By investing in our clinicians, we strengthen the care we provide to every individual, couple, and family who places their trust in Havencrest.
+We exist to create a clinical environment where therapists have the freedom to practice with curiosity, integrity, and sound clinical judgment. By investing in our clinicians, we strengthen the care we provide to every individual, couple, and family who places their trust in Havencrest.
 
 ---
 
@@ -22,29 +22,29 @@ We exist to create a clinical environment where therapists have the freedom to p
 
 ## **We Value Expertise**
 
-Every clinician brings unique knowledge, experience, and perspective. We respect the expertise each person contributes while recognising that every career offers opportunities for continued learning and growth.
+Every clinician brings unique knowledge, experience, and perspective. We respect the expertise each person contributes while recognizing that every career offers opportunities for continued learning and growth.
 
 ---
 
 ## **We Create Psychological Safety**
 
-Growth happens when people feel safe to ask questions, explore ideas, and acknowledge uncertainty without fear of judgement.
+Growth happens when people feel safe to ask questions, explore ideas, and acknowledge uncertainty without fear of judgment.
 
-We foster a culture of respect, openness, and constructive feedback, recognising that honest conversations and thoughtful reflection strengthen both clinicians and the care they provide.
+We foster a culture of respect, openness, and constructive feedback, recognizing that honest conversations and thoughtful reflection strengthen both clinicians and the care they provide.
 
 ---
 
-## **We Practise with Humility**
+## **We Practice with Humility**
 
 Expertise is not about having all the answers.
 
-We believe the strongest clinicians recognise that learning never ends. Humility allows us to reflect on our work, recognise blind spots, seek consultation when needed, and continually strengthen our practice.
+We believe the strongest clinicians recognize that learning never ends. Humility allows us to reflect on our work, recognize blind spots, seek consultation when needed, and continually strengthen our practice.
 
 ---
 
 ## **We Foster Clinical Autonomy**
 
-We trust our clinicians to exercise sound clinical judgement and practise in ways that reflect their professional expertise.
+We trust our clinicians to exercise sound clinical judgment and practice in ways that reflect their professional expertise.
 
 Autonomy is supported by access to consultation, opportunities for reflection, and shared clinical standards that help every clinician continue developing throughout their career.
 
@@ -79,10 +79,10 @@ Benefits may include:
 You may feel at home at Havencrest if you:
 
 - Value meaningful therapeutic relationships.
-- Believe every client deserves individualised, evidence-based care.
+- Believe every client deserves individualized, evidence-based care.
 - Approach your work with curiosity and humility.
 - Welcome reflection as part of professional growth.
-- Value autonomy while recognising the importance of consultation.
+- Value autonomy while recognizing the importance of consultation.
 - Appreciate authentic human connection alongside clinical expertise.
 - Want to build a career in a practice committed to clinical excellence.
 

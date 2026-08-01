@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-10 max-w-3xl lg:mb-14">
+  <div v-reveal class="mb-10 max-w-3xl lg:mb-14">
     <p v-if="eyebrow" class="text-label mb-3 uppercase text-accent">
       {{ eyebrow }}
     </p>

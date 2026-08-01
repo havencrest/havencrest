@@ -3,7 +3,7 @@
     <PageHero
       eyebrow="Services"
       title="Thoughtful care, tailored to you."
-      subtitle="No two people experience life's challenges in the same way. That's why we provide personalised mental healthcare designed around your unique needs, goals and circumstances. Explore our services below to learn more."
+      subtitle="No two people experience life's challenges in the same way. That's why we provide personalized mental healthcare designed around your unique needs, goals and circumstances. Explore our services below to learn more."
     />
 
     <section class="bg-white">

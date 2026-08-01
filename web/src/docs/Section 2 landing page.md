@@ -1,6 +1,6 @@
 **Why Choose Havencrest?**
 
-We're committed to making quality mental healthcare accessible, personalised, and centred around your needs. We believe the best care is collaborative, which is why you'll be an active participant in your journey. Together, we'll develop meaningful goals, monitor your progress, and adapt your care as your needs evolve.
+We're committed to making quality mental healthcare accessible, personalized, and centered around your needs. We believe the best care is collaborative, which is why you'll be an active participant in your journey. Together, we'll develop meaningful goals, monitor your progress, and adapt your care as your needs evolve.
 
 _**Cards to be designed**_
 
@@ -14,7 +14,7 @@ _**Card 2**_
 
 Diverse Clinical Team
 
-Our clinicians offer a range of specialities, backgrounds, and therapeutic approaches to help you find the right fit
+Our clinicians offer a range of specialties, backgrounds, and therapeutic approaches to help you find the right fit
 
 _**Card 3**_
 
