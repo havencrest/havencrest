@@ -3,7 +3,8 @@
     <PageHero
       eyebrow="Careers"
       title="Build the future of mental healthcare with us."
-      subtitle="Exceptional mental healthcare begins with exceptional clinicians. At Havencrest, we're building a practice where clinicians are trusted, supported, and encouraged to provide thoughtful, evidence-based, person-centred care."
+      subtitle="Exceptional mental healthcare begins with exceptional clinicians. At Havencrest, we're building a practice where clinicians are trusted, supported, and encouraged to provide thoughtful, evidence-based, person-centered care."
+      :image="media.careers"
     >
       <template #actions>
         <router-link
@@ -19,7 +20,7 @@
         <SectionHeading
           eyebrow="Why we show up"
           title="Meaningful care cannot be rushed."
-          subtitle="We exist to create a clinical environment where therapists have the freedom to practise with curiosity, integrity, and sound clinical judgement. By investing in our clinicians, we strengthen the care we provide to every individual, couple, and family who places their trust in Havencrest."
+          subtitle="We exist to create a clinical environment where therapists have the freedom to practice with curiosity, integrity, and sound clinical judgment. By investing in our clinicians, we strengthen the care we provide to every individual, couple, and family who places their trust in Havencrest."
         />
       </div>
     </section>
@@ -31,25 +32,25 @@
           <InfoCard title="We value expertise">
             <p>
               Every clinician brings unique knowledge, experience, and perspective. We respect the
-              expertise each person contributes while recognising every career offers opportunities
+              expertise each person contributes while recognizing every career offers opportunities
               for continued growth.
             </p>
           </InfoCard>
           <InfoCard title="We create psychological safety">
             <p>
-              We foster a culture of respect, openness, and constructive feedback, recognising that
+              We foster a culture of respect, openness, and constructive feedback, recognizing that
               honest conversations strengthen both clinicians and the care they provide.
             </p>
           </InfoCard>
-          <InfoCard title="We practise with humility">
+          <InfoCard title="We practice with humility">
             <p>
-              The strongest clinicians recognise that learning never ends. Humility allows us to
+              The strongest clinicians recognize that learning never ends. Humility allows us to
               reflect, seek consultation, and continually strengthen our practice.
             </p>
           </InfoCard>
           <InfoCard title="We foster clinical autonomy">
             <p>
-              We trust our clinicians to exercise sound clinical judgement, supported by
+              We trust our clinicians to exercise sound clinical judgment, supported by
               consultation, opportunities for reflection, and shared clinical standards.
             </p>
           </InfoCard>
@@ -90,10 +91,10 @@
         />
         <ul class="text-body grid grid-cols-1 gap-4 text-text/80 md:grid-cols-2">
           <li>• Value meaningful therapeutic relationships.</li>
-          <li>• Believe every client deserves individualised, evidence-based care.</li>
+          <li>• Believe every client deserves individualized, evidence-based care.</li>
           <li>• Approach your work with curiosity and humility.</li>
           <li>• Welcome reflection as part of professional growth.</li>
-          <li>• Value autonomy while recognising the importance of consultation.</li>
+          <li>• Value autonomy while recognizing the importance of consultation.</li>
           <li>• Appreciate authentic human connection alongside clinical expertise.</li>
           <li>• Want to build a career in a practice committed to clinical excellence.</li>
         </ul>
@@ -120,4 +121,5 @@ import PageHero from "@/components/PageHero.vue";
 import SectionHeading from "@/components/SectionHeading.vue";
 import InfoCard from "@/components/InfoCard.vue";
 import CTABlock from "@/components/CTABlock.vue";
+import { media } from "@/data/media";
 </script>

@@ -14,6 +14,6 @@
 
 We'd still love to hear from you.
 
-If you share our values and believe you'd be a great fit for Havencrest, we welcome expressions of interest from clinicians and professionals who are passionate about thoughtful, person-centred care.
+If you share our values and believe you'd be a great fit for Havencrest, we welcome expressions of interest from clinicians and professionals who are passionate about thoughtful, person-centered care.
 
 Contact us

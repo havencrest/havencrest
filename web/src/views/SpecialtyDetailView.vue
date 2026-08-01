@@ -1,6 +1,6 @@
 <template>
   <div v-if="specialty">
-    <PageHero eyebrow="Specialty" :title="specialty.title" />
+    <PageHero eyebrow="Specialty" :title="specialty.title" :image="specialty.image" />
 
     <section class="bg-white">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">

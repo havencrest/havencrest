@@ -4,6 +4,7 @@
       eyebrow="About Havencrest"
       title="Exceptional care begins with exceptional clinical practice."
       subtitle="At Havencrest, we believe meaningful mental healthcare starts with understanding the person behind every story."
+      :image="media.about"
     />
 
     <section class="bg-white">
@@ -12,13 +13,13 @@
           <div class="lg:col-span-1">
             <p class="text-label mb-3 uppercase text-accent">Our approach</p>
             <h2 class="text-h1 font-display text-text">
-              Care shaped by curiosity, judgement, and connection.
+              Care shaped by curiosity, judgment, and connection.
             </h2>
           </div>
           <div class="text-body max-w-measure space-y-5 text-text/80 lg:col-span-2">
             <p>
               As a multidisciplinary mental health practice, we bring together evidence-based care,
-              thoughtful clinical judgement, and genuine human connection to support individuals,
+              thoughtful clinical judgment, and genuine human connection to support individuals,
               couples, families, and children through every stage of life.
             </p>
             <p>
@@ -47,7 +48,7 @@
           </p>
           <p>
             Today, Havencrest brings together clinicians who share a commitment to providing
-            evidence-based, person-centred care in an environment that values continuous learning,
+            evidence-based, person-centered care in an environment that values continuous learning,
             professional excellence, and meaningful therapeutic relationships.
           </p>
         </div>
@@ -59,18 +60,18 @@
         <SectionHeading
           eyebrow="Our foundational philosophy"
           title="Exceptional care begins with exceptional clinical practice."
-          subtitle="Meaningful mental healthcare is shaped by more than clinical knowledge alone. It requires curiosity, thoughtful clinical judgement, humility, and genuine human connection."
+          subtitle="Meaningful mental healthcare is shaped by more than clinical knowledge alone. It requires curiosity, thoughtful clinical judgment, humility, and genuine human connection."
         />
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <InfoCard title="Our mission">
             <p>
               To improve lives by providing exceptional, evidence-based mental healthcare that is
-              person-centred, compassionate, and responsive to the unique needs of every individual.
+              person-centered, compassionate, and responsive to the unique needs of every individual.
             </p>
           </InfoCard>
           <InfoCard title="Our vision">
             <p>
-              To become a trusted mental health practice recognised for exceptional clinical care,
+              To become a trusted mental health practice recognized for exceptional clinical care,
               meaningful human connection, and a culture where both clinicians and clients can
               thrive.
             </p>
@@ -86,7 +87,7 @@
           <InfoCard title="A sanctuary of safety">
             <p>
               Feeling safe is the foundation of meaningful therapy. We are committed to creating a
-              space where you feel welcomed, respected, and free from judgement.
+              space where you feel welcomed, respected, and free from judgment.
             </p>
           </InfoCard>
           <InfoCard title="Human connection, guided by expertise">
@@ -98,14 +99,14 @@
           </InfoCard>
           <InfoCard title="Working at your pace">
             <p>
-              We meet you where you are, working alongside you to move towards realistic,
+              We meet you where you are, working alongside you to move toward realistic,
               meaningful, and achievable goals at a pace that feels right for you.
             </p>
           </InfoCard>
           <InfoCard title="Care that grows with you">
             <p>
               Your needs, goals, and circumstances may change over time — we provide responsive,
-              individualised support that adapts as you grow.
+              individualized support that adapts as you grow.
             </p>
           </InfoCard>
         </div>
@@ -134,4 +135,5 @@ import PageHero from "@/components/PageHero.vue";
 import SectionHeading from "@/components/SectionHeading.vue";
 import InfoCard from "@/components/InfoCard.vue";
 import CTABlock from "@/components/CTABlock.vue";
+import { media } from "@/data/media";
 </script>

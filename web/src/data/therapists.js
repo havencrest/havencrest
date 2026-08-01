@@ -1,3 +1,7 @@
+// Each therapist may include an optional `image` field — a portrait photo
+// imported into src/assets or placed in /public. When present it renders in
+// the therapist cards; when absent, a warm brand-tinted initials avatar is
+// shown instead. Example:  image: "/therapists/sarah-johnson.jpg",
 export const therapists = [
   {
     slug: "sarah-johnson",

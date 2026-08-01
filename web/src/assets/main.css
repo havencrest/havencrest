@@ -19,14 +19,14 @@
   --font-sans: "Lato", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   /* ───────────────────────────────
-     PALETTE  (§03 Colour) — five colours, each with one job.
+     PALETTE  (§03 Color) — five colors, each with one job.
      Do not add hues beyond these. Need a border or muted tint?
      Derive it, e.g.  color-mix(in srgb, var(--color-deep-plum) 12%, transparent)
      ─────────────────────────────── */
   --color-deep-plum: #230423; /* Primary text        */
   --color-root-olive: #4e5637; /* Accents / labels    */
-  --color-growth-green: #527646; /* Primary colour      */
-  --color-signal-plum: #762476; /* Secondary colour    */
+  --color-growth-green: #527646; /* Primary color       */
+  --color-signal-plum: #762476; /* Secondary color     */
   --color-haven-cream: #f7f4ed; /* Background          */
 
   /* Semantic aliases — reference roles, not hex, in components */
@@ -43,15 +43,18 @@
      Case is NOT a token — apply `uppercase` in markup where noted.
      ─────────────────────────────── */
 
-  /* H1 · Page title — Julius Sans One · 40/48 · UPPERCASE · +3% */
-  --text-h1: 2.5rem;
-  --text-h1--line-height: 3rem;
+  /* H1 · Page title — Julius Sans One · 40/48 · UPPERCASE · +3%
+     Mobile-first: fluid from ~30px on phones up to the brand's 40px.
+     Line-height is unitless so it tracks the size as it scales. */
+  --text-h1: clamp(1.875rem, 1.2rem + 3vw, 2.5rem);
+  --text-h1--line-height: 1.2;
   --text-h1--letter-spacing: 0.03em;
   --text-h1--font-weight: 400;
 
-  /* H2 · Section — Julius Sans One · 28/36 · UPPERCASE · +2% */
-  --text-h2: 1.75rem;
-  --text-h2--line-height: 2.25rem;
+  /* H2 · Section — Julius Sans One · 28/36 · UPPERCASE · +2%
+     Mobile-first: fluid from ~22px on phones up to the brand's 28px. */
+  --text-h2: clamp(1.375rem, 1rem + 1.9vw, 1.75rem);
+  --text-h2--line-height: 1.286;
   --text-h2--letter-spacing: 0.02em;
   --text-h2--font-weight: 400;
 
@@ -73,8 +76,10 @@
 
   /* Display / hero numerals (01–06, wordmark scale) — Julius Sans One.
      Not in the formal type table; sized to match the deck's section
-     numbers. Uppercase, letterspaced, single light weight. */
-  --text-display: 4rem;
+     numbers. Uppercase, letterspaced, single light weight.
+     Mobile-first: fluid from ~34px on phones up to the full 64px so long
+     single words (e.g. "PSYCHIATRIC") never force horizontal scroll. */
+  --text-display: clamp(2.125rem, 1.1rem + 5.2vw, 4rem);
   --text-display--line-height: 1.1;
   --text-display--letter-spacing: 0.03em;
   --text-display--font-weight: 400;
@@ -116,5 +121,89 @@
   .font-display {
     font-family: var(--font-display);
     text-transform: uppercase;
+    /* Safety net: a single very long uppercase word (e.g. a service
+       title) must wrap rather than force horizontal scroll on narrow
+       phones. The fluid type scale handles the common case; this covers
+       the extremes. */
+    overflow-wrap: break-word;
+  }
+
+  /* Headings and long links should never widen the viewport. */
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: break-word;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MOTION — small, calm, and always optional.
+   This audience may be distressed; motion must never surprise or
+   distract. Everything below is switched off under the visitor's
+   "reduce motion" OS setting (see the media query at the end).
+   ───────────────────────────────────────────────────────────── */
+@theme {
+  /* Soft ease-out — decelerates gently, never overshoots. */
+  --ease-gentle: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer components {
+  /* Scroll-reveal, driven by the v-reveal directive. The hidden base
+     state is added before paint; `.is-visible` is added on entry.
+     Only opacity + a small rise animate, so this never fights the
+     transform-based hover lifts on cards and buttons. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 0.6s var(--ease-gentle),
+      transform 0.6s var(--ease-gentle);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Route change — a quiet cross-fade. Paired with <Transition name="page">
+     in App.vue. Opacity only; the per-element reveals carry the movement. */
+  .page-enter-active,
+  .page-leave-active {
+    transition: opacity 0.25s var(--ease-gentle);
+  }
+  .page-enter-from,
+  .page-leave-to {
+    opacity: 0;
+  }
+
+  /* Very slow drift for the decorative SoftBlobs — barely perceptible. */
+  .drift-slow {
+    animation: drift 18s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+
+/* Respect the OS "reduce motion" preference everywhere: no reveals,
+   no transitions, no drift. Content is shown immediately. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

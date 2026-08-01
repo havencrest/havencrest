@@ -1,6 +1,7 @@
 <template>
-  <section class="bg-background">
-    <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
+  <section class="relative overflow-hidden bg-background">
+    <SoftBlobs variant="cta" />
+    <div class="relative z-10 mx-auto max-w-7xl px-4 py-16 lg:py-24">
       <div class="max-w-3xl">
         <div class="mb-6 h-1 w-16 rounded-full bg-secondary" aria-hidden="true" />
         <h2 class="text-h1 font-display text-text">{{ title }}</h2>
@@ -14,6 +15,8 @@
 </template>
 
 <script setup>
+import SoftBlobs from "@/components/SoftBlobs.vue";
+
 defineProps({
   title: { type: String, required: true },
   body: { type: String, default: "" },
