@@ -1,6 +1,7 @@
 export const specialties = [
   {
     slug: "anxiety",
+    image: "Havencrest/annie-spratt-H582qBzGmHQ-unsplash_bhd7hd",
     title: "Anxiety",
     what: "Anxiety is more than occasional worry. It can affect your thoughts, emotions, body, and daily life.",
     recognize:
@@ -9,6 +10,7 @@ export const specialties = [
   },
   {
     slug: "depression",
+    image: "Havencrest/christopher-lemercier-12yvdCiLaVE-unsplash_dkfwqv",
     title: "Depression",
     what: "Depression is a persistent low mood that affects how you feel, think, and function.",
     recognize:
@@ -17,6 +19,7 @@ export const specialties = [
   },
   {
     slug: "trauma-ptsd",
+    image: "Havencrest/susan-wilkinson-EDJKEXFbzHA-unsplash_xridkb",
     title: "Trauma & PTSD",
     what: "Trauma can result from distressing or overwhelming experiences and may continue to affect you long after the event.",
     recognize:
@@ -25,6 +28,7 @@ export const specialties = [
   },
   {
     slug: "adhd",
+    image: "Havencrest/nathan-dumlao-B7Ys4q_utls-unsplash_kogkxx",
     title: "ADHD",
     what: "ADHD affects attention, organization, and self-regulation in ways that can impact work, school, and relationships.",
     recognize:
@@ -33,6 +37,7 @@ export const specialties = [
   },
   {
     slug: "autism",
+    image: "Havencrest/peter-burdon-C2zX9DEVSDs-unsplash_zy67ms",
     title: "Autism",
     what: "Autism is a neurodevelopmental difference that influences communication, sensory experiences, and how people interact with the world.",
     recognize:
@@ -41,6 +46,7 @@ export const specialties = [
   },
   {
     slug: "stress-burnout",
+    image: "Havencrest/ben-maguire-3AE3jUCBhxo-unsplash_peqacx",
     title: "Stress & Burnout",
     what: "Stress becomes burnout when ongoing demands leave you feeling emotionally, mentally, and physically exhausted.",
     recognize:
@@ -49,6 +55,7 @@ export const specialties = [
   },
   {
     slug: "grief-loss",
+    image: "Havencrest/sandy-millar-cQ-66Evaf5g-unsplash_ctbt9w",
     title: "Grief & Loss",
     what: "Grief is a natural response to loss and can affect every aspect of life.",
     recognize:
@@ -57,6 +64,7 @@ export const specialties = [
   },
   {
     slug: "life-transitions",
+    image: "Havencrest/jovan-vasiljevic-w91JpY9pGZo-unsplash_a4zisc",
     title: "Life Transitions",
     what: "Major life changes can bring uncertainty, even when they're positive.",
     recognize:
@@ -65,6 +73,7 @@ export const specialties = [
   },
   {
     slug: "relationship-challenges",
+    image: "Havencrest/kelly-sikkema-ofczR12zfxM-unsplash_wiuarw",
     title: "Relationship Challenges",
     what: "Relationship difficulties can affect communication, trust, and emotional connection.",
     recognize:
@@ -73,6 +82,7 @@ export const specialties = [
   },
   {
     slug: "parenting-support",
+    image: "Havencrest/robo-wunderkind--_QpJv4J_AA-unsplash_qtwgmi",
     title: "Parenting Support",
     what: "Parenting comes with unique joys and challenges at every stage.",
     recognize:
@@ -81,6 +91,7 @@ export const specialties = [
   },
   {
     slug: "child-adolescent-mental-health",
+    image: "Havencrest/melissa-walker-horn-qycAibck4B0-unsplash_qqddkk",
     title: "Child & Adolescent Mental Health",
     what: "Children and teens experience mental health challenges differently from adults.",
     recognize:
@@ -89,6 +100,7 @@ export const specialties = [
   },
   {
     slug: "womens-mental-health",
+    image: "Havencrest/olivia-bauso-7NvnR9rK5uI-unsplash_bce3dw",
     title: "Women's Mental Health",
     what: "Women's mental health may be influenced by life stages, relationships, hormones, and personal experiences.",
     recognize:
@@ -97,6 +109,7 @@ export const specialties = [
   },
   {
     slug: "mens-mental-health",
+    image: "Havencrest/kaja-sariwating-UEEmt2sndSQ-unsplash_fdmnuh",
     title: "Men's Mental Health",
     what: "Men often experience unique pressures that can make it difficult to seek support.",
     recognize:
@@ -105,6 +118,7 @@ export const specialties = [
   },
   {
     slug: "identity-self-discovery",
+    image: "Havencrest/mitch-nJupV3AOP-U-unsplash_w8p2zm",
     title: "Identity & Self-Discovery",
     what: "Exploring your identity is a personal journey that can involve growth, uncertainty, and change.",
     recognize:
@@ -113,6 +127,7 @@ export const specialties = [
   },
   {
     slug: "cultural-life-experiences",
+    image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
     title: "Cultural & Life Experiences",
     what: "Culture, background, and lived experiences can shape mental health in meaningful ways.",
     recognize:

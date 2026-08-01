@@ -4,6 +4,7 @@
       eyebrow="About Havencrest"
       title="Exceptional care begins with exceptional clinical practice."
       subtitle="At Havencrest, we believe meaningful mental healthcare starts with understanding the person behind every story."
+      :image="media.about"
     />
 
     <section class="bg-white">
@@ -134,4 +135,5 @@ import PageHero from "@/components/PageHero.vue";
 import SectionHeading from "@/components/SectionHeading.vue";
 import InfoCard from "@/components/InfoCard.vue";
 import CTABlock from "@/components/CTABlock.vue";
+import { media } from "@/data/media";
 </script>

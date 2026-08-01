@@ -10,6 +10,15 @@
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <InfoCard v-for="s in specialties" :key="s.slug" :title="s.title">
+            <template #media>
+              <AppImage
+                :src="cldImage(s.image, { w: 640, ar: '16:9' })"
+                alt=""
+                class="aspect-video w-full"
+                :width="640"
+                :height="360"
+              />
+            </template>
             <p>{{ s.what }}</p>
             <template #actions>
               <router-link
@@ -47,5 +56,7 @@
 import PageHero from "@/components/PageHero.vue";
 import InfoCard from "@/components/InfoCard.vue";
 import CTABlock from "@/components/CTABlock.vue";
+import AppImage from "@/components/AppImage.vue";
 import { specialties } from "@/data/specialties";
+import { cldImage } from "@/data/media";
 </script>

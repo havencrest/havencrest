@@ -10,13 +10,18 @@
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <InfoCard v-for="s in services" :key="s.slug" :title="s.title">
+            <template #media>
+              <AppImage
+                :src="cldImage(s.image, { w: 640, ar: '16:9' })"
+                alt=""
+                class="aspect-video w-full"
+                :width="640"
+                :height="360"
+              />
+            </template>
             <p>{{ s.what }}</p>
             <template #actions>
-              <router-link
-                :to="`/services/${s.slug}`"
-                class="text-label uppercase text-primary hover:underline"
-                >Learn more →</router-link
-              >
+              <ArrowLink :to="`/services/${s.slug}`">Learn more</ArrowLink>
             </template>
           </InfoCard>
         </div>
@@ -47,5 +52,8 @@
 import PageHero from "@/components/PageHero.vue";
 import InfoCard from "@/components/InfoCard.vue";
 import CTABlock from "@/components/CTABlock.vue";
+import ArrowLink from "@/components/ArrowLink.vue";
+import AppImage from "@/components/AppImage.vue";
 import { services } from "@/data/services";
+import { cldImage } from "@/data/media";
 </script>

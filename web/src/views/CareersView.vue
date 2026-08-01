@@ -4,6 +4,7 @@
       eyebrow="Careers"
       title="Build the future of mental healthcare with us."
       subtitle="Exceptional mental healthcare begins with exceptional clinicians. At Havencrest, we're building a practice where clinicians are trusted, supported, and encouraged to provide thoughtful, evidence-based, person-centered care."
+      :image="media.careers"
     >
       <template #actions>
         <router-link
@@ -120,4 +121,5 @@ import PageHero from "@/components/PageHero.vue";
 import SectionHeading from "@/components/SectionHeading.vue";
 import InfoCard from "@/components/InfoCard.vue";
 import CTABlock from "@/components/CTABlock.vue";
+import { media } from "@/data/media";
 </script>

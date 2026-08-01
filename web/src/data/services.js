@@ -1,6 +1,8 @@
 export const services = [
   {
     slug: "couples-therapy",
+    art: "hearts",
+    image: "Havencrest/youssef-naddam-iJ2IG8ckCpA-unsplash_w3dse1",
     title: "Couples Therapy",
     what: "A supportive space for partners to strengthen their relationship, improve communication, and work through challenges together.",
     when: "Communication difficulties, conflict, trust concerns, parenting challenges, intimacy concerns, premarital counseling, and major life changes.",
@@ -9,6 +11,8 @@ export const services = [
   },
   {
     slug: "family-therapy",
+    art: "home",
+    image: "Havencrest/robo-wunderkind--_QpJv4J_AA-unsplash_qtwgmi",
     title: "Family Therapy",
     what: "Helps family members improve communication, strengthen relationships, and navigate challenges together.",
     when: "Family conflict, parenting challenges, blended families, behavioral concerns, life transitions, grief, and communication difficulties.",
@@ -16,6 +20,8 @@ export const services = [
   },
   {
     slug: "child-adolescent-therapy",
+    art: "kite",
+    image: "Havencrest/caleb-woods-ecRuhwPIW7c-unsplash_gssaal",
     title: "Child & Adolescent Therapy",
     what: "Supports children and teenagers through emotional, behavioral, social, and developmental challenges.",
     when: "Anxiety, school concerns, behavioral challenges, social difficulties, family changes, grief, and self-esteem.",
@@ -24,6 +30,8 @@ export const services = [
   },
   {
     slug: "psychological-assessments",
+    art: "clipboard",
+    image: "Havencrest/vitaly-gariev-ZFBrAHDW9P4-unsplash_sr4dva",
     title: "Psychological Assessments",
     what: "A structured evaluation to better understand cognitive, emotional, behavioral, or developmental functioning.",
     when: "ADHD, autism, learning difficulties, diagnostic clarification, accommodations, and treatment planning.",
@@ -31,6 +39,8 @@ export const services = [
   },
   {
     slug: "telehealth-services",
+    art: "monitor",
+    image: "Havencrest/dylan-ferreira-HJmxky8Fvmo-unsplash_vr0tth",
     title: "Telehealth Services",
     what: "Secure online therapy from a convenient location.",
     when: "Busy schedules, travel, rural living, or greater flexibility.",
@@ -38,6 +48,8 @@ export const services = [
   },
   {
     slug: "life-transitions",
+    art: "sun",
+    image: "Havencrest/artem-kovalev-fk3XUcfTAvk-unsplash_ilvmzc",
     title: "Life Transitions",
     what: "Support through significant life changes affecting wellbeing or identity.",
     when: "Career changes, relocation, marriage, divorce, parenthood, retirement, and grief.",
@@ -45,6 +57,8 @@ export const services = [
   },
   {
     slug: "identity",
+    art: "sprout",
+    image: "Havencrest/kelly-sikkema-f_aHTIof44U-unsplash_esvoom",
     title: "Identity",
     what: "A supportive space to explore identity, belonging, and self-understanding.",
     when: "Cultural identity, gender identity, sexual orientation, faith, spirituality, and self-discovery.",
@@ -52,6 +66,8 @@ export const services = [
   },
   {
     slug: "psychiatric-evaluation-medication",
+    art: "pulse",
+    image: "Havencrest/christina-victoria-craft-ZHys6xN7sUE-unsplash_kqivxg",
     title: "Psychiatric Evaluation & Medication Management",
     what: "Assessment of mental health and whether medication may be beneficial, with ongoing monitoring.",
     when: "Anxiety, depression, bipolar disorder, ADHD, PTSD, OCD, or medication review.",
@@ -60,6 +76,8 @@ export const services = [
   },
   {
     slug: "relationships-family",
+    art: "chat",
+    image: "Havencrest/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash_owuqwo",
     title: "Relationships & Family",
     what: "Therapy that supports healthier relationships through improved communication.",
     when: "Communication difficulties, family conflict, parenting, separation, blended families, boundaries, and caregiver stress.",
@@ -67,6 +85,8 @@ export const services = [
   },
   {
     slug: "trauma-therapy-recovery",
+    art: "shield",
+    image: "Havencrest/mike-labrum-fvl4b1gjpbk-unsplash_tng8rr",
     title: "Trauma Therapy & Recovery",
     what: "Helps people process distressing experiences and move toward recovery.",
     when: "Childhood trauma, PTSD, abuse, violence, medical trauma, grief, and distressing life events.",
