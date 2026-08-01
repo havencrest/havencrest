@@ -1,5 +1,20 @@
 <template>
   <header class="fixed top-0 right-0 left-0 z-50 bg-primary text-haven-cream">
+    <!-- Top utility banner — quick contact + client portal login (per spec).
+         Collapses out of view once the page is scrolled, leaving just the nav. -->
+    <div
+      class="overflow-hidden bg-deep-plum text-haven-cream transition-all duration-300 ease-gentle"
+      :class="scrolled ? 'max-h-0 opacity-0' : 'max-h-16 opacity-100'"
+    >
+      <div class="mx-auto flex max-w-7xl items-center justify-end gap-4 px-4 py-2">
+        <a href="tel:+13604747990" class="text-label hover:underline">360-474-7990</a>
+        <span class="text-haven-cream/40" aria-hidden="true">|</span>
+        <router-link to="/client-access" class="text-label hover:underline" @click="closeAll"
+          >Client Login</router-link
+        >
+      </div>
+    </div>
+
     <!-- Main nav -->
     <div>
       <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
@@ -176,7 +191,8 @@
 
     <div
       v-show="mobileOpen"
-      class="fixed inset-0 top-[4.5rem] z-40 overflow-y-auto bg-background lg:hidden"
+      class="fixed inset-0 z-40 overflow-y-auto bg-background transition-all duration-300 ease-gentle lg:hidden"
+      :class="scrolled ? 'top-18' : 'top-26'"
     >
       <nav class="mx-auto max-w-7xl px-4 py-6">
         <router-link
@@ -267,7 +283,7 @@
 </template>
 
 <script setup>
-import { ref, h } from "vue";
+import { ref, h, onMounted, onUnmounted } from "vue";
 import { useRoute } from "vue-router";
 import { services } from "@/data/services";
 import { specialties } from "@/data/specialties";
@@ -275,6 +291,19 @@ import { specialties } from "@/data/specialties";
 const route = useRoute();
 const openMenu = ref(null);
 const mobileOpen = ref(false);
+
+// Collapse the top utility banner once the page is scrolled past it.
+const scrolled = ref(false);
+const onScroll = () => {
+  scrolled.value = window.scrollY > 24;
+};
+onMounted(() => {
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+});
+onUnmounted(() => {
+  window.removeEventListener("scroll", onScroll);
+});
 
 const navLink = "text-body text-haven-cream hover:underline";
 const navActive = "underline decoration-haven-cream decoration-2 underline-offset-[10px]";
