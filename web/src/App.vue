@@ -1,7 +1,9 @@
 <template>
   <div class="flex min-h-screen flex-col bg-background text-text">
     <AppHeader />
-    <main class="flex-1 pt-26 lg:pt-30">
+    <!-- Top padding clears the fixed header. The logo (and so the header) only
+         grows at xl, which is also where the desktop nav appears. -->
+    <main class="flex-1 pt-26 xl:pt-30">
       <RouterView v-slot="{ Component, route }">
         <Transition name="page" mode="out-in">
           <component :is="Component" :key="route.path" />
