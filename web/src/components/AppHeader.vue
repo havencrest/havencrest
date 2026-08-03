@@ -19,11 +19,19 @@
     <div>
       <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         <router-link to="/" @click="closeAll" class="flex items-center">
-          <img src="@/assets/Logo-light.svg" alt="Havencrest" class="h-12 w-auto lg:h-16" />
+          <img src="@/assets/Logo-light.svg" alt="Havencrest" class="h-12 w-auto xl:h-16" />
         </router-link>
 
-        <nav class="hidden items-center gap-7 lg:flex">
-          <router-link to="/about" :class="navLink" :active-class="navActive">About</router-link>
+        <!-- The menu follows the client's recommended structure — see
+             src/docs/Menu Recommendation and Service Page Plan.md. Seven top-level
+             items plus the logo and the appointment button need the wider
+             breakpoint; below xl the whole nav collapses into the drawer. -->
+        <nav class="hidden items-center gap-6 xl:flex">
+          <router-link to="/about" :class="navLink" :active-class="navActive">About Us</router-link>
+
+          <router-link to="/therapists" :class="navLink" :active-class="navActive"
+            >Our Team</router-link
+          >
 
           <div class="relative" @mouseenter="openMenu = 'services'" @mouseleave="openMenu = null">
             <button
@@ -95,66 +103,54 @@
             </div>
           </div>
 
-          <router-link to="/therapists" :class="navLink" :active-class="navActive"
-            >Therapists</router-link
+          <router-link to="/insurance-fees" :class="navLink" :active-class="navActive"
+            >Insurance</router-link
           >
 
-          <div class="relative" @mouseenter="openMenu = 'careers'" @mouseleave="openMenu = null">
+          <!-- "Resources" replaces the old "Careers" item; the blog and the
+               remaining supporting pages sit under it. -->
+          <div class="relative" @mouseenter="openMenu = 'resources'" @mouseleave="openMenu = null">
             <button
               type="button"
               :class="[
                 'flex items-center gap-1 text-body text-haven-cream hover:underline',
-                isActiveGroup('/careers') && navActive,
+                isActiveResources && navActive,
               ]"
-              @click="toggle('careers')"
+              @click="toggle('resources')"
             >
-              Careers
+              Resources
               <ChevronDown />
             </button>
             <div
-              v-show="openMenu === 'careers'"
+              v-show="openMenu === 'resources'"
               class="absolute left-0 top-full w-64 rounded-lg border border-text/10 bg-background p-3 shadow-lg"
             >
               <router-link
-                to="/careers"
-                class="block rounded-md px-3 py-2 text-body text-text/80 hover:bg-primary/5"
+                v-for="r in resourceLinks"
+                :key="r.to"
+                :to="r.to"
+                class="block rounded-md px-3 py-2 text-body text-text/80 hover:bg-primary/5 hover:text-text"
                 @click="closeAll"
-                >Working at Havencrest</router-link
-              >
-              <router-link
-                to="/careers/opportunities"
-                class="block rounded-md px-3 py-2 text-body text-text/80 hover:bg-primary/5"
-                @click="closeAll"
-                >Opportunities</router-link
-              >
-              <router-link
-                to="/careers/opportunities"
-                class="block rounded-md px-3 py-2 text-body text-text/80 hover:bg-primary/5"
-                @click="closeAll"
-                >Clinical supervision</router-link
-              >
-              <router-link
-                to="/careers/apply"
-                class="block rounded-md px-3 py-2 text-body text-text/80 hover:bg-primary/5"
-                @click="closeAll"
-                >Apply</router-link
+                >{{ r.label }}</router-link
               >
             </div>
           </div>
 
-          <router-link to="/blogs" :class="navLink" :active-class="navActive">Blogs</router-link>
+          <router-link to="/contact" :class="navLink" :active-class="navActive"
+            >Contact</router-link
+          >
         </nav>
 
         <div class="flex items-center gap-3">
           <router-link
             to="/request-appointment"
-            class="hidden rounded-md border border-haven-cream px-4 py-2.5 text-body text-haven-cream hover:bg-haven-cream hover:text-primary lg:inline-flex"
+            class="hidden rounded-md border border-haven-cream px-4 py-2.5 text-body text-haven-cream hover:bg-haven-cream hover:text-primary xl:inline-flex"
           >
             Request appointment
           </router-link>
 
           <button
-            class="block p-2 text-haven-cream lg:hidden"
+            class="block p-2 text-haven-cream xl:hidden"
             aria-label="Toggle menu"
             @click="toggleMobile"
           >
@@ -191,7 +187,7 @@
 
     <div
       v-show="mobileOpen"
-      class="fixed inset-0 z-40 overflow-y-auto bg-background transition-all duration-300 ease-gentle lg:hidden"
+      class="fixed inset-0 z-40 overflow-y-auto bg-background transition-all duration-300 ease-gentle xl:hidden"
       :class="scrolled ? 'top-18' : 'top-26'"
     >
       <nav class="mx-auto max-w-7xl px-4 py-6">
@@ -199,7 +195,13 @@
           to="/about"
           @click="closeAll"
           class="block border-b border-text/10 py-4 text-body text-text"
-          >About</router-link
+          >About Us</router-link
+        >
+        <router-link
+          to="/therapists"
+          @click="closeAll"
+          class="block border-b border-text/10 py-4 text-body text-text"
+          >Our Team</router-link
         >
         <details class="border-b border-text/10 py-4">
           <summary class="cursor-pointer text-body text-text">Services</summary>
@@ -240,36 +242,29 @@
           </div>
         </details>
         <router-link
-          to="/therapists"
+          to="/insurance-fees"
           @click="closeAll"
           class="block border-b border-text/10 py-4 text-body text-text"
-          >Therapists</router-link
+          >Insurance</router-link
         >
         <details class="border-b border-text/10 py-4">
-          <summary class="cursor-pointer text-body text-text">Careers</summary>
+          <summary class="cursor-pointer text-body text-text">Resources</summary>
           <div class="mt-3 space-y-2 pl-3">
-            <router-link to="/careers" @click="closeAll" class="block py-1 text-body text-text/80"
-              >Working at Havencrest</router-link
-            >
             <router-link
-              to="/careers/opportunities"
+              v-for="r in resourceLinks"
+              :key="r.to"
+              :to="r.to"
               @click="closeAll"
               class="block py-1 text-body text-text/80"
-              >Opportunities</router-link
-            >
-            <router-link
-              to="/careers/apply"
-              @click="closeAll"
-              class="block py-1 text-body text-text/80"
-              >Apply</router-link
+              >{{ r.label }}</router-link
             >
           </div>
         </details>
         <router-link
-          to="/blogs"
+          to="/contact"
           @click="closeAll"
           class="block border-b border-text/10 py-4 text-body text-text"
-          >Blogs</router-link
+          >Contact</router-link
         >
         <router-link
           to="/request-appointment"
@@ -283,7 +278,7 @@
 </template>
 
 <script setup>
-import { ref, h, onMounted, onUnmounted } from "vue";
+import { ref, computed, h, onMounted, onUnmounted } from "vue";
 import { useRoute } from "vue-router";
 import { services } from "@/data/services";
 import { specialties } from "@/data/specialties";
@@ -308,6 +303,18 @@ onUnmounted(() => {
 const navLink = "text-body text-haven-cream hover:underline";
 const navActive = "underline decoration-haven-cream decoration-2 underline-offset-[10px]";
 const isActiveGroup = (prefix) => route.path.startsWith(prefix);
+
+// Everything that now lives under "Resources". Careers keeps its pages and its
+// routes; it just moved off the top level.
+const resourceLinks = [
+  { label: "Blog", to: "/blogs" },
+  { label: "FAQs", to: "/faqs" },
+  { label: "Client portal", to: "/client-access" },
+  { label: "Working at Havencrest", to: "/careers" },
+  { label: "Opportunities", to: "/careers/opportunities" },
+  { label: "Apply", to: "/careers/apply" },
+];
+const isActiveResources = computed(() => resourceLinks.some((r) => route.path.startsWith(r.to)));
 
 const toggle = (name) => {
   openMenu.value = openMenu.value === name ? null : name;

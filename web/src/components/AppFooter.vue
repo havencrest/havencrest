@@ -28,7 +28,10 @@
               >Specialties</router-link
             >
             <router-link to="/therapists" class="text-body text-haven-cream hover:underline"
-              >Find a therapist</router-link
+              >Our team</router-link
+            >
+            <router-link to="/blogs" class="text-body text-haven-cream hover:underline"
+              >Blog</router-link
             >
             <router-link to="/careers" class="text-body text-haven-cream hover:underline"
               >Careers</router-link

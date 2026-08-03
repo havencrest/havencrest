@@ -75,9 +75,12 @@ import { computed } from "vue";
 import { useRoute } from "vue-router";
 import PageHero from "@/components/PageHero.vue";
 import { services, findService } from "@/data/services";
+import { useSeo } from "@/composables/useSeo";
 
 const route = useRoute();
 const service = computed(() => findService(route.params.slug));
+
+useSeo(() => service.value?.seo ?? { pageTitle: service.value?.title });
 const otherServices = computed(() =>
   services.filter((s) => s.slug !== route.params.slug).slice(0, 6),
 );
