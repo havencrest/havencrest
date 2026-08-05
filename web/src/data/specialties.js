@@ -22,13 +22,14 @@
 //   defs      [ { term, detail } ]    — bold-term bullets
 //   list      string[]                — plain bullets
 //   items     [ { title, body, list[], link } ]  — sub-headed blocks
+//   note      string                  — emphasized callout (safety copy)
 //   outro     string[]                — paragraphs after the lists
 //   links     [ { label, to } ]       — related-page link row
 //
 // Link targets are real routes only. Where the source copy pointed at a page
-// that has not been written yet (Individual Therapy, CBT, DBT, EMDR), the
-// sentence is kept but the link is dropped rather than pointed somewhere
-// approximate — see `src/docs/Menu Recommendation and Service Page Plan.md`.
+// that does not exist, the sentence is kept but the link is dropped rather than
+// pointed somewhere approximate — see
+// `src/docs/Menu Recommendation and Service Page Plan.md`.
 
 export const specialties = [
   {
@@ -126,7 +127,7 @@ export const specialties = [
           "Depending on your unique needs and goals, you may also find support through our trauma and grief services.",
         ],
         links: [
-          { label: "Trauma Therapy & Recovery", to: "/services/trauma-therapy-recovery" },
+          { label: "Trauma & PTSD", to: "/specialties/trauma-ptsd" },
           { label: "Grief & Loss", to: "/specialties/grief-loss" },
         ],
       },
@@ -159,7 +160,7 @@ export const specialties = [
           {
             title: "Supporting healing from past experiences",
             body: "For some people, depression is shaped by difficult or traumatic experiences. Trauma-informed therapy recognizes the lasting impact these experiences can have, creating a safe and supportive environment where healing can take place.",
-            link: { label: "Trauma Therapy & Recovery", to: "/services/trauma-therapy-recovery" },
+            link: { label: "Trauma & PTSD", to: "/specialties/trauma-ptsd" },
           },
           {
             title: "Processing grief and loss",
@@ -170,8 +171,8 @@ export const specialties = [
             title: "Medication support, when appropriate",
             body: "For some individuals, therapy provides the support they need to manage depression. For others, additional support may be beneficial. When appropriate, we can discuss medication support and referrals, and help coordinate your care with a trusted psychiatric provider.",
             link: {
-              label: "Psychiatric Evaluation & Medication Management",
-              to: "/services/psychiatric-evaluation-medication",
+              label: "Medication Management Support & Referrals",
+              to: "/services/medication-management",
             },
           },
         ],
@@ -193,7 +194,7 @@ export const specialties = [
           "As therapy progresses, you'll continue building practical skills that help you manage depression, strengthen your resilience, and reconnect with the people, activities, and goals that matter most to you.",
           "If meeting in person isn't convenient, we also offer secure telehealth appointments throughout Washington.",
         ],
-        links: [{ label: "Telehealth Services", to: "/services/telehealth-services" }],
+        links: [{ label: "Telehealth Therapy", to: "/services/telehealth-therapy" }],
       },
       {
         heading: "Insurance",
@@ -213,15 +214,15 @@ export const specialties = [
         a: "It can. Some people experience periods of low mood that improve over time, while others benefit from additional support. If depression is persistent or affecting your daily life, therapy can help you understand the factors contributing to your depression, develop practical coping strategies, and build lasting resilience. For some individuals, medication may also form part of a broader treatment plan.",
         links: [
           {
-            label: "Psychiatric Evaluation & Medication Management",
-            to: "/services/psychiatric-evaluation-medication",
+            label: "Medication Management Support & Referrals",
+            to: "/services/medication-management",
           },
         ],
       },
       {
         q: "Is online depression therapy effective?",
         a: "Yes. Research shows that telehealth therapy can be an effective treatment option for many people experiencing depression. Havencrest offers secure virtual appointments throughout Washington, providing the same compassionate, evidence-based care as our in-person sessions.",
-        links: [{ label: "Telehealth Services", to: "/services/telehealth-services" }],
+        links: [{ label: "Telehealth Therapy", to: "/services/telehealth-therapy" }],
       },
     ],
     closing: {
@@ -232,7 +233,7 @@ export const specialties = [
       { label: "Anxiety", to: "/specialties/anxiety" },
       { label: "Grief & Loss", to: "/specialties/grief-loss" },
       { label: "Trauma & PTSD", to: "/specialties/trauma-ptsd" },
-      { label: "Telehealth Services", to: "/services/telehealth-services" },
+      { label: "Telehealth Therapy", to: "/services/telehealth-therapy" },
     ],
   },
   {
@@ -369,7 +370,7 @@ export const specialties = [
         links: [
           { label: "Anxiety", to: "/specialties/anxiety" },
           { label: "Depression", to: "/specialties/depression" },
-          { label: "Trauma Therapy & Recovery", to: "/services/trauma-therapy-recovery" },
+          { label: "Trauma & PTSD", to: "/specialties/trauma-ptsd" },
         ],
       },
       {
@@ -443,7 +444,7 @@ export const specialties = [
           {
             title: "Trauma-informed therapy",
             body: "Helps explore how past experiences may influence current beliefs, relationships, and identity.",
-            link: { label: "Trauma Therapy & Recovery", to: "/services/trauma-therapy-recovery" },
+            link: { label: "Trauma & PTSD", to: "/specialties/trauma-ptsd" },
           },
           {
             title: "Culturally responsive therapy",
@@ -561,7 +562,7 @@ export const specialties = [
       {
         q: "Is life transition therapy available through telehealth?",
         a: "Yes. Havencrest provides secure telehealth therapy throughout Washington.",
-        links: [{ label: "Telehealth Services", to: "/services/telehealth-services" }],
+        links: [{ label: "Telehealth Therapy", to: "/services/telehealth-therapy" }],
       },
     ],
     closing: {
@@ -572,7 +573,7 @@ export const specialties = [
       { label: "Identity & Self-Discovery", to: "/specialties/identity-self-discovery" },
       { label: "Cultural & Life Experiences", to: "/specialties/cultural-life-experiences" },
       { label: "Grief & Loss", to: "/specialties/grief-loss" },
-      { label: "Telehealth Services", to: "/services/telehealth-services" },
+      { label: "Telehealth Therapy", to: "/services/telehealth-therapy" },
     ],
   },
   {
@@ -677,12 +678,12 @@ export const specialties = [
           {
             title: "Relationship challenges",
             body: "Relationships can be affected by communication difficulties, emotional distance, conflict, difficulty expressing needs, and trust concerns.",
-            link: { label: "Couples Therapy", to: "/services/couples-therapy" },
+            link: { label: "Couples Counseling", to: "/services/couples-counseling" },
           },
           {
             title: "Trauma and difficult experiences",
             body: "Past experiences can continue to affect how we see ourselves, manage emotions, and connect with others. Therapy can support healing from childhood experiences, relationship trauma, loss, workplace trauma, and major life events.",
-            link: { label: "Trauma Therapy & Recovery", to: "/services/trauma-therapy-recovery" },
+            link: { label: "Trauma & PTSD", to: "/specialties/trauma-ptsd" },
           },
         ],
       },
@@ -754,7 +755,7 @@ export const specialties = [
           {
             title: "Trauma-informed therapy",
             body: "Supports individuals processing difficult experiences while focusing on safety, healing, and resilience.",
-            link: { label: "Trauma Therapy & Recovery", to: "/services/trauma-therapy-recovery" },
+            link: { label: "Trauma & PTSD", to: "/specialties/trauma-ptsd" },
           },
           {
             title: "Culturally responsive care",
@@ -845,7 +846,7 @@ export const specialties = [
       {
         q: "Is men's therapy available through telehealth?",
         a: "Yes. Havencrest provides secure telehealth therapy throughout Washington.",
-        links: [{ label: "Telehealth Services", to: "/services/telehealth-services" }],
+        links: [{ label: "Telehealth Therapy", to: "/services/telehealth-therapy" }],
       },
     ],
     closing: {
@@ -856,7 +857,7 @@ export const specialties = [
       { label: "Stress & Burnout", to: "/specialties/stress-burnout" },
       { label: "Anxiety", to: "/specialties/anxiety" },
       { label: "Depression", to: "/specialties/depression" },
-      { label: "Trauma Therapy & Recovery", to: "/services/trauma-therapy-recovery" },
+      { label: "Trauma & PTSD", to: "/specialties/trauma-ptsd" },
     ],
   },
   {

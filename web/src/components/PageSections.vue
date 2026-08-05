@@ -61,6 +61,16 @@
         </div>
       </div>
 
+      <!-- Safety / emphasis callout. The source copy footnotes a few lines that
+           must not read as ordinary body text — e.g. the crisis instruction on
+           the child & teen page. -->
+      <p
+        v-if="s.note"
+        class="text-body mt-6 rounded-lg border-l-4 border-accent bg-background px-5 py-4 text-text font-bold"
+      >
+        {{ s.note }}
+      </p>
+
       <div v-if="s.outro" class="mt-6 space-y-4">
         <p v-for="(p, j) in s.outro" :key="j" class="text-body text-text/80">{{ p }}</p>
       </div>

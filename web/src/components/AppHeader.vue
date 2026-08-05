@@ -47,7 +47,7 @@
             </button>
             <div
               v-show="openMenu === 'services'"
-              class="absolute left-0 top-full w-72 rounded-lg border border-text/10 bg-background p-3 shadow-lg"
+              class="absolute left-0 top-full grid w-lg grid-cols-2 gap-1 rounded-lg border border-text/10 bg-background p-3 shadow-lg"
             >
               <router-link
                 v-for="s in services"
@@ -59,7 +59,7 @@
               >
               <router-link
                 to="/services"
-                class="text-label mt-2 block rounded-md border-t border-text/10 px-3 pt-3 uppercase text-primary hover:underline"
+                class="text-label col-span-2 mt-2 block rounded-md border-t border-text/10 px-3 pt-3 uppercase text-primary hover:underline"
                 @click="closeAll"
                 >See all services →</router-link
               >
