@@ -68,7 +68,9 @@
 
       <!-- Speech bubbles — relationships & communication -->
       <g v-else-if="key === 'chat'">
-        <path d="M12 16h28a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H24l-8 6v-6a4 4 0 0 1-4-4V20a4 4 0 0 1 4-4Z" />
+        <path
+          d="M12 16h28a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H24l-8 6v-6a4 4 0 0 1-4-4V20a4 4 0 0 1 4-4Z"
+        />
         <circle cx="20" cy="26" r="1.6" fill="var(--color-primary)" stroke="none" />
         <circle cx="27" cy="26" r="1.6" fill="var(--color-primary)" stroke="none" />
         <circle cx="34" cy="26" r="1.6" fill="var(--color-primary)" stroke="none" />

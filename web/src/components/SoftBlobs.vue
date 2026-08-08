@@ -23,6 +23,9 @@ defineProps({
 
 const variants = {
   hero: ["bg-primary/25 -top-24 -right-20 h-80 w-80", "bg-secondary/20 top-28 -left-24 h-72 w-72"],
-  cta: ["bg-secondary/20 -bottom-24 -right-16 h-72 w-72", "bg-primary/20 -top-20 left-1/3 h-64 w-64"],
+  cta: [
+    "bg-secondary/20 -bottom-24 -right-16 h-72 w-72",
+    "bg-primary/20 -top-20 left-1/3 h-64 w-64",
+  ],
 };
 </script>

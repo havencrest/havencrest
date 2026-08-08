@@ -123,23 +123,23 @@ offers assessments, it needs either a service page or a section on another page.
 
 ### Specialties
 
-| Menu item                       | Status                 | Route                               |
-| ------------------------------- | ---------------------- | ----------------------------------- |
-| Anxiety Disorders               | Built                  | `/specialties/anxiety`              |
-| Mood Disorders                  | **Copy needed**        | —                                   |
-| Personality Disorders           | **Copy needed**        | —                                   |
-| Trauma-Related Disorders / PTSD | Built                  | `/specialties/trauma-ptsd`          |
-| ADHD Support                    | Built                  | `/specialties/adhd`                 |
-| Autism                          | Built                  | `/specialties/autism`               |
-| Depression                      | Built — full page copy | `/specialties/depression`           |
-| Men's Mental Health             | Built — full page copy | `/specialties/mens-mental-health`   |
-| Women's Mental Health           | Built                  | `/specialties/womens-mental-health` |
-| Stress & Burnout                | Built                  | `/specialties/stress-burnout`       |
-| Grief and Loss                  | Built                  | `/specialties/grief-loss`           |
-| Life Transitions                | Built — full page copy | `/specialties/life-transitions`     |
-| OCD                             | **Copy needed**        | —                                   |
-| Eating Disorders                | **Copy needed**        | —                                   |
-| Bipolar Disorder                | **Copy needed**        | —                                   |
+| Menu item                       | Status                 | Route                                |
+| ------------------------------- | ---------------------- | ------------------------------------ |
+| Anxiety Disorders               | Built                  | `/specialties/anxiety`               |
+| Mood Disorders                  | Built — full page copy | `/specialties/mood-disorders`        |
+| Personality Disorders           | Built — full page copy | `/specialties/personality-disorders` |
+| Trauma-Related Disorders / PTSD | Built                  | `/specialties/trauma-ptsd`           |
+| ADHD Support                    | Built                  | `/specialties/adhd`                  |
+| Autism                          | Built                  | `/specialties/autism`                |
+| Depression                      | Built — full page copy | `/specialties/depression`            |
+| Men's Mental Health             | Built — full page copy | `/specialties/mens-mental-health`    |
+| Women's Mental Health           | Built                  | `/specialties/womens-mental-health`  |
+| Stress & Burnout                | Built                  | `/specialties/stress-burnout`        |
+| Grief and Loss                  | Built                  | `/specialties/grief-loss`            |
+| Life Transitions                | Built — full page copy | `/specialties/life-transitions`      |
+| OCD                             | **Copy needed**        | —                                    |
+| Eating Disorders                | **Copy needed**        | —                                    |
+| Bipolar Disorder                | **Copy needed**        | —                                    |
 
 Also live: Relationship Challenges, Parenting Support, Child & Adolescent
 Mental Health, Identity & Self-Discovery, Cultural & Life Experiences.

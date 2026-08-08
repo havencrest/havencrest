@@ -8,6 +8,7 @@ import TherapistsView from "./TherapistsView.vue";
 import TherapistDetailView from "./TherapistDetailView.vue";
 import CareersView from "./CareersView.vue";
 import OpportunitiesView from "./OpportunitiesView.vue";
+import RoleDetailView from "./RoleDetailView.vue";
 import ApplyView from "./ApplyView.vue";
 import ContactView from "./ContactView.vue";
 import RequestAppointmentView from "./RequestAppointmentView.vue";
@@ -28,6 +29,7 @@ export {
   TherapistDetailView,
   CareersView,
   OpportunitiesView,
+  RoleDetailView,
   ApplyView,
   ContactView,
   RequestAppointmentView,

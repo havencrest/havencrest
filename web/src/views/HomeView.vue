@@ -2,7 +2,9 @@
   <div>
     <!-- Section 1: Hero — full-bleed image with a deep-plum scrim so the
          message reads in cream over an aspirational, calming scene. -->
-    <section class="relative isolate flex min-h-[34rem] items-center overflow-hidden bg-deep-plum lg:min-h-[44rem]">
+    <section
+      class="relative isolate flex min-h-[34rem] items-center overflow-hidden bg-deep-plum lg:min-h-[44rem]"
+    >
       <AppImage
         :src="cldImage(media.homeHero, { w: 1920, ar: '16:9' })"
         alt=""

@@ -10,6 +10,7 @@ import {
   TherapistDetailView,
   CareersView,
   OpportunitiesView,
+  RoleDetailView,
   ApplyView,
   ContactView,
   RequestAppointmentView,
@@ -51,6 +52,7 @@ const routes = [
   { path: "/therapists/:slug", name: "therapist-detail", component: TherapistDetailView },
   { path: "/careers", name: "careers", component: CareersView },
   { path: "/careers/opportunities", name: "opportunities", component: OpportunitiesView },
+  { path: "/careers/opportunities/:slug", name: "role-detail", component: RoleDetailView },
   { path: "/careers/apply", name: "apply", component: ApplyView },
   { path: "/contact", name: "contact", component: ContactView },
   { path: "/request-appointment", name: "request-appointment", component: RequestAppointmentView },
@@ -60,9 +62,29 @@ const routes = [
   { path: "/blogs", name: "blogs", component: BlogsView },
   { path: "/privacy", name: "privacy", component: PrivacyView },
 
-  // The Individual Therapy copy document specifies this URL. The service lives
-  // under /services/ with the rest of the menu, so the client's URL redirects.
+  // Some copy documents specify their own URL. Those pages live under
+  // /services/ and /specialties/ with the rest of the menu, so the client's
+  // URLs redirect.
   { path: "/individual-therapy-washington", redirect: "/services/individual-therapy" },
+  { path: "/anxiety-therapy-washington", redirect: "/specialties/anxiety" },
+  { path: "/depression-therapy-washington", redirect: "/specialties/depression" },
+  { path: "/trauma-therapy-washington", redirect: "/specialties/trauma-ptsd" },
+  { path: "/adhd-therapy-washington", redirect: "/specialties/adhd" },
+  { path: "/autism-therapy-washington", redirect: "/specialties/autism" },
+  { path: "/mood-disorders-therapy-washington", redirect: "/specialties/mood-disorders" },
+  {
+    path: "/personality-disorders-therapy-washington",
+    redirect: "/specialties/personality-disorders",
+  },
+  { path: "/mens-mental-health-therapy", redirect: "/specialties/mens-mental-health" },
+  {
+    path: "/womens-mental-health-therapy-washington",
+    redirect: "/specialties/womens-mental-health",
+  },
+  {
+    path: "/stress-and-burnout-therapy-washington",
+    redirect: "/specialties/stress-burnout",
+  },
 
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];

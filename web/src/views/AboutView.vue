@@ -66,7 +66,8 @@
           <InfoCard title="Our mission">
             <p>
               To improve lives by providing exceptional, evidence-based mental healthcare that is
-              person-centered, compassionate, and responsive to the unique needs of every individual.
+              person-centered, compassionate, and responsive to the unique needs of every
+              individual.
             </p>
           </InfoCard>
           <InfoCard title="Our vision">
@@ -99,8 +100,8 @@
           </InfoCard>
           <InfoCard title="Working at your pace">
             <p>
-              We meet you where you are, working alongside you to move toward realistic,
-              meaningful, and achievable goals at a pace that feels right for you.
+              We meet you where you are, working alongside you to move toward realistic, meaningful,
+              and achievable goals at a pace that feels right for you.
             </p>
           </InfoCard>
           <InfoCard title="Care that grows with you">

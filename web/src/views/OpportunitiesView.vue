@@ -11,20 +11,31 @@
         <div class="space-y-4">
           <article
             v-for="role in roles"
-            :key="role.title"
-            class="flex flex-col justify-between gap-4 rounded-lg border border-text/10 bg-background p-6 md:flex-row md:items-center lg:p-8"
+            :key="role.slug"
+            class="flex flex-col justify-between gap-6 rounded-lg border border-text/10 bg-background p-6 md:flex-row md:items-center lg:p-8"
           >
             <div>
               <h3 class="text-h2 font-display text-text">{{ role.title }}</h3>
-              <p class="text-body mt-2 text-text/70">
+              <p class="text-label mt-2 uppercase text-accent">{{ role.credentials }}</p>
+              <p class="text-body mt-3 text-text/70">
                 {{ role.summary }}
               </p>
+              <p class="text-body mt-3 text-text/60">
+                {{ role.location }} · {{ role.employmentType }}
+              </p>
             </div>
-            <router-link
-              to="/careers/apply"
-              class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
-              >Apply →</router-link
-            >
+            <div class="flex flex-col gap-3 sm:flex-row md:shrink-0 md:flex-col lg:flex-row">
+              <router-link
+                :to="`/careers/opportunities/${role.slug}`"
+                class="inline-flex items-center justify-center rounded-md border border-text/30 px-6 py-3 text-body text-text hover:border-primary hover:text-primary"
+                >View role</router-link
+              >
+              <router-link
+                to="/careers/apply"
+                class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
+                >Apply →</router-link
+              >
+            </div>
           </article>
         </div>
 
@@ -49,19 +60,5 @@
 
 <script setup>
 import PageHero from "@/components/PageHero.vue";
-
-const roles = [
-  {
-    title: "Licensed Mental Health Therapist",
-    summary: "Full clinical caseload with autonomy, supervision, and flexible scheduling.",
-  },
-  {
-    title: "Associate Therapist",
-    summary: "Structured clinical support and supervision toward independent licensure.",
-  },
-  {
-    title: "Board Certified Supervisor",
-    summary: "Provide clinical supervision within a values-driven multidisciplinary team.",
-  },
-];
+import { roles } from "@/data/roles";
 </script>

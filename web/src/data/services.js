@@ -18,7 +18,9 @@
 //   heading   string
 //   body      string[]                — paragraphs
 //   defs      [ { term, detail } ]    — bold-term bullets
-//   list      string[]                — plain bullets
+//   list      string[]                — plain bullets. An entry may instead be
+//                                       { text, list[] } to carry sub-bullets,
+//                                       which drops the list to one column.
 //   checks    string[]                — check-marked bullets
 //   items     [ { title, body, list[], link } ]  — sub-headed blocks
 //   note      string                  — emphasized callout (safety copy)
