@@ -1,48 +1,30 @@
 <template>
-  <!-- Image hero: the representing photo becomes the hero background. By
-       default a deep-plum scrim carries the cream title over it. `fullImage`
-       switches to a scrim-free treatment on a cream base — the whole photo
-       is visible and text renders in the dark brand color. -->
-  <section
-    v-if="image"
-    class="relative isolate overflow-hidden"
-    :class="fullImage ? 'bg-background' : 'bg-deep-plum'"
-  >
+  <!-- Image hero: the representing photo becomes the hero background. Every
+       image hero shares one hue treatment — a slightly darkened photo under a
+       soft signal-plum wash that lifts cream text at the bottom.
+       `fullImage` opts into the display-sized subtitle used on service detail
+       pages (where the subtitle carries the lede heading). -->
+  <section v-if="image" class="relative isolate overflow-hidden bg-background">
     <AppImage
       :src="cldImage(image, { w: 1600, ar: '16:9' })"
       alt=""
       :width="1600"
       :height="900"
       eager
-      class="absolute inset-0 -z-10 h-full w-full object-cover"
-      :class="fullImage ? 'brightness-[0.6]' : ''"
+      class="absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.6]"
     />
-    <!-- Scrim: strongest at the bottom where the text sits, easing up so the
-         image stays visible toward the top. -->
+    <!-- Light-plum wash: signal-plum fades from ~60% at the bottom (where the
+         copy sits) to transparent at the top, so the photo still reads clearly
+         above the fold and text picks up a soft plum tint underneath. -->
     <div
-      v-if="!fullImage"
-      class="absolute inset-0 -z-10 bg-gradient-to-t from-deep-plum via-deep-plum/85 to-deep-plum/45"
-      aria-hidden="true"
-    />
-    <!-- Light-plum scrim for the fullImage variant: fades from a translucent
-         signal-plum wash at the bottom (where the title sits) to transparent
-         at the top, so the whole photo still reads while text contrast comes
-         from a soft plum tint rather than the heavy deep-plum treatment. -->
-    <div
-      v-if="fullImage"
       class="absolute inset-0 -z-10 bg-gradient-to-t from-signal-plum/60 via-signal-plum/30 to-signal-plum/0"
       aria-hidden="true"
     />
-    <!-- `fullImage` stretches the hero to at least the full viewport height on
-         every device, so the photo reads as an immersive full-screen band.
-         Extra bottom padding lifts the copy off the very bottom edge. -->
+    <!-- `fullImage` also stretches the container to full viewport height so
+         the service detail hero reads as an immersive full-screen band. -->
     <div
       class="mx-auto flex max-w-7xl flex-col justify-end px-4 py-16 lg:py-24"
-      :class="
-        fullImage
-          ? 'min-h-screen pb-32 lg:pb-48'
-          : 'min-h-[22rem] lg:min-h-[30rem]'
-      "
+      :class="fullImage ? 'min-h-[90vh]' : 'min-h-[22rem] lg:min-h-[30rem]'"
     >
       <p v-if="eyebrow" class="mb-4 flex items-center gap-3">
         <span class="inline-block h-px w-8 bg-haven-cream" aria-hidden="true" />
@@ -97,8 +79,9 @@ defineProps({
   // Optional Cloudinary public ID. When set, the hero renders the photo as a
   // full-bleed background instead of a flat brand-colored band.
   image: { type: String, default: "" },
-  // When true, the hero container adopts the image's 16:9 aspect ratio so the
-  // whole photo is visible rather than cropped to fit a fixed min-height.
+  // When true, the subtitle is rendered at display size (used on service
+  // detail pages, where the subtitle carries the lede heading rather than a
+  // paragraph).
   fullImage: { type: Boolean, default: false },
 });
 </script>

@@ -21,27 +21,42 @@
     <template v-if="service.sections">
       <section class="bg-white">
         <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
-          <div class="max-w-3xl" v-reveal>
-            <div class="space-y-4">
-              <p v-for="(p, i) in service.lede.body" :key="i" class="text-body text-text/80">
-                {{ p }}
-              </p>
-            </div>
-            <p v-if="service.lede.emphasis" class="text-h3 mt-6 text-text">
-              {{ service.lede.emphasis }}
-            </p>
+          <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+          <div class="lg:col-span-2">
+            <PageSections :sections="service.sections">
+              <template #intro>
+                <div class="max-w-3xl" v-reveal>
+                  <div class="space-y-4">
+                    <p
+                      v-for="(p, i) in service.lede.body"
+                      :key="i"
+                      class="text-body text-text/80"
+                    >
+                      {{ p }}
+                    </p>
+                  </div>
+                  <p v-if="service.lede.emphasis" class="text-h3 mt-6 text-text">
+                    {{ service.lede.emphasis }}
+                  </p>
+                </div>
+                <router-link
+                  to="/request-appointment"
+                  class="text-body mt-10 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-haven-cream hover:brightness-90"
+                  >Schedule an appointment</router-link
+                >
+              </template>
+            </PageSections>
           </div>
-
-          <div class="mt-16 grid grid-cols-1 gap-12 lg:mt-20 lg:grid-cols-3">
-            <div class="lg:col-span-2">
-              <PageSections :sections="service.sections" />
-            </div>
 
             <aside class="lg:col-span-1">
               <div class="lg:sticky lg:top-32">
-                <div class="rounded-lg border border-text/10 bg-background p-6 lg:p-8">
+                <div
+                  class="rounded-lg border border-text/10 bg-background p-6 lg:p-8"
+                >
                   <p class="text-label uppercase text-accent">Next steps</p>
-                  <h3 class="text-h2 font-display mt-2 text-text">Ready to begin?</h3>
+                  <h3 class="text-h2 font-display mt-2 text-text">
+                    Ready to begin?
+                  </h3>
                   <div class="mt-6 flex flex-col gap-3">
                     <router-link
                       to="/request-appointment"
@@ -60,7 +75,9 @@
                   v-if="service.related"
                   class="mt-6 rounded-lg border border-text/10 p-6 lg:p-8"
                 >
-                  <p class="text-label uppercase text-accent">Related support</p>
+                  <p class="text-label uppercase text-accent">
+                    Related support
+                  </p>title
                   <div class="mt-4 flex flex-col gap-3">
                     <router-link
                       v-for="l in service.related"
@@ -79,15 +96,20 @@
 
       <section v-if="service.faqs" class="bg-background">
         <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
-          <h2 class="text-h1 font-display text-text">Frequently asked questions</h2>
+          <h2 class="text-h1 font-display text-text">
+            Frequently asked questions
+          </h2>
           <div class="mt-8 max-w-3xl">
             <FaqList :items="service.faqs" />
           </div>
           <p class="text-body mt-8 text-text/80">
             Have a question that isn't answered here?
-            <router-link to="/contact" class="text-primary hover:underline">Contact us</router-link
+            <router-link to="/contact" class="text-primary hover:underline"
+              >Contact us</router-link
             >, or read our
-            <router-link to="/faqs" class="text-primary hover:underline">full FAQs</router-link>.
+            <router-link to="/faqs" class="text-primary hover:underline"
+              >full FAQs</router-link
+            >.
           </p>
         </div>
       </section>
@@ -121,7 +143,9 @@
               <p class="text-body mt-3 text-text/80">{{ service.what }}</p>
             </div>
             <div>
-              <h2 class="text-h2 font-display text-text">When might it be helpful?</h2>
+              <h2 class="text-h2 font-display text-text">
+                When might it be helpful?
+              </h2>
               <p class="text-body mt-3 text-text/80">{{ service.when }}</p>
             </div>
             <div>
@@ -131,11 +155,16 @@
           </div>
 
           <aside class="lg:col-span-1">
-            <div class="rounded-lg border border-text/10 bg-background p-6 lg:p-8">
+            <div
+              class="rounded-lg border border-text/10 bg-background p-6 lg:p-8"
+            >
               <p class="text-label uppercase text-accent">Next steps</p>
-              <h3 class="text-h2 font-display mt-2 text-text">Ready to begin?</h3>
+              <h3 class="text-h2 font-display mt-2 text-text">
+                Ready to begin?
+              </h3>
               <p class="text-body mt-3 text-text/80">
-                Our team will help you find the clinician who's right for this service.
+                Our team will help you find the clinician who's right for this
+                service.
               </p>
               <div class="mt-6 flex flex-col gap-3">
                 <router-link
@@ -163,9 +192,9 @@
             v-for="s in otherServices"
             :key="s.slug"
             :to="`/services/${s.slug}`"
-            class="rounded-lg border border-text/10 bg-white p-4 hover:border-primary"
+            class="rounded-lg bg-gradient-to-r from-signal-plum to-deep-plum p-4 transition hover:brightness-90"
           >
-            <span class="text-body text-text">{{ s.title }} →</span>
+            <span class="text-body text-haven-cream">{{ s.title }} →</span>
           </router-link>
         </div>
       </div>

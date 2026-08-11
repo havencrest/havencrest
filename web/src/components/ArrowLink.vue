@@ -12,8 +12,9 @@
 <script setup>
 // A text link with a trailing arrow that nudges right on hover. Motion is
 // gated behind `motion-safe`, so it stays still under reduced-motion.
-//   variant="label"  uppercase caption style (default)
-//   variant="body"   regular body-size link
+//   variant="label"   uppercase caption style (default)
+//   variant="body"    regular body-size link
+//   variant="button"  plum-gradient pill button, cream text
 import { computed } from "vue";
 
 const props = defineProps({
@@ -21,13 +22,15 @@ const props = defineProps({
   variant: { type: String, default: "label" },
 });
 
-const base =
-  "group inline-flex items-center gap-1.5 rounded-sm text-primary transition-colors duration-200 hover:brightness-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2";
-
-const variants = {
-  label: "text-label uppercase",
-  body: "text-body",
+const textVariants = {
+  label: "text-label uppercase text-primary",
+  body: "text-body text-primary",
+  button:
+    "text-body rounded-md bg-gradient-to-r from-signal-plum/25 to-signal-plum/10 px-4 py-2.5 text-text",
 };
 
-const classes = computed(() => `${base} ${variants[props.variant] || variants.label}`);
+const classes = computed(() => {
+  const variantClass = textVariants[props.variant] || textVariants.label;
+  return `group inline-flex items-center gap-1.5 transition duration-200 hover:brightness-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${variantClass}`;
+});
 </script>
