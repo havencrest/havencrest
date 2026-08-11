@@ -1,7 +1,13 @@
 <template>
-  <!-- Image hero: the representing photo becomes the hero background with a
-       deep-plum scrim so the display title reads in cream over it. -->
-  <section v-if="image" class="relative isolate overflow-hidden bg-deep-plum">
+  <!-- Image hero: the representing photo becomes the hero background. By
+       default a deep-plum scrim carries the cream title over it. `fullImage`
+       switches to a scrim-free treatment on a cream base — the whole photo
+       is visible and text renders in the dark brand color. -->
+  <section
+    v-if="image"
+    class="relative isolate overflow-hidden"
+    :class="fullImage ? 'bg-background' : 'bg-deep-plum'"
+  >
     <AppImage
       :src="cldImage(image, { w: 1600, ar: '16:9' })"
       alt=""
@@ -11,22 +17,56 @@
       class="absolute inset-0 -z-10 h-full w-full object-cover"
     />
     <!-- Scrim: strongest at the bottom where the text sits, easing up so the
-         image stays visible toward the top. -->
+         image stays visible toward the top. Omitted when `fullImage` is on so
+         the plum tint doesn't wash over the photo. -->
     <div
+      v-if="!fullImage"
       class="absolute inset-0 -z-10 bg-gradient-to-t from-deep-plum via-deep-plum/85 to-deep-plum/45"
       aria-hidden="true"
     />
+    <!-- Cream scrim for the fullImage variant: fades from opaque cream at the
+         bottom (where the dark title sits) to transparent higher up, so the
+         photo still reads at the top of the frame while text contrast stays
+         readable. No plum — this is pure haven-cream. -->
     <div
-      class="mx-auto flex min-h-[22rem] max-w-7xl flex-col justify-end px-4 py-16 lg:min-h-[30rem] lg:py-24"
+      v-if="fullImage"
+      class="absolute inset-0 -z-10 bg-gradient-to-t from-haven-cream via-haven-cream/70 to-haven-cream/0"
+      aria-hidden="true"
+    />
+    <!-- `fullImage` swaps the fixed min-height for the photo's own 16:9 ratio
+         so the whole image is visible (no cropping). A min-height still holds
+         the floor on very narrow screens where 16:9 would collapse the hero. -->
+    <div
+      class="mx-auto flex max-w-7xl flex-col justify-end px-4 py-16 lg:py-24"
+      :class="
+        fullImage
+          ? 'aspect-video min-h-[22rem]'
+          : 'min-h-[22rem] lg:min-h-[30rem]'
+      "
     >
       <p v-if="eyebrow" class="mb-4 flex items-center gap-3">
-        <span class="inline-block h-px w-8 bg-haven-cream" aria-hidden="true" />
-        <span class="text-label uppercase text-haven-cream/90">{{ eyebrow }}</span>
+        <span
+          class="inline-block h-px w-8"
+          :class="fullImage ? 'bg-secondary' : 'bg-haven-cream'"
+          aria-hidden="true"
+        />
+        <span
+          class="text-label uppercase"
+          :class="fullImage ? 'text-accent' : 'text-haven-cream/90'"
+          >{{ eyebrow }}</span
+        >
       </p>
-      <h1 class="text-display font-display max-w-4xl text-haven-cream">
+      <h1
+        class="text-display font-display max-w-4xl"
+        :class="fullImage ? 'text-text' : 'text-haven-cream'"
+      >
         {{ title }}
       </h1>
-      <p v-if="subtitle" class="text-body mt-6 max-w-2xl text-haven-cream/90">
+      <p
+        v-if="subtitle"
+        class="text-body mt-6 max-w-2xl"
+        :class="fullImage ? 'text-text/80' : 'text-haven-cream/90'"
+      >
         {{ subtitle }}
       </p>
       <div v-if="$slots.actions" class="mt-8 flex flex-wrap gap-4">
@@ -68,5 +108,8 @@ defineProps({
   // Optional Cloudinary public ID. When set, the hero renders the photo as a
   // full-bleed background instead of a flat brand-colored band.
   image: { type: String, default: "" },
+  // When true, the hero container adopts the image's 16:9 aspect ratio so the
+  // whole photo is visible rather than cropped to fit a fixed min-height.
+  fullImage: { type: Boolean, default: false },
 });
 </script>
