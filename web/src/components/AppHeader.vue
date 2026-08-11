@@ -140,7 +140,7 @@
         <div class="flex items-center gap-3">
           <router-link
             to="/client-access"
-            class="hidden rounded-md border border-haven-cream/70 px-4 py-2.5 text-body text-haven-cream hover:bg-haven-cream/10 xl:inline-flex"
+            class="hidden rounded-md bg-secondary px-4 py-2.5 text-body font-bold text-haven-cream shadow-sm ring-1 ring-inset ring-haven-cream/25 hover:brightness-105 hover:shadow-md xl:inline-flex"
           >
             Client portal
           </router-link>

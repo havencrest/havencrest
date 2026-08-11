@@ -24,5 +24,6 @@ export const media = {
   homeHero: "Havencrest/hero_section_crdm7z",
   about: "Havencrest/About_us_page_h5qs62",
   careers: "Havencrest/Meet_our_team_idggza",
-  cta: "Havencrest/Contact_us_page_vmn6hj",
+  contact: "Havencrest/Contact_us_page_vmn6hj",
+  cta: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
 };

@@ -4,6 +4,7 @@
       eyebrow="Contact us"
       title="We're here when you're ready."
       subtitle="Whether you have a question, would like to request an appointment, or simply aren't sure where to start, our team is here to help. We'll take the time to understand your needs and connect you with the right support."
+      :image="media.contact"
     />
 
     <section class="bg-white">
@@ -122,6 +123,7 @@ import { defineComponent, h } from "vue";
 import PageHero from "@/components/PageHero.vue";
 import CTABlock from "@/components/CTABlock.vue";
 import { faqs } from "@/data/faqs";
+import { media } from "@/data/media";
 
 const FormField = defineComponent({
   props: { label: String, name: String, type: { type: String, default: "text" } },

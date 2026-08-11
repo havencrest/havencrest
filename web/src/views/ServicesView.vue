@@ -21,7 +21,7 @@
             </template>
             <p>{{ s.what }}</p>
             <template #actions>
-              <ArrowLink :to="`/services/${s.slug}`">Learn more</ArrowLink>
+              <ArrowLink :to="`/services/${s.slug}`" variant="button">Learn more</ArrowLink>
             </template>
           </InfoCard>
         </div>

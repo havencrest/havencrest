@@ -1608,7 +1608,7 @@ export const specialties = [
   },
   {
     slug: "grief-loss",
-    image: "Havencrest/sandy-millar-cQ-66Evaf5g-unsplash_ctbt9w",
+    image: "Havencrest/Grief_and_loss_hero_xiakun",
     title: "Grief & Loss",
     what: "Grief is a natural response to loss and can affect every aspect of life.",
     recognize:
@@ -1689,6 +1689,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/Grief_fnmsey",
         heading: "Understanding grief & loss",
         body: [
           "Grief is a natural response to losing someone or something that matters deeply to you. It can affect your emotions, thoughts, physical health, relationships, and daily life. There is no right or wrong way to grieve, and no timeline that everyone follows. Your experience is shaped by your relationship to the loss, your life circumstances, your history, your culture, and the support available to you.",
@@ -1696,7 +1697,7 @@ export const specialties = [
         ],
       },
       {
-        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
+        image: "Havencrest/Grief_and_loss_2_fetpyn",
         heading: "How we support grief & loss",
         body: [
           "Our goal is to help you process your grief, make sense of your experiences, and develop practical ways to navigate life while honoring your loss.",

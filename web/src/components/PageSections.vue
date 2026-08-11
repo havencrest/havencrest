@@ -2,8 +2,20 @@
   <!-- Renders the long-form `sections` array carried by pages the client has
        supplied full copy for. See the shape note at the top of
        src/data/specialties.js. Every key is optional; a section renders only
-       the parts it defines, always in this order. -->
+       the parts it defines, always in this order.
+       Consumers may pass a `#intro` slot to prepend content (e.g. a service
+       lede + CTA) that reads as the opening block above the first section.
+       When an `#intro` slot is present, the first section's heading is
+       hoisted above the slot content so pages open with the section title
+       rather than the lede paragraphs. The heading is then suppressed in the
+       first section iteration to avoid duplication. -->
   <div class="space-y-14 lg:space-y-16">
+    <div v-if="$slots.intro">
+      <h2 v-if="sections[0]?.heading" class="text-h2 font-display text-text mb-6">
+        {{ sections[0].heading }}
+      </h2>
+      <slot name="intro" />
+    </div>
     <section v-for="(s, i) in sections" :key="i" v-reveal>
       <!-- Accent photo. Sections that carry `image` render it above the
            heading as a rounded 16:9 figure that fills the column. -->
@@ -16,7 +28,12 @@
         />
       </figure>
 
-      <h2 v-if="s.heading" class="text-h2 font-display text-text">{{ s.heading }}</h2>
+      <h2
+        v-if="s.heading && !(i === 0 && $slots.intro)"
+        class="text-h2 font-display text-text"
+      >
+        {{ s.heading }}
+      </h2>
 
       <div v-if="s.body" class="mt-4 space-y-4">
         <p v-for="(p, j) in s.body" :key="j" class="text-body text-text/80">{{ p }}</p>
@@ -108,7 +125,7 @@
           v-for="l in s.links"
           :key="l.to"
           :to="l.to"
-          class="text-body inline-flex items-center rounded-full border border-text/15 px-4 py-2 text-text/80 transition hover:border-primary hover:text-primary"
+          class="text-body inline-flex items-center rounded-full bg-gradient-to-r from-signal-plum/25 to-signal-plum/10 px-4 py-2 text-text transition hover:brightness-90"
           >{{ l.label }} →</router-link
         >
       </div>
