@@ -3,7 +3,7 @@
     <!-- Section 1: Hero — full-bleed image with a deep-plum scrim so the
          message reads in cream over an aspirational, calming scene. -->
     <section
-      class="relative isolate flex min-h-[34rem] items-center overflow-hidden lg:min-h-[44rem]"
+      class="relative isolate flex min-h-[90vh] items-center overflow-hidden lg:min-h-[90vh]"
     >
       <AppImage
         :src="cldImage(media.homeHero, { w: 1920, ar: '16:9' })"
@@ -17,7 +17,7 @@
            the next section. -->
       <div class="absolute inset-0 -z-10 bg-deep-plum/45 to-deep-plum/35" aria-hidden="true" />
       <div
-        class="absolute inset-x-0 bottom-0 -z-10 h-1/3 bg-gradient-to-t from-deep-plum to-transparent"
+        class="absolute inset-x-0 bottom-0 -z-10 h-1/3"
         aria-hidden="true"
       />
 

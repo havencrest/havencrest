@@ -13,29 +13,115 @@
           <div>
             <h2 class="text-h2 font-display text-text">Contact information</h2>
             <dl class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div>
-                <dt class="text-label uppercase text-accent">Phone</dt>
-                <dd class="text-body mt-1 text-text">
-                  <a href="tel:+13604747990" class="hover:text-primary">360-474-7990</a>
-                </dd>
-              </div>
-              <div>
-                <dt class="text-label uppercase text-accent">Email</dt>
-                <dd class="text-body mt-1 text-text">
-                  <a href="mailto:info@havencrestcounseling.com" class="hover:text-primary"
-                    >info@havencrestcounseling.com</a
+              <div class="flex gap-3">
+                <span
+                  class="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-signal-plum/10 text-secondary"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-4 w-4"
                   >
-                </dd>
+                    <path
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                    />
+                  </svg>
+                </span>
+                <div>
+                  <dt class="text-label uppercase text-accent">Phone</dt>
+                  <dd class="text-body mt-1 text-text">
+                    <a href="tel:+13604747990" class="hover:text-primary">360-474-7990</a>
+                  </dd>
+                </div>
               </div>
-              <div class="sm:col-span-2">
-                <dt class="text-label uppercase text-accent">Location</dt>
-                <dd class="text-body mt-1 text-text">
-                  1700 Seventh Ave, Suite 2100, Seattle WA 98101
-                </dd>
+              <div class="flex gap-3">
+                <span
+                  class="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-signal-plum/10 text-secondary"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-4 w-4"
+                  >
+                    <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75" />
+                    <path d="M21.75 6.75L12 13.5 2.25 6.75" />
+                    <path d="M21.75 6.75A2.25 2.25 0 0019.5 4.5h-15A2.25 2.25 0 002.25 6.75" />
+                  </svg>
+                </span>
+                <div>
+                  <dt class="text-label uppercase text-accent">Email</dt>
+                  <dd class="text-body mt-1 text-text">
+                    <a href="mailto:info@havencrestcounseling.com" class="hover:text-primary"
+                      >info@havencrestcounseling.com</a
+                    >
+                  </dd>
+                </div>
               </div>
-              <div class="sm:col-span-2">
-                <dt class="text-label uppercase text-accent">Office hours</dt>
-                <dd class="text-body mt-1 text-text">8am – 5pm • Open 7 days a week</dd>
+              <div class="flex gap-3 sm:col-span-2">
+                <span
+                  class="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-signal-plum/10 text-secondary"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-4 w-4"
+                  >
+                    <path
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    />
+                  </svg>
+                </span>
+                <div>
+                  <dt class="text-label uppercase text-accent">Location</dt>
+                  <dd class="text-body mt-1 text-text">
+                    1700 Seventh Ave, Suite 2100, Seattle WA 98101
+                  </dd>
+                </div>
+              </div>
+              <div class="flex gap-3 sm:col-span-2">
+                <span
+                  class="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-signal-plum/10 text-secondary"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-4 w-4"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" />
+                  </svg>
+                </span>
+                <div>
+                  <dt class="text-label uppercase text-accent">Office hours</dt>
+                  <dd class="text-body mt-1 text-text">8am – 5pm • Open 7 days a week</dd>
+                </div>
               </div>
             </dl>
           </div>

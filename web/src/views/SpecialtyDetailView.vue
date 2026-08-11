@@ -4,6 +4,7 @@
       eyebrow="Specialty"
       :title="specialty.headline ?? specialty.title"
       :image="specialty.image"
+      full-image
     />
 
     <!-- Long-form layout, used by specialties the client has supplied full page
@@ -11,26 +12,31 @@
     <template v-if="specialty.sections">
       <section class="bg-white">
         <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
-          <div class="max-w-3xl" v-reveal>
-            <h2 class="text-h1 font-display text-text">{{ specialty.lede.heading }}</h2>
-            <div class="mt-6 space-y-4">
-              <p v-for="(p, i) in specialty.lede.body" :key="i" class="text-body text-text/80">
-                {{ p }}
-              </p>
-            </div>
-            <p v-if="specialty.lede.emphasis" class="text-h3 mt-6 text-text">
-              {{ specialty.lede.emphasis }}
-            </p>
-            <router-link
-              to="/request-appointment"
-              class="text-body mt-8 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-haven-cream hover:brightness-90"
-              >Request appointment</router-link
-            >
-          </div>
-
-          <div class="mt-16 grid grid-cols-1 gap-12 lg:mt-20 lg:grid-cols-3">
+          <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
             <div class="lg:col-span-2">
-              <PageSections :sections="specialty.sections" />
+              <PageSections :sections="specialty.sections">
+                <template #intro>
+                  <div class="max-w-3xl" v-reveal>
+                    <div class="space-y-4">
+                      <p
+                        v-for="(p, i) in specialty.lede.body"
+                        :key="i"
+                        class="text-body text-text/80"
+                      >
+                        {{ p }}
+                      </p>
+                    </div>
+                    <p v-if="specialty.lede.emphasis" class="text-h3 mt-6 text-text">
+                      {{ specialty.lede.emphasis }}
+                    </p>
+                  </div>
+                  <router-link
+                    to="/request-appointment"
+                    class="text-body mt-10 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-haven-cream hover:brightness-90"
+                    >Request appointment</router-link
+                  >
+                </template>
+              </PageSections>
             </div>
 
             <aside class="lg:col-span-1">
