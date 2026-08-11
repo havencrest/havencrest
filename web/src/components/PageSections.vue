@@ -5,6 +5,17 @@
        the parts it defines, always in this order. -->
   <div class="space-y-14 lg:space-y-16">
     <section v-for="(s, i) in sections" :key="i" v-reveal>
+      <!-- Accent photo. Sections that carry `image` render it above the
+           heading as a rounded 16:9 figure that fills the column. -->
+      <figure v-if="s.image" class="mb-8 overflow-hidden rounded-lg aspect-[16/9]">
+        <AppImage
+          :src="cldImage(s.image, { w: 900, ar: '16:9' })"
+          alt=""
+          :width="900"
+          :height="506"
+        />
+      </figure>
+
       <h2 v-if="s.heading" class="text-h2 font-display text-text">{{ s.heading }}</h2>
 
       <div v-if="s.body" class="mt-4 space-y-4">
@@ -22,11 +33,28 @@
         </div>
       </dl>
 
-      <!-- Plain bullets. Two columns once there's room, since these lists run long. -->
-      <ul v-if="s.list" class="mt-6 grid grid-cols-1 gap-x-10 gap-y-2 sm:grid-cols-2">
+      <!-- Plain bullets. Two columns once there's room, since these lists run
+           long — but a list carrying nested bullets stays in one column, where
+           the indent still reads as subordinate. -->
+      <ul
+        v-if="s.list"
+        class="mt-6 grid grid-cols-1 gap-x-10 gap-y-2"
+        :class="hasNesting(s.list) ? '' : 'sm:grid-cols-2'"
+      >
         <li v-for="(item, j) in s.list" :key="j" class="text-body flex gap-3 text-text/80">
           <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" aria-hidden="true" />
-          <span>{{ item }}</span>
+          <div>
+            <span>{{ typeof item === "string" ? item : item.text }}</span>
+            <ul v-if="item.list" class="mt-2 space-y-2 pl-1">
+              <li v-for="(sub, k) in item.list" :key="k" class="flex gap-3">
+                <span
+                  class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary/40"
+                  aria-hidden="true"
+                />
+                <span>{{ sub }}</span>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
 
@@ -90,10 +118,17 @@
 
 <script setup>
 import { h } from "vue";
+import AppImage from "@/components/AppImage.vue";
+import { cldImage } from "@/data/media";
 
 defineProps({
   sections: { type: Array, required: true },
 });
+
+// A `list` entry is normally a plain string. The job postings need one bullet
+// to carry its own sub-bullets (the accepted license types), so an entry may
+// also be `{ text, list[] }`.
+const hasNesting = (list) => list.some((item) => typeof item !== "string" && item.list);
 
 const CheckMark = () =>
   h(

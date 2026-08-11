@@ -3,6 +3,22 @@
 > Client-supplied page copy. Blue text in the original document indicated an
 > internal link; those are called out as **Link →** notes below.
 > Rendered by `/specialties/depression`.
+>
+> The source document specified the URL `/depression-therapy-washington`. The
+> site nests specialties under `/specialties/…`, so the page keeps its existing
+> route — see `Menu Recommendation and Service Page Plan.md`.
+>
+> Original copy used British spellings (personalised, Behavioural, Behaviour,
+> recognise, recognises). Normalized to American English to match the rest of
+> the site.
+>
+> This page was first built before the service list was rebuilt, when several of
+> the pages it links to did not exist. Those links — Individual Therapy, EMDR
+> Therapy, CBT — now resolve and have been restored.
+
+**Title tag:** Depression Therapy in Washington | Havencrest Counseling
+
+**Meta description:** Find compassionate depression therapy in Washington. Our licensed therapists help adults and teens manage depression, restore hope, and improve well-being.
 
 ## Compassionate Depression Therapy to Help You Find Hope Again
 
@@ -35,7 +51,7 @@ Depression affects everyone differently. If you're experiencing any of the follo
 
 Depending on your unique needs and goals, you may also find support through our **Individual Therapy**, **Trauma Therapy**, **EMDR Therapy**, or **Grief and Loss** services.
 
-**Links →** Individual Therapy _(page not built)_, Trauma Therapy → `/services/trauma-therapy-recovery`, EMDR Therapy _(page not built)_, Grief and Loss → `/specialties/grief-loss`
+**Links →** Individual Therapy → `/services/individual-therapy`, Trauma & PTSD → `/specialties/trauma-ptsd`, EMDR Therapy → `/services/emdr-therapy`, Grief & Loss → `/specialties/grief-loss`
 
 ---
 
@@ -57,7 +73,9 @@ Depending on your unique needs and goals, therapy may include:
 
 ### Understanding thought patterns (CBT)
 
-Cognitive Behavioral Therapy (CBT) helps you better understand the connection between your thoughts, emotions, and behaviors. Together, you'll identify patterns that contribute to depression and develop practical coping strategies that support lasting change. Learn more about our **CBT Therapy** services. _(page not built)_
+Cognitive Behavioral Therapy (CBT) helps you better understand the connection between your thoughts, emotions, and behaviors. Together, you'll identify patterns that contribute to depression and develop practical coping strategies that support lasting change. Learn more about our **CBT Therapy** services.
+
+**Link →** Cognitive Behavioral Therapy (CBT) → `/services/cbt`
 
 ### Building psychological flexibility (ACT)
 
@@ -69,9 +87,9 @@ Mindfulness-based approaches help you focus on the present moment with greater a
 
 ### Supporting healing from past experiences (Trauma-Informed Therapy)
 
-For some people, depression is shaped by difficult or traumatic experiences. Trauma-informed therapy recognizes the lasting impact these experiences can have, creating a safe and supportive environment where healing can take place.
+For some people, depression is shaped by difficult or traumatic experiences. Trauma-informed therapy recognizes the lasting impact these experiences can have, creating a safe and supportive environment where healing can take place. Learn more about our **Trauma Therapy** services.
 
-**Link →** Trauma Therapy & Recovery → `/services/trauma-therapy-recovery`
+**Link →** Trauma & PTSD → `/specialties/trauma-ptsd`
 
 ### Processing grief and loss
 
@@ -83,7 +101,7 @@ When depression is connected to the loss of a loved one or another significant l
 
 For some individuals, therapy provides the support they need to manage depression. For others, additional support may be beneficial. When appropriate, we can discuss **Medication Support & Referrals** and help coordinate your care with a trusted psychiatric provider.
 
-**Link →** Psychiatric Evaluation & Medication Management → `/services/psychiatric-evaluation-medication`
+**Link →** Medication Management Support & Referrals → `/services/medication-management`
 
 ---
 
@@ -103,7 +121,7 @@ As therapy progresses, you'll continue building practical skills that help you m
 
 If meeting in person isn't convenient, we also offer secure **Telehealth Therapy** appointments throughout Washington.
 
-**Link →** Telehealth Services → `/services/telehealth-services`
+**Link →** Telehealth Therapy → `/services/telehealth-therapy`
 
 **CTA:** Schedule your first appointment today.
 
@@ -119,7 +137,7 @@ Learn more on our **Insurance** page.
 
 ---
 
-## FAQs
+## Frequently Asked Questions
 
 ### How do I know if I'm experiencing depression?
 
@@ -129,10 +147,22 @@ Depression can affect people in different ways. If you've been experiencing pers
 
 It can. Some people experience periods of low mood that improve over time, while others benefit from additional support. If depression is persistent or affecting your daily life, therapy can help you understand the factors contributing to your depression, develop practical coping strategies, and build lasting resilience. For some individuals, medication may also form part of a broader treatment plan. Learn more about our **Medication Support & Referrals**.
 
-**Link →** Psychiatric Evaluation & Medication Management → `/services/psychiatric-evaluation-medication`
+**Link →** Medication Management Support & Referrals → `/services/medication-management`
 
 ### Is online depression therapy effective?
 
 Yes. Research shows that telehealth therapy can be an effective treatment option for many people experiencing depression. Havencrest offers secure virtual appointments throughout Washington, providing the same compassionate, evidence-based care as our in-person sessions. Learn more about our **Telehealth Therapy** services.
 
-**Link →** Telehealth Services → `/services/telehealth-services`
+**Link →** Telehealth Therapy → `/services/telehealth-therapy`
+
+---
+
+## Ready to take the next step?
+
+Whether you're navigating anxiety, depression, life transitions, relationship challenges, or simply looking to better understand yourself, **Havencrest Wellness & Counseling** provides compassionate, evidence-based individual therapy tailored to your unique needs and goals. Schedule your first appointment today.
+
+**Button:** Schedule Your Appointment
+
+> The closing block above is the generic individual-therapy close carried by
+> every source document. As on the other specialty pages, the built page uses a
+> depression-specific version instead.

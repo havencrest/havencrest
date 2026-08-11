@@ -21,8 +21,8 @@ export function cldImage(publicId, { w = 800, ar = "4:3", crop = "fill" } = {}) 
 
 // Named hero / page images used outside the services & specialties data.
 export const media = {
-  homeHero: "Havencrest/artem-kovalev-fk3XUcfTAvk-unsplash_ilvmzc", // calm, watching a sunset over water
-  about: "Havencrest/olivia-bauso-7NvnR9rK5uI-unsplash_bce3dw", // group in forest at dusk
-  careers: "Havencrest/christina-wocintechchat-com-m-vzfgh3RAPzM-unsplash_izmqhg", // team meeting
-  cta: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i", // hands stacked together — togetherness
+  homeHero: "Havencrest/hero_section_crdm7z",
+  about: "Havencrest/About_us_page_h5qs62",
+  careers: "Havencrest/Meet_our_team_idggza",
+  cta: "Havencrest/Contact_us_page_vmn6hj",
 };

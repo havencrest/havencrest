@@ -6,18 +6,14 @@
       class="overflow-hidden bg-deep-plum text-haven-cream transition-all duration-300 ease-gentle"
       :class="scrolled ? 'max-h-0 opacity-0' : 'max-h-16 opacity-100'"
     >
-      <div class="mx-auto flex max-w-7xl items-center justify-end gap-4 px-4 py-2">
+      <div class="flex items-center justify-end gap-4 px-4 py-2 lg:px-8 xl:px-12">
         <a href="tel:+13604747990" class="text-label hover:underline">360-474-7990</a>
-        <span class="text-haven-cream/40" aria-hidden="true">|</span>
-        <router-link to="/client-access" class="text-label hover:underline" @click="closeAll"
-          >Client Login</router-link
-        >
       </div>
     </div>
 
     <!-- Main nav -->
     <div>
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+      <div class="flex items-center justify-between px-4 py-3 lg:px-8 xl:px-12">
         <router-link to="/" @click="closeAll" class="flex items-center">
           <img src="@/assets/Logo-light.svg" alt="Havencrest" class="h-12 w-auto xl:h-16" />
         </router-link>
@@ -143,8 +139,14 @@
 
         <div class="flex items-center gap-3">
           <router-link
+            to="/client-access"
+            class="hidden rounded-md border border-haven-cream/70 px-4 py-2.5 text-body text-haven-cream hover:bg-haven-cream/10 xl:inline-flex"
+          >
+            Client portal
+          </router-link>
+          <router-link
             to="/request-appointment"
-            class="hidden rounded-md border border-haven-cream px-4 py-2.5 text-body text-haven-cream hover:bg-haven-cream hover:text-primary xl:inline-flex"
+            class="hidden rounded-md bg-haven-cream px-4 py-2.5 text-body text-primary hover:bg-haven-cream/90 xl:inline-flex"
           >
             Request appointment
           </router-link>
@@ -190,7 +192,7 @@
       class="fixed inset-0 z-40 overflow-y-auto bg-background transition-all duration-300 ease-gentle xl:hidden"
       :class="scrolled ? 'top-18' : 'top-26'"
     >
-      <nav class="mx-auto max-w-7xl px-4 py-6">
+      <nav class="px-4 py-6 lg:px-8 xl:px-12">
         <router-link
           to="/about"
           @click="closeAll"
@@ -271,6 +273,12 @@
           @click="closeAll"
           class="mt-6 block rounded-md bg-primary px-4 py-3 text-center text-body text-haven-cream"
           >Request appointment</router-link
+        >
+        <router-link
+          to="/client-access"
+          @click="closeAll"
+          class="mt-3 block rounded-md border border-primary px-4 py-3 text-center text-body text-primary"
+          >Client portal</router-link
         >
       </nav>
     </div>
