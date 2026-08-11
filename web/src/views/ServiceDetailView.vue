@@ -1,30 +1,60 @@
 <template>
   <div v-if="service">
-    <PageHero eyebrow="Service" :title="service.headline ?? service.title" :image="service.image" />
+    <!-- Extended hero (long-form services only): the photo now stretches down
+         behind the eyebrow / title AND the lede + Request-appointment CTA, so
+         everything above the first section reads as one continuous hero band.
+         The old deep-plum scrim is replaced with a cream wash so text stays in
+         the brand text color without a plum tint over the image. -->
+    <section v-if="service.sections" class="relative isolate overflow-hidden bg-background">
+      <AppImage
+        :src="cldImage(service.image, { w: 1920, ar: '21:9' })"
+        alt=""
+        :width="1920"
+        :height="822"
+        eager
+        class="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      <!-- Cream wash: strongest on the left where the copy sits, easing toward
+           the right so the photo still reads through. A light veil on mobile
+           keeps everything legible when the layout is single-column. -->
+      <div
+        aria-hidden="true"
+        class="absolute inset-0 -z-10 bg-gradient-to-r from-haven-cream from-40% to-haven-cream/40 to-95%"
+      />
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-haven-cream/60 lg:hidden" />
+      <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
+        <p class="mb-4 flex items-center gap-3">
+          <span class="inline-block h-px w-8 bg-secondary" aria-hidden="true" />
+          <span class="text-label uppercase text-accent">Service</span>
+        </p>
+        <h1 class="text-display font-display max-w-4xl text-text">
+          {{ service.headline ?? service.title }}
+        </h1>
+        <div class="mt-10 max-w-3xl" v-reveal>
+          <h2 class="text-h1 font-display text-text">{{ service.lede.heading }}</h2>
+          <div class="mt-6 space-y-4">
+            <p v-for="(p, i) in service.lede.body" :key="i" class="text-body text-text/80">
+              {{ p }}
+            </p>
+          </div>
+          <p v-if="service.lede.emphasis" class="text-h3 mt-6 text-text">
+            {{ service.lede.emphasis }}
+          </p>
+          <router-link
+            to="/request-appointment"
+            class="text-body mt-8 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-haven-cream hover:brightness-90"
+            >Request appointment</router-link
+          >
+        </div>
+      </div>
+    </section>
 
     <!-- Long-form layout, used by services the client has supplied full page
          copy for. Everything else keeps the three-part summary below. -->
     <template v-if="service.sections">
       <section class="bg-white">
         <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
-          <div class="max-w-3xl" v-reveal>
-            <h2 class="text-h1 font-display text-text">{{ service.lede.heading }}</h2>
-            <div class="mt-6 space-y-4">
-              <p v-for="(p, i) in service.lede.body" :key="i" class="text-body text-text/80">
-                {{ p }}
-              </p>
-            </div>
-            <p v-if="service.lede.emphasis" class="text-h3 mt-6 text-text">
-              {{ service.lede.emphasis }}
-            </p>
-            <router-link
-              to="/request-appointment"
-              class="text-body mt-8 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-haven-cream hover:brightness-90"
-              >Request appointment</router-link
-            >
-          </div>
-
-          <div class="mt-16 grid grid-cols-1 gap-12 lg:mt-20 lg:grid-cols-3">
+          <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
             <div class="lg:col-span-2">
               <PageSections :sections="service.sections" />
             </div>
@@ -103,8 +133,15 @@
       </CTABlock>
     </template>
 
-    <!-- Summary layout — the three-part format from the service page guide. -->
-    <section v-else class="bg-white">
+    <!-- Summary layout — the three-part format from the service page guide.
+         No long-form lede, so the classic PageHero still applies here. -->
+    <PageHero
+      v-else
+      eyebrow="Service"
+      :title="service.headline ?? service.title"
+      :image="service.image"
+    />
+    <section v-if="!service.sections" class="bg-white">
       <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
         <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
           <div class="space-y-10 lg:col-span-2">
@@ -181,7 +218,9 @@ import PageHero from "@/components/PageHero.vue";
 import PageSections from "@/components/PageSections.vue";
 import FaqList from "@/components/FaqList.vue";
 import CTABlock from "@/components/CTABlock.vue";
+import AppImage from "@/components/AppImage.vue";
 import { services, findService } from "@/data/services";
+import { cldImage } from "@/data/media";
 import { useSeo } from "@/composables/useSeo";
 
 const route = useRoute();
