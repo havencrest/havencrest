@@ -3,9 +3,18 @@
     <PageHero
       eyebrow="Service"
       :title="service.headline ?? service.title"
+      :subtitle="service.lede?.heading"
       :image="service.image"
       full-image
-    />
+    >
+      <template #actions>
+        <router-link
+          to="/request-appointment"
+          class="text-body inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-haven-cream hover:brightness-90"
+          >Request appointment</router-link
+        >
+      </template>
+    </PageHero>
 
     <!-- Long-form layout, used by services the client has supplied full page
          copy for. Everything else keeps the three-part summary below. -->
@@ -13,8 +22,7 @@
       <section class="bg-white">
         <div class="mx-auto max-w-7xl px-4 py-16 lg:py-24">
           <div class="max-w-3xl" v-reveal>
-            <h2 class="text-h1 font-display text-text">{{ service.lede.heading }}</h2>
-            <div class="mt-6 space-y-4">
+            <div class="space-y-4">
               <p v-for="(p, i) in service.lede.body" :key="i" class="text-body text-text/80">
                 {{ p }}
               </p>
@@ -22,11 +30,6 @@
             <p v-if="service.lede.emphasis" class="text-h3 mt-6 text-text">
               {{ service.lede.emphasis }}
             </p>
-            <router-link
-              to="/request-appointment"
-              class="text-body mt-8 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-haven-cream hover:brightness-90"
-              >Request appointment</router-link
-            >
           </div>
 
           <div class="mt-16 grid grid-cols-1 gap-12 lg:mt-20 lg:grid-cols-3">
