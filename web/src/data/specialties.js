@@ -17,6 +17,10 @@
 //
 // A section renders whichever of these it defines, in this order:
 //
+//   image     string                  — Cloudinary public ID, renders as a
+//                                       16:9 accent photo above the heading.
+//                                       Use to weave a second/third photo
+//                                       through pages beyond the hero.
 //   heading   string
 //   body      string[]                — paragraphs
 //   defs      [ { term, detail } ]    — bold-term bullets
@@ -36,7 +40,7 @@
 export const specialties = [
   {
     slug: "anxiety",
-    image: "Havencrest/annie-spratt-H582qBzGmHQ-unsplash_bhd7hd",
+    image: "Havencrest/anxiety-therapy-session-washington_lj3vnx",
     title: "Anxiety",
     what: "Anxiety is more than occasional worry. It can affect your thoughts, emotions, body, and daily life.",
     recognize:
@@ -44,11 +48,11 @@ export const specialties = [
     help: "Therapy can help you understand your anxiety, develop practical coping strategies, and regain confidence in everyday life.",
 
     seo: {
-      title: "Anxiety Therapy in Washington | Havencrest Counseling",
+      title: "Anxiety Therapy| Havencrest Counseling",
       description:
         "Find compassionate anxiety therapy in Washington. Our licensed therapists help adults and teens overcome anxiety, panic attacks, and chronic stress. Schedule today.",
     },
-    headline: "Anxiety Therapy in Washington",
+    headline: "Anxiety Therapy",
     lede: {
       heading: "Find relief from anxiety with compassionate, evidence-based care",
       body: [
@@ -130,6 +134,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/anxiety-therapy-session-washington_1_s9notv",
         heading: "How we support anxiety",
         body: [
           "Our goal is to help you better understand your anxiety, reduce its impact on your daily life, and develop practical skills that support lasting emotional wellbeing.",
@@ -230,7 +235,7 @@ export const specialties = [
   },
   {
     slug: "mood-disorders",
-    image: "Havencrest/christina-victoria-craft-ZHys6xN7sUE-unsplash_kqivxg",
+    image: "Havencrest/Mood-Disorders_otc6me",
     title: "Mood Disorders",
     what: "Mood disorders involve changes in mood, energy, and functioning that go beyond everyday ups and downs.",
     recognize:
@@ -326,6 +331,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/christopher-lemercier-12yvdCiLaVE-unsplash_dkfwqv",
         heading: "How we support mood disorders",
         body: [
           "Our goal is to help you better understand your experiences, improve emotional wellbeing, and develop practical strategies that support lasting stability and resilience. Your therapy is tailored to your unique experiences, strengths, goals, and the challenges you're navigating.",
@@ -427,7 +433,7 @@ export const specialties = [
   },
   {
     slug: "personality-disorders",
-    image: "Havencrest/mike-labrum-fvl4b1gjpbk-unsplash_tng8rr",
+    image: "Havencrest/Personality-Disorder_jwggng",
     title: "Personality Disorders",
     what: "Personality disorders involve long-standing patterns of thinking, feeling, and relating to others that can affect everyday life and relationships.",
     recognize:
@@ -530,6 +536,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
         heading: "How we support personality disorders",
         body: [
           "Our goal is to help you better understand your experiences, strengthen emotional regulation, improve relationships, and develop practical strategies that support lasting emotional wellbeing. Your therapy is tailored to your unique experiences, strengths, goals, and the challenges you're navigating.",
@@ -617,14 +624,14 @@ export const specialties = [
     related: [
       { label: "Mood Disorders", to: "/specialties/mood-disorders" },
       { label: "Trauma & PTSD", to: "/specialties/trauma-ptsd" },
-      { label: "Relationship Challenges", to: "/specialties/relationship-challenges" },
+      // { label: "Relationship Challenges", to: "/specialties/relationship-challenges" },
       { label: "Dialectical Behavior Therapy (DBT)", to: "/services/dbt" },
       { label: "Couples Counseling", to: "/services/couples-counseling" },
     ],
   },
   {
     slug: "depression",
-    image: "Havencrest/christopher-lemercier-12yvdCiLaVE-unsplash_dkfwqv",
+    image: "Havencrest/depressing-therapy-session-seattle-washington.jpg_l5u5qg",
     title: "Depression",
     what: "Depression is a persistent low mood that affects how you feel, think, and function.",
     recognize:
@@ -722,6 +729,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/artem-kovalev-fk3XUcfTAvk-unsplash_ilvmzc",
         heading: "How we support depression",
         body: [
           "Our goal is to help you better understand your depression, reduce its impact on your daily life, and develop practical skills that support lasting emotional wellbeing.",
@@ -823,7 +831,7 @@ export const specialties = [
   },
   {
     slug: "trauma-ptsd",
-    image: "Havencrest/susan-wilkinson-EDJKEXFbzHA-unsplash_xridkb",
+    image: "Havencrest/Trauma_Therapy_plebpt",
     title: "Trauma & PTSD",
     what: "Trauma can result from distressing or overwhelming experiences and may continue to affect you long after the event.",
     recognize:
@@ -835,7 +843,7 @@ export const specialties = [
       description:
         "Compassionate trauma therapy in Washington. Heal from PTSD, childhood trauma, abuse, and difficult life experiences with evidence-based, trauma-informed care.",
     },
-    headline: "Trauma Therapy in Washington",
+    headline: "Trauma Therapy",
     lede: {
       heading: "Heal from trauma with safe, compassionate, trauma-informed care",
       body: [
@@ -923,6 +931,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/sandy-millar-cQ-66Evaf5g-unsplash_ctbt9w",
         heading: "How we support trauma",
         body: [
           "Our goal is to help you safely process difficult experiences, reduce the impact trauma continues to have on your daily life, and build the confidence, resilience, and emotional wellbeing to move forward.",
@@ -1019,7 +1028,7 @@ export const specialties = [
   },
   {
     slug: "adhd",
-    image: "Havencrest/nathan-dumlao-B7Ys4q_utls-unsplash_kogkxx",
+    image: "Havencrest/ADHD_Support_dlysij",
     title: "ADHD",
     what: "ADHD affects attention, organization, and self-regulation in ways that can impact work, school, and relationships.",
     recognize:
@@ -1123,6 +1132,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash_owuqwo",
         heading: "How we support ADHD",
         body: [
           "Our goal is to help you better understand how ADHD affects your daily life, strengthen executive functioning skills, and develop practical strategies that support lasting confidence and wellbeing. Your therapy is tailored to your unique experiences, strengths, and goals.",
@@ -1218,7 +1228,7 @@ export const specialties = [
   },
   {
     slug: "autism",
-    image: "Havencrest/peter-burdon-C2zX9DEVSDs-unsplash_zy67ms",
+    image: "Havencrest/autism_therapy_gcgs52",
     title: "Autism",
     what: "Autism is a neurodevelopmental difference that influences communication, sensory experiences, and how people interact with the world.",
     recognize:
@@ -1314,6 +1324,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/Autism_therapy2_x5drkb",
         heading: "How we support autistic individuals",
         body: [
           "Our goal is to help you better understand yourself, build on your strengths, and develop practical strategies that support lasting emotional wellbeing and everyday functioning. Your therapy is tailored to your unique experiences, strengths, communication style, sensory preferences, and goals.",
@@ -1409,7 +1420,7 @@ export const specialties = [
   },
   {
     slug: "stress-burnout",
-    image: "Havencrest/ben-maguire-3AE3jUCBhxo-unsplash_peqacx",
+    image: "Havencrest/Stress_and_Burn_out_cxnipw",
     title: "Stress & Burnout",
     what: "Stress becomes burnout when ongoing demands leave you feeling emotionally, mentally, and physically exhausted.",
     recognize:
@@ -1504,6 +1515,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/Stress_and_Burn_out_1_vucutc",
         heading: "How we support stress & burnout",
         body: [
           "Our goal is to help you better understand the factors contributing to your stress, strengthen emotional resilience, and develop practical strategies that support lasting wellbeing. Your therapy is tailored to your unique experiences, strengths, values, and goals.",
@@ -1535,6 +1547,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/stress_and_burnout_liaixq",
         heading: "What to expect during stress & burnout therapy",
         body: [
           "Your first session is focused on understanding your experiences, current challenges, strengths, and goals.",
@@ -1632,8 +1645,7 @@ export const specialties = [
           },
           {
             term: "Relationship loss",
-            detail:
-              "Processing separation, divorce, or the end of a meaningful relationship.",
+            detail: "Processing separation, divorce, or the end of a meaningful relationship.",
           },
           {
             term: "Anticipatory grief",
@@ -1662,8 +1674,7 @@ export const specialties = [
           },
           {
             term: "Supporting children or family through grief",
-            detail:
-              "Wanting guidance as you help your family navigate loss together.",
+            detail: "Wanting guidance as you help your family navigate loss together.",
           },
         ],
         outro: [
@@ -1685,6 +1696,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
         heading: "How we support grief & loss",
         body: [
           "Our goal is to help you process your grief, make sense of your experiences, and develop practical ways to navigate life while honoring your loss.",
@@ -1775,7 +1787,7 @@ export const specialties = [
   },
   {
     slug: "life-transitions",
-    image: "Havencrest/jovan-vasiljevic-w91JpY9pGZo-unsplash_a4zisc",
+    image: "Havencrest/Life_transition_jui6js",
     title: "Life Transitions",
     what: "Major life changes can bring uncertainty, even when they're positive.",
     recognize:
@@ -1878,6 +1890,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/olivia-bauso-7NvnR9rK5uI-unsplash_bce3dw",
         heading: "How we support life transitions & identity",
         body: [
           "Our goal is to help you navigate change with greater confidence, strengthen your sense of identity, and develop practical strategies that support lasting emotional wellbeing.",
@@ -1966,38 +1979,38 @@ export const specialties = [
     },
     related: [
       { label: "Grief & Loss", to: "/specialties/grief-loss" },
-      { label: "Identity & Self-Discovery", to: "/specialties/identity-self-discovery" },
-      { label: "Cultural & Life Experiences", to: "/specialties/cultural-life-experiences" },
+      // { label: "Identity & Self-Discovery", to: "/specialties/identity-self-discovery" },
+      // { label: "Cultural & Life Experiences", to: "/specialties/cultural-life-experiences" },
       { label: "Telehealth Therapy", to: "/services/telehealth-therapy" },
     ],
   },
-  {
-    slug: "relationship-challenges",
-    image: "Havencrest/kelly-sikkema-ofczR12zfxM-unsplash_wiuarw",
-    title: "Relationship Challenges",
-    what: "Relationship difficulties can affect communication, trust, and emotional connection.",
-    recognize:
-      "You may recognize this if you're experiencing frequent conflict, feeling disconnected, struggling with communication, or facing significant life changes together.",
-    help: "Therapy can help strengthen understanding, improve communication, and support healthier relationships.",
-  },
-  {
-    slug: "parenting-support",
-    image: "Havencrest/robo-wunderkind--_QpJv4J_AA-unsplash_qtwgmi",
-    title: "Parenting Support",
-    what: "Parenting comes with unique joys and challenges at every stage.",
-    recognize:
-      "You may recognize this if you're feeling overwhelmed, uncertain, experiencing conflict at home, or looking for strategies to support your child.",
-    help: "Our clinicians work alongside parents to build confidence and strengthen family relationships.",
-  },
-  {
-    slug: "child-adolescent-mental-health",
-    image: "Havencrest/melissa-walker-horn-qycAibck4B0-unsplash_qqddkk",
-    title: "Child & Adolescent Mental Health",
-    what: "Children and teens experience mental health challenges differently from adults.",
-    recognize:
-      "You may recognize this if your child shows changes in mood, behavior, friendships, school performance, or emotional regulation.",
-    help: "We provide age-appropriate support while working collaboratively with families.",
-  },
+  // {
+  //   slug: "relationship-challenges",
+  //   image: "Havencrest/kelly-sikkema-ofczR12zfxM-unsplash_wiuarw",
+  //   title: "Relationship Challenges",
+  //   what: "Relationship difficulties can affect communication, trust, and emotional connection.",
+  //   recognize:
+  //     "You may recognize this if you're experiencing frequent conflict, feeling disconnected, struggling with communication, or facing significant life changes together.",
+  //   help: "Therapy can help strengthen understanding, improve communication, and support healthier relationships.",
+  // },
+  // {
+  //   slug: "parenting-support",
+  //   image: "Havencrest/robo-wunderkind--_QpJv4J_AA-unsplash_qtwgmi",
+  //   title: "Parenting Support",
+  //   what: "Parenting comes with unique joys and challenges at every stage.",
+  //   recognize:
+  //     "You may recognize this if you're feeling overwhelmed, uncertain, experiencing conflict at home, or looking for strategies to support your child.",
+  //   help: "Our clinicians work alongside parents to build confidence and strengthen family relationships.",
+  // },
+  // {
+  //   slug: "child-adolescent-mental-health",
+  //   image: "Havencrest/melissa-walker-horn-qycAibck4B0-unsplash_qqddkk",
+  //   title: "Child & Adolescent Mental Health",
+  //   what: "Children and teens experience mental health challenges differently from adults.",
+  //   recognize:
+  //     "You may recognize this if your child shows changes in mood, behavior, friendships, school performance, or emotional regulation.",
+  //   help: "We provide age-appropriate support while working collaboratively with families.",
+  // },
   {
     slug: "womens-mental-health",
     image: "Havencrest/olivia-bauso-7NvnR9rK5uI-unsplash_bce3dw",
@@ -2107,6 +2120,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
         heading: "How we support women's mental health",
         body: [
           "Our goal is to help you better understand your experiences, strengthen emotional wellbeing, and develop practical strategies that support lasting resilience and confidence. Your therapy is tailored to your unique experiences, strengths, values, and goals.",
@@ -2198,7 +2212,7 @@ export const specialties = [
   },
   {
     slug: "mens-mental-health",
-    image: "Havencrest/kaja-sariwating-UEEmt2sndSQ-unsplash_fdmnuh",
+    image: "Havencrest/Mens_Mental_Health_jifxfc",
     title: "Men's Mental Health",
     what: "Men often experience unique pressures that can make it difficult to seek support.",
     recognize:
@@ -2301,6 +2315,7 @@ export const specialties = [
         ],
       },
       {
+        image: "Havencrest/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash_owuqwo",
         heading: "How we support men's mental health",
         body: [
           "Our goal is to help you better understand your experiences, strengthen emotional resilience, and develop practical strategies that support lasting wellbeing. Your therapy is tailored to your unique experiences, strengths, and goals.",
@@ -2400,24 +2415,24 @@ export const specialties = [
       { label: "Individual Therapy", to: "/services/individual-therapy" },
     ],
   },
-  {
-    slug: "identity-self-discovery",
-    image: "Havencrest/mitch-nJupV3AOP-U-unsplash_w8p2zm",
-    title: "Identity & Self-Discovery",
-    what: "Exploring your identity is a personal journey that can involve growth, uncertainty, and change.",
-    recognize:
-      "You may recognize this if you're questioning who you are, your values, life direction, or sense of belonging.",
-    help: "We're here to provide a supportive, non-judgmental space as you explore what matters most to you.",
-  },
-  {
-    slug: "cultural-life-experiences",
-    image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
-    title: "Cultural & Life Experiences",
-    what: "Culture, background, and lived experiences can shape mental health in meaningful ways.",
-    recognize:
-      "You may recognize this if you're navigating cultural expectations, migration, discrimination, or challenges balancing different parts of your identity.",
-    help: "Our clinicians value your lived experience and provide culturally responsive care.",
-  },
+  // {
+  //   slug: "identity-self-discovery",
+  //   image: "Havencrest/mitch-nJupV3AOP-U-unsplash_w8p2zm",
+  //   title: "Identity & Self-Discovery",
+  //   what: "Exploring your identity is a personal journey that can involve growth, uncertainty, and change.",
+  //   recognize:
+  //     "You may recognize this if you're questioning who you are, your values, life direction, or sense of belonging.",
+  //   help: "We're here to provide a supportive, non-judgmental space as you explore what matters most to you.",
+  // },
+  // {
+  //   slug: "cultural-life-experiences",
+  //   image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
+  //   title: "Cultural & Life Experiences",
+  //   what: "Culture, background, and lived experiences can shape mental health in meaningful ways.",
+  //   recognize:
+  //     "You may recognize this if you're navigating cultural expectations, migration, discrimination, or challenges balancing different parts of your identity.",
+  //   help: "Our clinicians value your lived experience and provide culturally responsive care.",
+  // },
 ];
 
 export const findSpecialty = (slug) => specialties.find((s) => s.slug === slug);

@@ -87,7 +87,6 @@
       <CTABlock
         :title="service.closing?.heading ?? 'Ready when you are.'"
         :body="service.closing?.body ?? ''"
-        :image="service.image"
       >
         <template #actions>
           <router-link

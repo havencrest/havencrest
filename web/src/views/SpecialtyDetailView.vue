@@ -91,7 +91,6 @@
       <CTABlock
         :title="specialty.closing?.heading ?? 'Ready when you are.'"
         :body="specialty.closing?.body ?? ''"
-        :image="specialty.image"
       >
         <template #actions>
           <router-link

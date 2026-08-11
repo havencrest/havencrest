@@ -5,6 +5,17 @@
        the parts it defines, always in this order. -->
   <div class="space-y-14 lg:space-y-16">
     <section v-for="(s, i) in sections" :key="i" v-reveal>
+      <!-- Accent photo. Sections that carry `image` render it above the
+           heading as a rounded 16:9 figure that fills the column. -->
+      <figure v-if="s.image" class="mb-8 overflow-hidden rounded-lg aspect-[16/9]">
+        <AppImage
+          :src="cldImage(s.image, { w: 900, ar: '16:9' })"
+          alt=""
+          :width="900"
+          :height="506"
+        />
+      </figure>
+
       <h2 v-if="s.heading" class="text-h2 font-display text-text">{{ s.heading }}</h2>
 
       <div v-if="s.body" class="mt-4 space-y-4">
@@ -107,6 +118,8 @@
 
 <script setup>
 import { h } from "vue";
+import AppImage from "@/components/AppImage.vue";
+import { cldImage } from "@/data/media";
 
 defineProps({
   sections: { type: Array, required: true },

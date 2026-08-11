@@ -62,33 +62,43 @@
             >
           </div>
 
-          <div class="col-span-4 flex flex-col gap-3 lg:col-span-5">
+          <div class="col-span-4 flex flex-col gap-5 lg:col-span-5">
             <span class="text-label uppercase text-haven-cream">Get in touch</span>
-            <div class="flex items-start gap-2">
-              <span class="text-label uppercase text-haven-cream">Phone</span>
-              <a href="tel:+13604747990" class="text-body text-haven-cream hover:underline"
-                >360-474-7990</a
-              >
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-label uppercase text-haven-cream">Fax</span>
-              <span class="text-body text-haven-cream">360-447-5250</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-label shrink-0 uppercase text-haven-cream">Email</span>
-              <a
-                href="mailto:info@havencrestcounseling.com"
-                class="text-body min-w-0 break-words text-haven-cream hover:underline"
-                >info@havencrestcounseling.com</a
-              >
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-label uppercase text-haven-cream">Location</span>
-              <span class="text-body text-haven-cream"
-                >1700 Seventh Ave, Suite 2100, Seattle WA 98101</span
-              >
-            </div>
-            <p class="text-h3 text-haven-cream">Appointments available 7 days a week</p>
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
+              <div>
+                <dt class="text-label uppercase text-haven-cream/70">Phone</dt>
+                <dd class="mt-1.5">
+                  <a href="tel:+13604747990" class="text-body text-haven-cream hover:underline"
+                    >360-474-7990</a
+                  >
+                </dd>
+              </div>
+              <div>
+                <dt class="text-label uppercase text-haven-cream/70">Fax</dt>
+                <dd class="text-body mt-1.5 text-haven-cream">360-447-5250</dd>
+              </div>
+              <div class="sm:col-span-2">
+                <dt class="text-label uppercase text-haven-cream/70">Email</dt>
+                <dd class="mt-1.5">
+                  <a
+                    href="mailto:info@havencrestcounseling.com"
+                    class="text-body break-words text-haven-cream hover:underline"
+                    >info@havencrestcounseling.com</a
+                  >
+                </dd>
+              </div>
+              <div class="sm:col-span-2">
+                <dt class="text-label uppercase text-haven-cream/70">Location</dt>
+                <dd class="text-body mt-1.5 text-haven-cream">
+                  1700 Seventh Ave, Suite 2100, Seattle WA 98101
+                </dd>
+              </div>
+            </dl>
+            <p
+              class="text-label mt-2 border-t border-haven-cream/20 pt-4 uppercase text-haven-cream/80"
+            >
+              Appointments available 7 days a week
+            </p>
           </div>
         </div>
       </div>

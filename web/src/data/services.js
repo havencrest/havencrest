@@ -15,6 +15,10 @@
 //
 // A section renders whichever of these it defines, in this order:
 //
+//   image     string                  — Cloudinary public ID, renders as a
+//                                       16:9 accent photo above the heading.
+//                                       Use to weave a second/third photo
+//                                       through pages beyond the hero.
 //   heading   string
 //   body      string[]                — paragraphs
 //   defs      [ { term, detail } ]    — bold-term bullets
@@ -42,7 +46,7 @@ export const services = [
   {
     slug: "individual-therapy",
     art: "sprout",
-    image: "Havencrest/kelly-sikkema-f_aHTIof44U-unsplash_esvoom",
+    image: "Havencrest/Individual_therapy_s4svpo",
     title: "Individual Therapy",
     what: "One-to-one therapy with a licensed clinician, focused on understanding what you're experiencing and building practical tools for everyday life.",
     when: "Anxiety, depression, stress and burnout, trauma, grief, self-esteem, life transitions, and personal growth.",
@@ -54,7 +58,7 @@ export const services = [
       description:
         "Find compassionate individual therapy in Washington for anxiety, depression, trauma, stress, grief, and life transitions. Schedule your first appointment today.",
     },
-    headline: "Individual Therapy in Washington",
+    headline: "Individual Therapy",
     lede: {
       heading: "Find support, healing, and growth with individual therapy",
       body: [
@@ -150,6 +154,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/adult-therapy-client-conversation-1-1024x683_e711tj",
         heading: "How we approach individual therapy",
         body: [
           "Our goal is to help you better understand yourself, build resilience, strengthen emotional wellbeing, and develop practical skills that support lasting change.",
@@ -176,6 +181,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
         heading: "What to expect during individual therapy",
         body: ["During your first session, your therapist will:"],
         list: [
@@ -241,14 +247,14 @@ export const services = [
   {
     slug: "couples-counseling",
     art: "hearts",
-    image: "Havencrest/youssef-naddam-iJ2IG8ckCpA-unsplash_w3dse1",
+    image: "Havencrest/couples-counseling-therapy-washington_zsyt53",
     title: "Couples Counseling",
     what: "A supportive space for partners to strengthen their relationship, improve communication, and work through challenges together.",
     when: "Communication difficulties, conflict, trust concerns, parenting challenges, intimacy concerns, premarital counseling, and major life changes.",
     expect:
       "Your therapist will help you understand relationship patterns, improve communication, and develop practical strategies.",
 
-    headline: "Couples Counseling in Washington",
+    headline: "Couples Counseling",
     lede: {
       heading: "A supportive space to grow together",
       body: [
@@ -337,6 +343,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
         heading: "How we approach couples counseling",
         body: [
           "Our goal is to help you strengthen communication, deepen understanding, rebuild trust, and develop the skills needed to navigate challenges together with confidence.",
@@ -352,6 +359,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash_owuqwo",
         heading: "What to expect during couples counseling",
         body: ["During your first session, your therapist will:"],
         list: [
@@ -418,13 +426,13 @@ export const services = [
   {
     slug: "family-therapy",
     art: "home",
-    image: "Havencrest/robo-wunderkind--_QpJv4J_AA-unsplash_qtwgmi",
+    image: "Havencrest/Family_Therapy_xlcifj",
     title: "Family Therapy",
     what: "Helps family members improve communication, strengthen relationships, and navigate challenges together.",
     when: "Family conflict, parenting challenges, blended families, behavioral concerns, life transitions, grief, and communication difficulties.",
     expect: "Sessions focus on understanding family dynamics and working toward shared goals.",
 
-    headline: "Family Therapy in Washington",
+    headline: "Family Therapy",
     lede: {
       heading: "Working through challenges together",
       body: [
@@ -535,6 +543,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/olivia-bauso-7NvnR9rK5uI-unsplash_bce3dw",
         heading: "How we approach family therapy",
         body: [
           "Every family is unique, so therapy is tailored to your family's strengths, challenges, and goals. Our therapists use evidence-based approaches to help improve communication, strengthen relationships, and support healthier family functioning.",
@@ -554,6 +563,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/christina-wocintechchat-com-m-vzfgh3RAPzM-unsplash_izmqhg",
         heading: "What to expect during family therapy",
         body: ["During your first session, your therapist will:"],
         list: [
@@ -620,14 +630,14 @@ export const services = [
   {
     slug: "child-teen-therapy",
     art: "kite",
-    image: "Havencrest/caleb-woods-ecRuhwPIW7c-unsplash_gssaal",
+    image: "Havencrest/Child_and_Teen_Therapy_og1fon",
     title: "Child & Teen Therapy",
     what: "Supports children and teenagers through emotional, behavioral, social, and developmental challenges.",
     when: "Anxiety, school concerns, behavioral challenges, social difficulties, family changes, grief, and self-esteem.",
     expect:
       "Care is tailored to the child's developmental needs while partnering with parents when appropriate.",
 
-    headline: "Child & Teen Therapy in Washington",
+    headline: "Child & Teen Therapy",
     lede: {
       heading: "A safe, supportive space for children and teens",
       body: [
@@ -780,6 +790,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/Child_therapy_l92spo",
         heading: "How we approach child & teen therapy",
         body: [
           "Our goal is to help children and teens better understand their emotions, build confidence, strengthen resilience, and develop practical skills that support healthy emotional wellbeing both now and into adulthood.",
@@ -800,6 +811,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
         heading: "What to expect during child & teen therapy",
         body: ["During your child's first session, your therapist will:"],
         list: [
@@ -882,14 +894,14 @@ export const services = [
   {
     slug: "cbt",
     art: "clipboard",
-    image: "Havencrest/vitaly-gariev-ZFBrAHDW9P4-unsplash_sr4dva",
+    image: "Havencrest/cbt-therapy-session-washington_y62lkk",
     title: "Cognitive Behavioral Therapy (CBT)",
     what: "A structured, evidence-based therapy that examines how thoughts, emotions, and behaviors influence one another.",
     when: "Anxiety, depression, panic, OCD, insomnia, stress, and unhelpful thought patterns.",
     expect:
       "Practical skills, between-session practice, and steady progress toward clearly defined goals.",
 
-    headline: "Cognitive Behavioral Therapy (CBT) in Washington",
+    headline: "Cognitive Behavioral Therapy (CBT)",
     lede: {
       heading: "Practical, evidence-based tools for lasting change",
       body: [
@@ -963,6 +975,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/christina-wocintechchat-com-m-vzfgh3RAPzM-unsplash_izmqhg",
         heading: "How we approach CBT",
         body: [
           "Our goal is to help you better understand the connection between your thoughts, emotions, and behaviors, so you can respond to life's challenges with greater awareness, confidence, and resilience.",
@@ -1077,14 +1090,14 @@ export const services = [
   {
     slug: "dbt",
     art: "chat",
-    image: "Havencrest/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash_owuqwo",
+    image: "Havencrest/dbt-therapy-session-washington_c2fyld",
     title: "Dialectical Behavior Therapy (DBT)",
     what: "A skills-based therapy for managing intense emotions and building healthier, steadier relationships.",
     when: "Emotional overwhelm, impulsivity, self-harm, mood instability, and relationship difficulties.",
     expect:
       "Skills in mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness, practiced between sessions.",
 
-    headline: "Dialectical Behavior Therapy (DBT) in Washington",
+    headline: "Dialectical Behavior Therapy (DBT)",
     lede: {
       heading: "Skills for managing intense emotions",
       body: [
@@ -1161,6 +1174,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
         heading: "How we approach DBT",
         body: [
           "Our goal is to help you better understand your emotions, strengthen your relationships, and develop practical skills that help you respond to life's challenges with greater confidence and balance.",
@@ -1267,14 +1281,14 @@ export const services = [
   {
     slug: "emdr-therapy",
     art: "shield",
-    image: "Havencrest/mike-labrum-fvl4b1gjpbk-unsplash_tng8rr",
+    image: "Havencrest/emdr-therapy-session-seattle-washington_a9mssq",
     title: "EMDR Therapy",
     what: "An evidence-based therapy that helps the brain reprocess distressing memories so they carry less emotional weight.",
     when: "PTSD, childhood trauma, abuse, accidents, medical trauma, phobias, and distressing memories.",
     expect:
       "Careful preparation, structured reprocessing with bilateral stimulation, and progress at a pace that feels safe.",
 
-    headline: "EMDR Therapy in Washington",
+    headline: "EMDR Therapy",
     lede: {
       heading: "Processing difficult experiences at a pace that feels safe",
       body: [
@@ -1342,6 +1356,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/susan-wilkinson-EDJKEXFbzHA-unsplash_xridkb",
         heading: "How we approach EMDR therapy",
         body: [
           "Our goal is to help you safely process distressing experiences, reduce the emotional impact they continue to have on your life, and develop a greater sense of confidence, resilience, and emotional wellbeing.",
@@ -1459,14 +1474,14 @@ export const services = [
   {
     slug: "medication-management",
     art: "pulse",
-    image: "Havencrest/christina-victoria-craft-ZHys6xN7sUE-unsplash_kqivxg",
+    image: "Havencrest/Medication_Management_js0hjb",
     title: "Medication Management Support & Referrals",
     what: "Havencrest doesn't prescribe medication. We help you explore whether medication may be part of your care and connect you with trusted psychiatric providers.",
     when: "Depression, anxiety, ADHD, trauma and PTSD, mood changes, or symptoms that are affecting daily life.",
     expect:
       "A conversation about your options, referral to a qualified prescriber when appropriate, and coordinated care with your consent.",
 
-    headline: "Medication Management Support & Referrals in Washington",
+    headline: "Medication Management Support & Referrals",
     lede: {
       heading: "Coordinated care and trusted psychiatric referrals",
       body: [
@@ -1527,6 +1542,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/annie-spratt-H582qBzGmHQ-unsplash_bhd7hd",
         heading: "How our referral process works",
         body: [
           "If medication support may be a helpful part of your care, we'll work with you to explore your options and connect you with appropriate psychiatric support when needed. The process may include:",
@@ -1606,13 +1622,13 @@ export const services = [
   {
     slug: "telehealth-therapy",
     art: "monitor",
-    image: "Havencrest/dylan-ferreira-HJmxky8Fvmo-unsplash_vr0tth",
+    image: "Havencrest/Telehealth_1_gcnhlj",
     title: "Telehealth Therapy",
     what: "Secure online therapy from wherever is convenient for you, anywhere in Washington.",
     when: "Busy schedules, travel, rural living, limited transportation, or a need for greater flexibility.",
     expect: "The same care as an in-person session, conducted over a secure video platform.",
 
-    headline: "Telehealth Therapy in Washington",
+    headline: "Telehealth Therapy",
     lede: {
       heading: "Compassionate care, wherever you are in Washington",
       body: [
@@ -1671,6 +1687,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/virtual-therapy-barrie_wfzodz",
         heading: "How telehealth therapy works",
         body: ["Starting online therapy with Havencrest is simple."],
         items: [
@@ -1768,7 +1785,7 @@ export const services = [
     expect:
       "A therapist who takes your background seriously and adapts care to your values, community, and goals.",
 
-    headline: "Culturally Responsive Therapy in Washington",
+    headline: "Culturally Responsive Therapy",
     lede: {
       heading: "Care that recognizes your whole story",
       body: [
@@ -1849,6 +1866,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/olivia-bauso-7NvnR9rK5uI-unsplash_bce3dw",
         heading: "How we approach culturally responsive therapy",
         body: [
           "Our goal is to provide therapy that recognizes your whole story while creating a safe, respectful, and collaborative space where you can explore your experiences and work toward meaningful change.",
@@ -1892,6 +1910,7 @@ export const services = [
         ],
       },
       {
+        image: "Havencrest/kaja-sariwating-UEEmt2sndSQ-unsplash_fdmnuh",
         heading: "What to expect during therapy",
         body: ["During your first session, your therapist will:"],
         list: [
