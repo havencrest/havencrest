@@ -811,7 +811,7 @@ export const services = [
         ],
       },
       {
-        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
+        image: "Havencrest/caleb-woods-ecRuhwPIW7c-unsplash_gssaal",
         heading: "What to expect during child & teen therapy",
         body: ["During your child's first session, your therapist will:"],
         list: [

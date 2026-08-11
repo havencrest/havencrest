@@ -192,9 +192,9 @@
             v-for="s in otherServices"
             :key="s.slug"
             :to="`/services/${s.slug}`"
-            class="rounded-lg bg-gradient-to-r from-signal-plum to-deep-plum p-4 transition hover:brightness-90"
+            class="rounded-lg bg-gradient-to-r from-signal-plum/25 to-signal-plum/10 p-4 transition hover:brightness-90"
           >
-            <span class="text-body text-haven-cream">{{ s.title }} →</span>
+            <span class="text-body text-text">{{ s.title }} →</span>
           </router-link>
         </div>
       </div>
