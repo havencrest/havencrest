@@ -6,6 +6,7 @@
       :subtitle="service.lede?.heading"
       :image="service.image"
       full-image
+      display-subtitle
     >
       <template #actions>
         <router-link

@@ -2,8 +2,9 @@
   <!-- Image hero: the representing photo becomes the hero background. Every
        image hero shares one hue treatment — a slightly darkened photo under a
        soft signal-plum wash that lifts cream text at the bottom.
-       `fullImage` opts into the display-sized subtitle used on service detail
-       pages (where the subtitle carries the lede heading). -->
+       `fullImage` stretches the container to a full-viewport band;
+       `displaySubtitle` bumps the subtitle to display size (used on service
+       detail pages, where the subtitle carries the lede heading). -->
   <section v-if="image" class="relative isolate overflow-hidden bg-background">
     <AppImage
       :src="cldImage(image, { w: 1600, ar: '16:9' })"
@@ -36,7 +37,7 @@
       <p
         v-if="subtitle"
         class="mt-6 max-w-2xl text-haven-cream/90"
-        :class="fullImage ? 'text-h1 font-display' : 'text-body'"
+        :class="displaySubtitle ? 'text-h1 font-display' : 'text-body'"
       >
         {{ subtitle }}
       </p>
@@ -79,9 +80,11 @@ defineProps({
   // Optional Cloudinary public ID. When set, the hero renders the photo as a
   // full-bleed background instead of a flat brand-colored band.
   image: { type: String, default: "" },
+  // When true, stretches the hero container to a full-viewport band.
+  fullImage: { type: Boolean, default: false },
   // When true, the subtitle is rendered at display size (used on service
   // detail pages, where the subtitle carries the lede heading rather than a
   // paragraph).
-  fullImage: { type: Boolean, default: false },
+  displaySubtitle: { type: Boolean, default: false },
 });
 </script>
