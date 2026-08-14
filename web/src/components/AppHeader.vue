@@ -37,6 +37,27 @@
             </svg>
             360-474-7990
           </a>
+          <div class="flex items-center gap-3 border-l border-haven-cream/25 pl-4">
+            <a
+              v-for="s in socials"
+              :key="s.label"
+              :href="s.href"
+              :aria-label="s.label"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-haven-cream/85 hover:text-haven-cream"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="h-4 w-4"
+                aria-hidden="true"
+              >
+                <path :d="s.path" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -356,6 +377,7 @@ import { ref, computed, h, onMounted, onUnmounted } from "vue";
 import { useRoute } from "vue-router";
 import { services } from "@/data/services";
 import { specialties } from "@/data/specialties";
+import { socials } from "@/data/socials";
 
 const route = useRoute();
 const openMenu = ref(null);
