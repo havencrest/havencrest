@@ -409,7 +409,6 @@ const resourceLinks = [
   { label: "Client portal", to: "/client-access" },
   { label: "Working at Havencrest", to: "/careers" },
   { label: "Opportunities", to: "/careers/opportunities" },
-  { label: "Apply", to: "/careers/apply" },
 ];
 const isActiveResources = computed(() =>
   resourceLinks.some((r) => route.path.startsWith(r.to)),
