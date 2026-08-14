@@ -123,6 +123,53 @@
                   <dd class="text-body mt-1 text-text">8am – 5pm • Open 7 days a week</dd>
                 </div>
               </div>
+              <div class="flex gap-3 sm:col-span-2">
+                <span
+                  class="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-signal-plum/10 text-secondary"
+                  aria-hidden="true"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-4 w-4"
+                  >
+                    <circle cx="18" cy="5" r="3" />
+                    <circle cx="6" cy="12" r="3" />
+                    <circle cx="18" cy="19" r="3" />
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                  </svg>
+                </span>
+                <div>
+                  <dt class="text-label uppercase text-accent">Follow us</dt>
+                  <dd class="mt-2 flex flex-wrap items-center gap-3">
+                    <a
+                      v-for="s in socials"
+                      :key="s.label"
+                      :href="s.href"
+                      :aria-label="s.label"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex h-12 w-12 items-center justify-center rounded-md bg-signal-plum/10 text-secondary transition hover:bg-signal-plum hover:text-haven-cream"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="h-6 w-6"
+                        aria-hidden="true"
+                      >
+                        <path :d="s.path" />
+                      </svg>
+                    </a>
+                  </dd>
+                </div>
+              </div>
             </dl>
           </div>
 
@@ -210,6 +257,7 @@ import PageHero from "@/components/PageHero.vue";
 import CTABlock from "@/components/CTABlock.vue";
 import { faqs } from "@/data/faqs";
 import { media } from "@/data/media";
+import { socials } from "@/data/socials";
 
 const FormField = defineComponent({
   props: { label: String, name: String, type: { type: String, default: "text" } },

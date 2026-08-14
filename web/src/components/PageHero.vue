@@ -25,7 +25,7 @@
          the service detail hero reads as an immersive full-screen band. -->
     <div
       class="mx-auto flex max-w-7xl flex-col justify-end px-4 py-16 lg:py-24"
-      :class="fullImage ? 'min-h-[90vh]' : 'min-h-[22rem] lg:min-h-[30rem]'"
+      :class="fullImage ? 'min-h-[90vh]' : 'min-h-[60vh]'"
     >
       <p v-if="eyebrow" class="mb-4 flex items-center gap-3">
         <span class="inline-block h-px w-8 bg-haven-cream" aria-hidden="true" />
@@ -47,18 +47,23 @@
     </div>
   </section>
 
-  <!-- Default hero: no image, brand background with the soft decorative blobs. -->
-  <section v-else class="relative overflow-hidden bg-background">
+  <!-- Default hero: no image. A deep-plum gradient stands in for the photo so
+       the fixed cream header stays readable, matching the treatment used by
+       image heroes elsewhere. -->
+  <section
+    v-else
+    class="relative isolate overflow-hidden bg-deep-plum bg-gradient-to-br from-deep-plum via-signal-plum to-deep-plum"
+  >
     <SoftBlobs variant="hero" />
-    <div class="relative z-10 mx-auto max-w-7xl px-4 py-16 lg:py-24">
+    <div class="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl flex-col justify-end px-4 py-16 lg:py-24">
       <p v-if="eyebrow" class="mb-4 flex items-center gap-3">
-        <span class="inline-block h-px w-8 bg-secondary" aria-hidden="true" />
-        <span class="text-label uppercase text-accent">{{ eyebrow }}</span>
+        <span class="inline-block h-px w-8 bg-haven-cream" aria-hidden="true" />
+        <span class="text-label uppercase text-haven-cream/90">{{ eyebrow }}</span>
       </p>
-      <h1 class="text-display font-display max-w-4xl text-text">
+      <h1 class="text-display font-display max-w-4xl text-haven-cream">
         {{ title }}
       </h1>
-      <p v-if="subtitle" class="text-body mt-6 max-w-2xl text-text/80">
+      <p v-if="subtitle" class="text-body mt-6 max-w-2xl text-haven-cream/90">
         {{ subtitle }}
       </p>
       <div v-if="$slots.actions" class="mt-8 flex flex-wrap gap-4">

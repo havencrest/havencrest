@@ -331,7 +331,7 @@ export const specialties = [
         ],
       },
       {
-        image: "Havencrest/christopher-lemercier-12yvdCiLaVE-unsplash_dkfwqv",
+        image: "Havencrest/Mood-Disorders2_dhgxa6",
         heading: "How we support mood disorders",
         body: [
           "Our goal is to help you better understand your experiences, improve emotional wellbeing, and develop practical strategies that support lasting stability and resilience. Your therapy is tailored to your unique experiences, strengths, goals, and the challenges you're navigating.",
@@ -729,7 +729,7 @@ export const specialties = [
         ],
       },
       {
-        image: "Havencrest/artem-kovalev-fk3XUcfTAvk-unsplash_ilvmzc",
+        image: "Havencrest/depressing-therapy-session-seattle-washington2_mm1ur4",
         heading: "How we support depression",
         body: [
           "Our goal is to help you better understand your depression, reduce its impact on your daily life, and develop practical skills that support lasting emotional wellbeing.",
@@ -931,7 +931,7 @@ export const specialties = [
         ],
       },
       {
-        image: "Havencrest/sandy-millar-cQ-66Evaf5g-unsplash_ctbt9w",
+        image: "Havencrest/Trauma-Therapy_n5anyh",
         heading: "How we support trauma",
         body: [
           "Our goal is to help you safely process difficult experiences, reduce the impact trauma continues to have on your daily life, and build the confidence, resilience, and emotional wellbeing to move forward.",
@@ -1132,7 +1132,7 @@ export const specialties = [
         ],
       },
       {
-        image: "Havencrest/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash_owuqwo",
+        image: "Havencrest/ADHD_Support2_ddzuyv",
         heading: "How we support ADHD",
         body: [
           "Our goal is to help you better understand how ADHD affects your daily life, strengthen executive functioning skills, and develop practical strategies that support lasting confidence and wellbeing. Your therapy is tailored to your unique experiences, strengths, and goals.",
@@ -1891,7 +1891,7 @@ export const specialties = [
         ],
       },
       {
-        image: "Havencrest/olivia-bauso-7NvnR9rK5uI-unsplash_bce3dw",
+        image: "Havencrest/life_transitions2_xln4ve",
         heading: "How we support life transitions & identity",
         body: [
           "Our goal is to help you navigate change with greater confidence, strengthen your sense of identity, and develop practical strategies that support lasting emotional wellbeing.",
@@ -2121,7 +2121,7 @@ export const specialties = [
         ],
       },
       {
-        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
+        image: "Havencrest/claudia-wolff-owBcefxgrIE-unsplash_ldyymm",
         heading: "How we support women's mental health",
         body: [
           "Our goal is to help you better understand your experiences, strengthen emotional wellbeing, and develop practical strategies that support lasting resilience and confidence. Your therapy is tailored to your unique experiences, strengths, values, and goals.",
@@ -2316,7 +2316,7 @@ export const specialties = [
         ],
       },
       {
-        image: "Havencrest/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash_owuqwo",
+        image: "Havencrest/Mens_mental_health2_yju0cs",
         heading: "How we support men's mental health",
         body: [
           "Our goal is to help you better understand your experiences, strengthen emotional resilience, and develop practical strategies that support lasting wellbeing. Your therapy is tailored to your unique experiences, strengths, and goals.",

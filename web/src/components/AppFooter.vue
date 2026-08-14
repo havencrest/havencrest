@@ -11,6 +11,27 @@
               Havencrest Wellness &amp; Counseling. Exceptional mental healthcare grounded in
               genuine human connection.
             </p>
+            <div class="flex items-center gap-3 pt-2">
+              <a
+                v-for="s in socials"
+                :key="s.label"
+                :href="s.href"
+                :aria-label="s.label"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-haven-cream/10 text-haven-cream ring-1 ring-inset ring-haven-cream/20 hover:bg-haven-cream/20"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-4 w-4"
+                  aria-hidden="true"
+                >
+                  <path :d="s.path" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           <div class="col-span-2 flex flex-col gap-3">
@@ -113,10 +134,20 @@
         <span class="text-body text-haven-cream"
           >Copyright © {{ currentYear }} Havencrest. All rights reserved.</span
         >
-        <div class="flex gap-4">
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
           <router-link to="/privacy" class="text-body text-haven-cream hover:underline"
             >Privacy policy</router-link
           >
+          <span class="text-body text-haven-cream/80">
+            Designed and developed by
+            <a
+              href="https://developersmania.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-bold text-haven-cream hover:underline"
+              >Developers Mania</a
+            >
+          </span>
         </div>
       </div>
     </div>
@@ -125,5 +156,6 @@
 
 <script setup>
 import CrisisBanner from "@/components/CrisisBanner.vue";
+import { socials } from "@/data/socials";
 const currentYear = new Date().getFullYear();
 </script>
