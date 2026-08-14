@@ -343,7 +343,6 @@ export const services = [
         ],
       },
       {
-        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
         heading: "How we approach couples counseling",
         body: [
           "Our goal is to help you strengthen communication, deepen understanding, rebuild trust, and develop the skills needed to navigate challenges together with confidence.",
@@ -359,7 +358,7 @@ export const services = [
         ],
       },
       {
-        image: "Havencrest/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash_owuqwo",
+        image: "Havencrest/couples-counseling-therapy-session-washington2_i6rcnp",
         heading: "What to expect during couples counseling",
         body: ["During your first session, your therapist will:"],
         list: [
@@ -543,7 +542,7 @@ export const services = [
         ],
       },
       {
-        image: "Havencrest/olivia-bauso-7NvnR9rK5uI-unsplash_bce3dw",
+        image: "Havencrest/Family_Therapy_2_r1fzpv",
         heading: "How we approach family therapy",
         body: [
           "Every family is unique, so therapy is tailored to your family's strengths, challenges, and goals. Our therapists use evidence-based approaches to help improve communication, strengthen relationships, and support healthier family functioning.",
@@ -563,7 +562,6 @@ export const services = [
         ],
       },
       {
-        image: "Havencrest/christina-wocintechchat-com-m-vzfgh3RAPzM-unsplash_izmqhg",
         heading: "What to expect during family therapy",
         body: ["During your first session, your therapist will:"],
         list: [
@@ -975,7 +973,7 @@ export const services = [
         ],
       },
       {
-        image: "Havencrest/christina-wocintechchat-com-m-vzfgh3RAPzM-unsplash_izmqhg",
+        image: "Havencrest/cbt-therapy-session-washington2_swhuxn",
         heading: "How we approach CBT",
         body: [
           "Our goal is to help you better understand the connection between your thoughts, emotions, and behaviors, so you can respond to life's challenges with greater awareness, confidence, and resilience.",
@@ -1174,7 +1172,7 @@ export const services = [
         ],
       },
       {
-        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
+        image: "Havencrest/dbt-therapy-session-washington2_tndnnf",
         heading: "How we approach DBT",
         body: [
           "Our goal is to help you better understand your emotions, strengthen your relationships, and develop practical skills that help you respond to life's challenges with greater confidence and balance.",
@@ -1356,7 +1354,7 @@ export const services = [
         ],
       },
       {
-        image: "Havencrest/susan-wilkinson-EDJKEXFbzHA-unsplash_xridkb",
+        image: "Havencrest/emdr-therapy-session-seattle-washington2_ntdfxm",
         heading: "How we approach EMDR therapy",
         body: [
           "Our goal is to help you safely process distressing experiences, reduce the emotional impact they continue to have on your life, and develop a greater sense of confidence, resilience, and emotional wellbeing.",

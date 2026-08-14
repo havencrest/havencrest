@@ -16,7 +16,7 @@
           <div class="lg:col-span-1">
             <p class="text-label mb-3 uppercase text-accent">Our approach</p>
             <h2 class="text-h1 font-display text-text">
-              Care shaped by curiosity, judgment, and connection.
+              Care shaped by clinical expertise, empathy & connection.
             </h2>
           </div>
           <div
