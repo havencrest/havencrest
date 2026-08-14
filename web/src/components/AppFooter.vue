@@ -134,10 +134,20 @@
         <span class="text-body text-haven-cream"
           >Copyright © {{ currentYear }} Havencrest. All rights reserved.</span
         >
-        <div class="flex gap-4">
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
           <router-link to="/privacy" class="text-body text-haven-cream hover:underline"
             >Privacy policy</router-link
           >
+          <span class="text-body text-haven-cream/80">
+            Designed and developed by
+            <a
+              href="https://developersmania.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-bold text-haven-cream hover:underline"
+              >Developers Mania</a
+            >
+          </span>
         </div>
       </div>
     </div>
