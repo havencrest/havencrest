@@ -1515,7 +1515,6 @@ export const specialties = [
         ],
       },
       {
-        image: "Havencrest/Stress_and_Burn_out_1_vucutc",
         heading: "How we support stress & burnout",
         body: [
           "Our goal is to help you better understand the factors contributing to your stress, strengthen emotional resilience, and develop practical strategies that support lasting wellbeing. Your therapy is tailored to your unique experiences, strengths, values, and goals.",
@@ -1689,7 +1688,6 @@ export const specialties = [
         ],
       },
       {
-        image: "Havencrest/Grief_fnmsey",
         heading: "Understanding grief & loss",
         body: [
           "Grief is a natural response to losing someone or something that matters deeply to you. It can affect your emotions, thoughts, physical health, relationships, and daily life. There is no right or wrong way to grieve, and no timeline that everyone follows. Your experience is shaped by your relationship to the loss, your life circumstances, your history, your culture, and the support available to you.",

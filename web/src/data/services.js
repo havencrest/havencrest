@@ -181,7 +181,6 @@ export const services = [
         ],
       },
       {
-        image: "Havencrest/hannah-busing-Zyx1bK9mqmA-unsplash_f0an6i",
         heading: "What to expect during individual therapy",
         body: ["During your first session, your therapist will:"],
         list: [
@@ -788,7 +787,6 @@ export const services = [
         ],
       },
       {
-        image: "Havencrest/Child_therapy_l92spo",
         heading: "How we approach child & teen therapy",
         body: [
           "Our goal is to help children and teens better understand their emotions, build confidence, strengthen resilience, and develop practical skills that support healthy emotional wellbeing both now and into adulthood.",
@@ -1908,7 +1906,6 @@ export const services = [
         ],
       },
       {
-        image: "Havencrest/kaja-sariwating-UEEmt2sndSQ-unsplash_fdmnuh",
         heading: "What to expect during therapy",
         body: ["During your first session, your therapist will:"],
         list: [
