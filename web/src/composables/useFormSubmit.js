@@ -4,14 +4,21 @@ import { HONEYPOT_FIELD, emptyValues, validateForm } from "@/data/forms.js";
 // Drives the two public enquiry forms: local state, inline validation, and the
 // POST to /api/contact that emails the practice.
 //
-//   const form = useFormSubmit("appointment");
-//   <FormField v-model="form.values.name" :error="form.errors.name" … />
-//   <form @submit.prevent="form.submit">
+// DESTRUCTURE THE RESULT. Vue only unwraps refs that are top-level bindings in
+// `<script setup>`, so this must be used as
 //
-// Validation runs once on submit and then live for every subsequent edit —
-// nagging someone about a half-typed email address before they have submitted
-// anything is worse than saying nothing, but once an error is on screen it
-// should clear as soon as they fix it.
+//   const { values, errors, status, isSubmitting, submit, touch } = useFormSubmit("appointment");
+//
+// and never as `const form = useFormSubmit(…)` with `form.isSubmitting` in the
+// template. A ref reached through a plain object stays a ref there — it renders
+// as an object and, being an object, is always truthy. That mistake silently
+// pinned the submit button to its disabled "Sending…" state.
+//
+// When errors appear:
+//   • on blur, but only for a field the person actually typed into — tabbing
+//     past an empty box should not be scolded, a malformed address should;
+//   • on submit, for everything at once;
+//   • and from then on live, so an error clears the moment it is fixed.
 //
 // The server validates independently and its field errors win, so a check
 // missing here is a UX gap rather than a hole.
@@ -34,9 +41,12 @@ export function useFormSubmit(formKey) {
 
   const status = ref("idle"); // idle | submitting | success | error
   const failureMessage = ref("");
-  // Set once the person has attempted a submit, which is when live
-  // re-validation starts being helpful rather than annoying.
+  // Set once the person has attempted a submit, after which every field's error
+  // is fair game rather than only the ones they have visited.
   const attempted = ref(false);
+  // Fields that have been blurred at least once. A plain Set: nothing renders it
+  // directly, and every path that changes it also refreshes `errors`.
+  const touched = new Set();
 
   const isSubmitting = computed(() => status.value === "submitting");
 
@@ -45,17 +55,41 @@ export function useFormSubmit(formKey) {
     Object.assign(errors, next);
   }
 
+  // Recomputes which errors are currently allowed on screen. Everything is
+  // validated every time; this only decides what the person is ready to be told.
+  function refreshErrors() {
+    const all = validateForm(formKey, values);
+    if (attempted.value) {
+      setErrors(all);
+      return;
+    }
+    setErrors(
+      Object.fromEntries(
+        Object.entries(all).filter(
+          ([name]) => touched.has(name) && String(values[name] ?? "").trim() !== "",
+        ),
+      ),
+    );
+  }
+
+  /** Called from a field's `@blur`. */
+  function touch(name) {
+    touched.add(name);
+    refreshErrors();
+  }
+
   function reset() {
     Object.assign(values, emptyValues(formKey));
     setErrors({});
     attempted.value = false;
+    touched.clear();
   }
 
   // Deep by default for a reactive object, and it runs after the mutation — so
   // this sees the edit the person just made, which a per-field listener racing
   // v-model's own handler would not.
   watch(values, () => {
-    if (attempted.value) setErrors(validateForm(formKey, values));
+    refreshErrors();
 
     // Clear the confirmation once they start composing again, so a stale "sent"
     // banner never sits above a half-written second message. Gated on the form
@@ -97,8 +131,9 @@ export function useFormSubmit(formKey) {
       });
 
       // A non-JSON body means something upstream of the function answered — a
-      // platform error page, most likely. Treat it as a generic failure rather
-      // than letting the parse throw.
+      // platform error page, or the dev server's SPA fallback when the API is
+      // not running. Treat it as a generic failure rather than letting the
+      // parse throw.
       const payload = await response.json().catch(() => ({}));
 
       if (!response.ok) {
@@ -116,5 +151,5 @@ export function useFormSubmit(formKey) {
     }
   }
 
-  return { values, errors, honeypot, status, failureMessage, isSubmitting, submit };
+  return { values, errors, honeypot, status, failureMessage, isSubmitting, submit, touch };
 }

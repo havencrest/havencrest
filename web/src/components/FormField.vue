@@ -24,6 +24,7 @@
       :value="modelValue"
       :class="[controlClass, 'mt-2']"
       @input="$emit('update:modelValue', $event.target.value)"
+      @blur="$emit('blur')"
     />
 
     <!-- A file input's value cannot be bound, so it emits the selected File
@@ -39,6 +40,7 @@
       :aria-describedby="describedBy"
       :class="[fileClass, 'mt-2']"
       @change="$emit('update:modelValue', $event.target.files?.[0] ?? null)"
+      @blur="$emit('blur')"
     />
 
     <input
@@ -53,6 +55,7 @@
       :value="modelValue"
       :class="[controlClass, 'mt-2']"
       @input="$emit('update:modelValue', $event.target.value)"
+      @blur="$emit('blur')"
     />
 
     <span v-if="hint" :id="hintId" class="text-label mt-2 block text-text/60">{{ hint }}</span>
@@ -77,7 +80,7 @@ const props = defineProps({
   error: { type: String, default: undefined },
 });
 
-defineEmits(["update:modelValue"]);
+defineEmits(["update:modelValue", "blur"]);
 
 const uid = useId();
 const hintId = `${uid}-hint`;
