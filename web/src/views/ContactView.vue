@@ -176,7 +176,7 @@
           <form
             class="space-y-5 rounded-lg border border-text/10 bg-background p-6 lg:p-8"
             novalidate
-            @submit.prevent="form.submit"
+            @submit.prevent="submit"
           >
             <h3 class="text-h2 font-display text-text">Send us a message</h3>
             <p class="text-body text-text/70">
@@ -185,49 +185,54 @@
             </p>
 
             <FormField
-              v-model="form.values.name"
+              v-model="values.name"
               label="Full name"
               name="name"
               autocomplete="name"
               required
               :maxlength="100"
-              :error="form.errors.name"
+              :error="errors.name"
+              @blur="touch('name')"
             />
             <FormField
-              v-model="form.values.email"
+              v-model="values.email"
               label="Email address"
               name="email"
               type="email"
               autocomplete="email"
               required
               :maxlength="200"
-              :error="form.errors.email"
+              :error="errors.email"
+              @blur="touch('email')"
             />
             <FormField
-              v-model="form.values.phone"
+              v-model="values.phone"
               label="Phone number"
               name="phone"
               type="tel"
               autocomplete="tel"
               :maxlength="40"
-              :error="form.errors.phone"
+              :error="errors.phone"
+              @blur="touch('phone')"
             />
             <FormField
-              v-model="form.values.subject"
+              v-model="values.subject"
               label="How can we help?"
               name="subject"
               required
               :maxlength="200"
-              :error="form.errors.subject"
+              :error="errors.subject"
+              @blur="touch('subject')"
             />
             <FormField
-              v-model="form.values.message"
+              v-model="values.message"
               label="Your message"
               name="message"
               type="textarea"
               required
               :maxlength="4000"
-              :error="form.errors.message"
+              :error="errors.message"
+              @blur="touch('message')"
             />
 
             <!-- Honeypot. Hidden from sight and from assistive tech, and skipped
@@ -235,13 +240,13 @@
             <div class="hidden" aria-hidden="true">
               <label>
                 Company
-                <input v-model="form.honeypot" type="text" name="company" tabindex="-1" />
+                <input v-model="honeypot" type="text" name="company" tabindex="-1" />
               </label>
             </div>
 
             <p class="text-body text-text/70">{{ PRIVACY_NOTICE }}</p>
 
-            <FormStatus :status="form.status" :message="form.failureMessage">
+            <FormStatus :status="status" :message="failureMessage">
               Thank you — your message has been sent. We'll be in touch soon. If your need is
               urgent, please call
               <a href="tel:+13604747990" class="text-primary hover:underline">360-474-7990</a>.
@@ -249,10 +254,10 @@
 
             <button
               type="submit"
-              :disabled="form.isSubmitting"
+              :disabled="isSubmitting"
               class="inline-flex w-full items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {{ form.isSubmitting ? "Sending…" : "Send message" }}
+              {{ isSubmitting ? "Sending…" : "Send message" }}
             </button>
           </form>
         </div>
@@ -327,5 +332,6 @@ import { media } from "@/data/media";
 import { socials } from "@/data/socials";
 import { PRIVACY_NOTICE } from "@/data/forms.js";
 
-const form = useFormSubmit("contact");
+const { values, errors, honeypot, status, failureMessage, isSubmitting, submit, touch } =
+  useFormSubmit("contact");
 </script>

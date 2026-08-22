@@ -12,7 +12,7 @@
           <form
             class="space-y-5 rounded-lg border border-text/10 bg-background p-6 lg:col-span-2 lg:p-10"
             novalidate
-            @submit.prevent="form.submit"
+            @submit.prevent="submit"
           >
             <p class="text-body text-text/70">
               All fields marked <span class="text-secondary" aria-hidden="true">*</span> are
@@ -21,66 +21,73 @@
 
             <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
               <FormField
-                v-model="form.values.name"
+                v-model="values.name"
                 label="Full name"
                 name="name"
                 autocomplete="name"
                 required
                 :maxlength="100"
-                :error="form.errors.name"
+                :error="errors.name"
+                @blur="touch('name')"
               />
               <FormField
-                v-model="form.values.preferred"
+                v-model="values.preferred"
                 label="Preferred name"
                 name="preferred"
                 :maxlength="100"
-                :error="form.errors.preferred"
+                :error="errors.preferred"
+                @blur="touch('preferred')"
               />
               <FormField
-                v-model="form.values.email"
+                v-model="values.email"
                 label="Email"
                 name="email"
                 type="email"
                 autocomplete="email"
                 required
                 :maxlength="200"
-                :error="form.errors.email"
+                :error="errors.email"
+                @blur="touch('email')"
               />
               <FormField
-                v-model="form.values.phone"
+                v-model="values.phone"
                 label="Phone"
                 name="phone"
                 type="tel"
                 autocomplete="tel"
                 required
                 :maxlength="40"
-                :error="form.errors.phone"
+                :error="errors.phone"
+                @blur="touch('phone')"
               />
               <FormField
-                v-model="form.values.service"
+                v-model="values.service"
                 label="Service of interest"
                 name="service"
                 :maxlength="120"
-                :error="form.errors.service"
+                :error="errors.service"
+                @blur="touch('service')"
               />
               <FormField
-                v-model="form.values.appointment_type"
+                v-model="values.appointment_type"
                 label="Preferred appointment type"
                 name="appointment_type"
                 hint="In person or telehealth — leave blank if you're not sure."
                 :maxlength="120"
-                :error="form.errors.appointment_type"
+                :error="errors.appointment_type"
+                @blur="touch('appointment_type')"
               />
             </div>
 
             <FormField
-              v-model="form.values.message"
+              v-model="values.message"
               label="How can we help?"
               name="message"
               type="textarea"
               required
               :maxlength="4000"
-              :error="form.errors.message"
+              :error="errors.message"
+              @blur="touch('message')"
             />
 
             <!-- Honeypot. Hidden from sight and from assistive tech, and skipped
@@ -88,13 +95,13 @@
             <div class="hidden" aria-hidden="true">
               <label>
                 Company
-                <input v-model="form.honeypot" type="text" name="company" tabindex="-1" />
+                <input v-model="honeypot" type="text" name="company" tabindex="-1" />
               </label>
             </div>
 
             <p class="text-body text-text/70">{{ PRIVACY_NOTICE }}</p>
 
-            <FormStatus :status="form.status" :message="form.failureMessage">
+            <FormStatus :status="status" :message="failureMessage">
               Thank you — your request has been sent. A member of our team will be in touch shortly.
               If your need is urgent, please call
               <a href="tel:+13604747990" class="text-primary hover:underline">360-474-7990</a>.
@@ -102,10 +109,10 @@
 
             <button
               type="submit"
-              :disabled="form.isSubmitting"
+              :disabled="isSubmitting"
               class="inline-flex w-full items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {{ form.isSubmitting ? "Sending…" : "Submit request" }}
+              {{ isSubmitting ? "Sending…" : "Submit request" }}
             </button>
           </form>
 
@@ -149,5 +156,6 @@ import FormStatus from "@/components/FormStatus.vue";
 import { useFormSubmit } from "@/composables/useFormSubmit.js";
 import { PRIVACY_NOTICE } from "@/data/forms.js";
 
-const form = useFormSubmit("appointment");
+const { values, errors, honeypot, status, failureMessage, isSubmitting, submit, touch } =
+  useFormSubmit("appointment");
 </script>
