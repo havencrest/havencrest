@@ -11,22 +11,101 @@
         <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
           <form
             class="space-y-5 rounded-lg border border-text/10 bg-background p-6 lg:col-span-2 lg:p-10"
-            @submit.prevent
+            novalidate
+            @submit.prevent="form.submit"
           >
+            <p class="text-body text-text/70">
+              All fields marked <span class="text-secondary" aria-hidden="true">*</span> are
+              required.
+            </p>
+
             <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
-              <FormField label="Full name" name="name" />
-              <FormField label="Preferred name (optional)" name="preferred" />
-              <FormField label="Email" name="email" type="email" />
-              <FormField label="Phone" name="phone" type="tel" />
-              <FormField label="Service of interest" name="service" />
-              <FormField label="Preferred appointment type" name="appointment_type" />
+              <FormField
+                v-model="form.values.name"
+                label="Full name"
+                name="name"
+                autocomplete="name"
+                required
+                :maxlength="100"
+                :error="form.errors.name"
+              />
+              <FormField
+                v-model="form.values.preferred"
+                label="Preferred name"
+                name="preferred"
+                :maxlength="100"
+                :error="form.errors.preferred"
+              />
+              <FormField
+                v-model="form.values.email"
+                label="Email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                :maxlength="200"
+                :error="form.errors.email"
+              />
+              <FormField
+                v-model="form.values.phone"
+                label="Phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                required
+                :maxlength="40"
+                :error="form.errors.phone"
+              />
+              <FormField
+                v-model="form.values.service"
+                label="Service of interest"
+                name="service"
+                :maxlength="120"
+                :error="form.errors.service"
+              />
+              <FormField
+                v-model="form.values.appointment_type"
+                label="Preferred appointment type"
+                name="appointment_type"
+                hint="In person or telehealth — leave blank if you're not sure."
+                :maxlength="120"
+                :error="form.errors.appointment_type"
+              />
             </div>
-            <FormField label="How can we help?" name="message" type="textarea" />
+
+            <FormField
+              v-model="form.values.message"
+              label="How can we help?"
+              name="message"
+              type="textarea"
+              required
+              :maxlength="4000"
+              :error="form.errors.message"
+            />
+
+            <!-- Honeypot. Hidden from sight and from assistive tech, and skipped
+                 by tabbing, so only an automated submission fills it in. -->
+            <div class="hidden" aria-hidden="true">
+              <label>
+                Company
+                <input v-model="form.honeypot" type="text" name="company" tabindex="-1" />
+              </label>
+            </div>
+
+            <p class="text-body text-text/70">{{ PRIVACY_NOTICE }}</p>
+
+            <FormStatus :status="form.status" :message="form.failureMessage">
+              Thank you — your request has been sent. A member of our team will be in touch shortly.
+              If your need is urgent, please call
+              <a href="tel:+13604747990" class="text-primary hover:underline">360-474-7990</a>.
+            </FormStatus>
+
             <button
               type="submit"
-              class="inline-flex w-full items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
+              :disabled="form.isSubmitting"
+              class="inline-flex w-full items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Submit request
+              {{ form.isSubmitting ? "Sending…" : "Submit request" }}
             </button>
           </form>
 
@@ -64,21 +143,11 @@
 </template>
 
 <script setup>
-import { defineComponent, h } from "vue";
 import PageHero from "@/components/PageHero.vue";
+import FormField from "@/components/FormField.vue";
+import FormStatus from "@/components/FormStatus.vue";
+import { useFormSubmit } from "@/composables/useFormSubmit.js";
+import { PRIVACY_NOTICE } from "@/data/forms.js";
 
-const FormField = defineComponent({
-  props: { label: String, name: String, type: { type: String, default: "text" } },
-  setup(props) {
-    const inputClass =
-      "w-full rounded-md border border-text/20 bg-white px-4 py-3 text-body text-text focus:border-primary focus:outline-none";
-    return () =>
-      h("label", { class: "block" }, [
-        h("span", { class: "text-label uppercase text-accent" }, props.label),
-        props.type === "textarea"
-          ? h("textarea", { name: props.name, rows: 5, class: `${inputClass} mt-2` })
-          : h("input", { name: props.name, type: props.type, class: `${inputClass} mt-2` }),
-      ]);
-  },
-});
+const form = useFormSubmit("appointment");
 </script>
