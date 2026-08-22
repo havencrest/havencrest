@@ -40,54 +40,11 @@
 </template>
 
 <script setup>
-import { defineComponent, h } from "vue";
 import PageHero from "@/components/PageHero.vue";
+import FormField from "@/components/FormField.vue";
 
-const FormField = defineComponent({
-  props: {
-    label: String,
-    name: String,
-    type: { type: String, default: "text" },
-    required: { type: Boolean, default: false },
-    accept: { type: String, default: undefined },
-    hint: { type: String, default: undefined },
-  },
-  setup(props) {
-    const inputClass =
-      "w-full rounded-md border border-text/20 bg-white px-4 py-3 text-body text-text focus:border-primary focus:outline-none";
-    const fileClass =
-      "w-full rounded-md border border-text/20 bg-white px-4 py-3 text-body text-text file:mr-4 file:cursor-pointer file:rounded-md file:border-0 file:bg-primary file:px-4 file:py-2 file:text-body file:text-haven-cream hover:file:brightness-90 focus:border-primary focus:outline-none";
-    return () =>
-      h("label", { class: "block" }, [
-        h("span", { class: "text-label uppercase text-accent" }, [
-          props.label,
-          props.required
-            ? h("span", { class: "ml-1 text-secondary", "aria-hidden": "true" }, "*")
-            : null,
-        ]),
-        props.type === "textarea"
-          ? h("textarea", {
-              name: props.name,
-              rows: 5,
-              required: props.required,
-              class: `${inputClass} mt-2`,
-            })
-          : props.type === "file"
-            ? h("input", {
-                name: props.name,
-                type: "file",
-                accept: props.accept,
-                required: props.required,
-                class: `${fileClass} mt-2`,
-              })
-            : h("input", {
-                name: props.name,
-                type: props.type,
-                required: props.required,
-                class: `${inputClass} mt-2`,
-              }),
-        props.hint ? h("span", { class: "text-label mt-2 block text-text/60" }, props.hint) : null,
-      ]);
-  },
-});
+// NOTE: this form still submits nowhere — the careers application carries a
+// resume upload, which needs storage rather than the email path that the
+// contact and appointment forms use. It shares the field component so there is
+// only one copy of the markup to maintain in the meantime.
 </script>

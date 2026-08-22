@@ -13,5 +13,17 @@
   "rules": {
     // Side-effect imports (global CSS, polyfills) are legit in Vue/Vite.
     "import/no-unassigned-import": "off"
-  }
+  },
+  "overrides": [
+    {
+      // Serverless functions run on Node, not in the browser: `process` and
+      // `console` are expected there.
+      "files": ["api/**/*.js"],
+      "env": {
+        "browser": false,
+        "node": true,
+        "es2024": true
+      }
+    }
+  ]
 }

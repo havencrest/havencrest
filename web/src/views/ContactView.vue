@@ -55,7 +55,9 @@
                     stroke-linejoin="round"
                     class="h-4 w-4"
                   >
-                    <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75" />
+                    <path
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75"
+                    />
                     <path d="M21.75 6.75L12 13.5 2.25 6.75" />
                     <path d="M21.75 6.75A2.25 2.25 0 0019.5 4.5h-15A2.25 2.25 0 002.25 6.75" />
                   </svg>
@@ -84,9 +86,7 @@
                     stroke-linejoin="round"
                     class="h-4 w-4"
                   >
-                    <path
-                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
+                    <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path
                       d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                     />
@@ -175,19 +175,84 @@
 
           <form
             class="space-y-5 rounded-lg border border-text/10 bg-background p-6 lg:p-8"
-            @submit.prevent
+            novalidate
+            @submit.prevent="form.submit"
           >
             <h3 class="text-h2 font-display text-text">Send us a message</h3>
-            <FormField label="Full name" name="name" />
-            <FormField label="Email address" name="email" type="email" />
-            <FormField label="Phone number (optional)" name="phone" type="tel" />
-            <FormField label="How can we help?" name="subject" />
-            <FormField label="Your message" name="message" type="textarea" />
+            <p class="text-body text-text/70">
+              All fields marked <span class="text-secondary" aria-hidden="true">*</span> are
+              required.
+            </p>
+
+            <FormField
+              v-model="form.values.name"
+              label="Full name"
+              name="name"
+              autocomplete="name"
+              required
+              :maxlength="100"
+              :error="form.errors.name"
+            />
+            <FormField
+              v-model="form.values.email"
+              label="Email address"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              :maxlength="200"
+              :error="form.errors.email"
+            />
+            <FormField
+              v-model="form.values.phone"
+              label="Phone number"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              :maxlength="40"
+              :error="form.errors.phone"
+            />
+            <FormField
+              v-model="form.values.subject"
+              label="How can we help?"
+              name="subject"
+              required
+              :maxlength="200"
+              :error="form.errors.subject"
+            />
+            <FormField
+              v-model="form.values.message"
+              label="Your message"
+              name="message"
+              type="textarea"
+              required
+              :maxlength="4000"
+              :error="form.errors.message"
+            />
+
+            <!-- Honeypot. Hidden from sight and from assistive tech, and skipped
+                 by tabbing, so only an automated submission fills it in. -->
+            <div class="hidden" aria-hidden="true">
+              <label>
+                Company
+                <input v-model="form.honeypot" type="text" name="company" tabindex="-1" />
+              </label>
+            </div>
+
+            <p class="text-body text-text/70">{{ PRIVACY_NOTICE }}</p>
+
+            <FormStatus :status="form.status" :message="form.failureMessage">
+              Thank you — your message has been sent. We'll be in touch soon. If your need is
+              urgent, please call
+              <a href="tel:+13604747990" class="text-primary hover:underline">360-474-7990</a>.
+            </FormStatus>
+
             <button
               type="submit"
-              class="inline-flex w-full items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90"
+              :disabled="form.isSubmitting"
+              class="inline-flex w-full items-center justify-center rounded-md bg-primary px-6 py-3 text-body text-haven-cream hover:brightness-90 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Send message
+              {{ form.isSubmitting ? "Sending…" : "Send message" }}
             </button>
           </form>
         </div>
@@ -252,25 +317,15 @@
 </template>
 
 <script setup>
-import { defineComponent, h } from "vue";
 import PageHero from "@/components/PageHero.vue";
 import CTABlock from "@/components/CTABlock.vue";
+import FormField from "@/components/FormField.vue";
+import FormStatus from "@/components/FormStatus.vue";
+import { useFormSubmit } from "@/composables/useFormSubmit.js";
 import { faqs } from "@/data/faqs";
 import { media } from "@/data/media";
 import { socials } from "@/data/socials";
+import { PRIVACY_NOTICE } from "@/data/forms.js";
 
-const FormField = defineComponent({
-  props: { label: String, name: String, type: { type: String, default: "text" } },
-  setup(props) {
-    const inputClass =
-      "w-full rounded-md border border-text/20 bg-white px-4 py-3 text-body text-text focus:border-primary focus:outline-none";
-    return () =>
-      h("label", { class: "block" }, [
-        h("span", { class: "text-label uppercase text-accent" }, props.label),
-        props.type === "textarea"
-          ? h("textarea", { name: props.name, rows: 5, class: `${inputClass} mt-2` })
-          : h("input", { name: props.name, type: props.type, class: `${inputClass} mt-2` }),
-      ]);
-  },
-});
+const form = useFormSubmit("contact");
 </script>
