@@ -4,6 +4,7 @@
       eyebrow="Specialties"
       title="The way we experience mental health is deeply personal."
       subtitle="Explore the concerns we commonly support, and if you're unsure where your experience fits, we still encourage you to reach out."
+      full-on-mobile
     />
 
     <section class="bg-white">

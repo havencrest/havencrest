@@ -5,6 +5,7 @@
       title="Build the future of mental healthcare with us."
       subtitle="Exceptional mental healthcare begins with exceptional clinicians. At Havencrest, we're building a practice where clinicians are trusted, supported, and encouraged to provide thoughtful, evidence-based, person-centered care."
       :image="media.careers"
+      full-on-mobile
     >
       <template #actions>
         <router-link

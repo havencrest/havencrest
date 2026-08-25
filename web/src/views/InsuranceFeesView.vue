@@ -4,6 +4,7 @@
       eyebrow="Insurance & fees"
       title="Making care as accessible as possible."
       subtitle="We understand that navigating insurance and healthcare costs can feel overwhelming. Our team is here to help you understand your options and answer any questions before your first appointment."
+      full-on-mobile
     />
 
     <section class="bg-white">
