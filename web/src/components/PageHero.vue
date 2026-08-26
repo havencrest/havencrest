@@ -22,10 +22,15 @@
       aria-hidden="true"
     />
     <!-- `fullImage` also stretches the container to full viewport height so
-         the service detail hero reads as an immersive full-screen band. -->
+         the service detail hero reads as an immersive full-screen band.
+         `fullOnMobile` bumps the mobile band to full viewport height while
+         leaving the desktop treatment unchanged. -->
     <div
       class="mx-auto flex max-w-7xl flex-col justify-end px-4 py-16 lg:py-24"
-      :class="fullImage ? 'min-h-[90vh]' : 'min-h-[60vh]'"
+      :class="[
+        fullOnMobile ? 'min-h-screen' : fullImage ? 'min-h-[90vh]' : 'min-h-[60vh]',
+        fullOnMobile ? (fullImage ? 'md:min-h-[90vh]' : 'md:min-h-[60vh]') : '',
+      ]"
     >
       <p v-if="eyebrow" class="mb-4 flex items-center gap-3">
         <span class="inline-block h-px w-8 bg-haven-cream" aria-hidden="true" />
@@ -55,7 +60,10 @@
     class="relative isolate overflow-hidden bg-deep-plum bg-gradient-to-br from-deep-plum via-signal-plum to-deep-plum"
   >
     <SoftBlobs variant="hero" />
-    <div class="relative z-10 mx-auto flex min-h-[60vh] max-w-7xl flex-col justify-end px-4 py-16 lg:py-24">
+    <div
+      class="relative z-10 mx-auto flex max-w-7xl flex-col justify-end px-4 py-16 lg:py-24"
+      :class="fullOnMobile ? 'min-h-screen md:min-h-[60vh]' : 'min-h-[60vh]'"
+    >
       <p v-if="eyebrow" class="mb-4 flex items-center gap-3">
         <span class="inline-block h-px w-8 bg-haven-cream" aria-hidden="true" />
         <span class="text-label uppercase text-haven-cream/90">{{ eyebrow }}</span>
@@ -87,6 +95,9 @@ defineProps({
   image: { type: String, default: "" },
   // When true, stretches the hero container to a full-viewport band.
   fullImage: { type: Boolean, default: false },
+  // When true, stretches the hero to full viewport height on mobile only.
+  // Desktop keeps the standard 60vh (or 90vh with `fullImage`) treatment.
+  fullOnMobile: { type: Boolean, default: false },
   // When true, the subtitle is rendered at display size (used on service
   // detail pages, where the subtitle carries the lede heading rather than a
   // paragraph).
